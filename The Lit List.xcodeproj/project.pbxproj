@@ -92,8 +92,8 @@
 		BA49746B1F03FE22004FE18B /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				BA49746D1F03FE32004FE18B /* SecondViewController.swift */,
 				BA49747A1F04034B004FE18B /* YourLitListViewController.swift */,
+				BA49746D1F03FE32004FE18B /* SecondViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
