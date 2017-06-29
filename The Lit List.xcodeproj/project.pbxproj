@@ -10,7 +10,6 @@
 		0FD42AC30E1A6B5E178D6B8B /* Pods_The_Lit_List.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29F21216A15ADE8B16190E21 /* Pods_The_Lit_List.framework */; };
 		BA4974581F03FD62004FE18B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4974571F03FD62004FE18B /* AppDelegate.swift */; };
 		BA4974611F03FD62004FE18B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA4974601F03FD62004FE18B /* Assets.xcassets */; };
-		BA49746F1F03FE32004FE18B /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA49746D1F03FE32004FE18B /* SecondViewController.swift */; };
 		BA4974751F03FE62004FE18B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA4974741F03FE62004FE18B /* LaunchScreen.storyboard */; };
 		BA4974771F03FE6A004FE18B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA4974761F03FE6A004FE18B /* Main.storyboard */; };
 		BA77798E1F05461A00128AA9 /* SourceSansPro-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = BA7779821F05461A00128AA9 /* SourceSansPro-Black.otf */; };
@@ -30,6 +29,7 @@
 		BA77799F1F05521000128AA9 /* Storyboard+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA77799E1F05521000128AA9 /* Storyboard+Utility.swift */; };
 		BA7779A11F056DF100128AA9 /* UIViewController+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7779A01F056DF100128AA9 /* UIViewController+Utility.swift */; };
 		BA7779A31F056F5200128AA9 /* UINavigationController+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7779A21F056F5200128AA9 /* UINavigationController+Utility.swift */; };
+		BA7779A51F0575B600128AA9 /* SearchByViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7779A41F0575B600128AA9 /* SearchByViewController.swift */; };
 		BA8E27F61F04060F00105C0E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8E27F51F04060F00105C0E /* Constants.swift */; };
 		BA8E27FA1F0410F700105C0E /* YourLitListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8E27F91F0410F700105C0E /* YourLitListViewController.swift */; };
 		BA8E27FD1F041BFA00105C0E /* ColorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8E27FC1F041BFA00105C0E /* ColorHelper.swift */; };
@@ -45,7 +45,6 @@
 		BA4974541F03FD62004FE18B /* The Lit List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Lit List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA4974571F03FD62004FE18B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA4974601F03FD62004FE18B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		BA49746D1F03FE32004FE18B /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SecondViewController.swift; path = Controllers/SecondViewController.swift; sourceTree = "<group>"; };
 		BA4974721F03FE52004FE18B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Supporting/Info.plist; sourceTree = "<group>"; };
 		BA4974741F03FE62004FE18B /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Storyboards/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BA4974761F03FE6A004FE18B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Storyboards/Main.storyboard; sourceTree = "<group>"; };
@@ -66,6 +65,7 @@
 		BA77799E1F05521000128AA9 /* Storyboard+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Storyboard+Utility.swift"; path = "Extensions/Storyboard+Utility.swift"; sourceTree = "<group>"; };
 		BA7779A01F056DF100128AA9 /* UIViewController+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIViewController+Utility.swift"; path = "Extensions/UIViewController+Utility.swift"; sourceTree = "<group>"; };
 		BA7779A21F056F5200128AA9 /* UINavigationController+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UINavigationController+Utility.swift"; path = "Extensions/UINavigationController+Utility.swift"; sourceTree = "<group>"; };
+		BA7779A41F0575B600128AA9 /* SearchByViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchByViewController.swift; path = Controllers/SearchByViewController.swift; sourceTree = "<group>"; };
 		BA8E27F51F04060F00105C0E /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Supporting/Constants.swift; sourceTree = "<group>"; };
 		BA8E27F91F0410F700105C0E /* YourLitListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = YourLitListViewController.swift; path = Controllers/YourLitListViewController.swift; sourceTree = "<group>"; };
 		BA8E27FC1F041BFA00105C0E /* ColorHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColorHelper.swift; path = Helpers/ColorHelper.swift; sourceTree = "<group>"; };
@@ -142,7 +142,7 @@
 			children = (
 				BA8E27F91F0410F700105C0E /* YourLitListViewController.swift */,
 				BA77799A1F0549C600128AA9 /* ItemDetailViewController.swift */,
-				BA49746D1F03FE32004FE18B /* SecondViewController.swift */,
+				BA7779A41F0575B600128AA9 /* SearchByViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -352,8 +352,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA8E28031F04239000105C0E /* LitLitItemCell.swift in Sources */,
-				BA49746F1F03FE32004FE18B /* SecondViewController.swift in Sources */,
 				BA77799B1F0549C600128AA9 /* ItemDetailViewController.swift in Sources */,
+				BA7779A51F0575B600128AA9 /* SearchByViewController.swift in Sources */,
 				BA8E27FD1F041BFA00105C0E /* ColorHelper.swift in Sources */,
 				BA7779A31F056F5200128AA9 /* UINavigationController+Utility.swift in Sources */,
 				BA8E28001F041C3000105C0E /* UIColor+Utility.swift in Sources */,
