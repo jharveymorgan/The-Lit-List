@@ -9,6 +9,44 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--My Lit List-->
+        <scene sceneID="iVH-WI-KHy">
+            <objects>
+                <viewController id="Lcl-Aj-7az" customClass="YourLitListViewController" customModule="The_Lit_List" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dLZ-rk-HOA"/>
+                        <viewControllerLayoutGuide type="bottom" id="Apa-yo-3zh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7ts-WM-jcV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0mg-p4-XIA">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Lcl-Aj-7az" id="LrP-lE-l4k"/>
+                                    <outlet property="delegate" destination="Lcl-Aj-7az" id="hBL-o2-PMQ"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0mg-p4-XIA" firstAttribute="leading" secondItem="7ts-WM-jcV" secondAttribute="leading" id="0b4-Qe-NGr"/>
+                            <constraint firstAttribute="trailing" secondItem="0mg-p4-XIA" secondAttribute="trailing" id="KLM-iO-zLd"/>
+                            <constraint firstItem="0mg-p4-XIA" firstAttribute="top" secondItem="7ts-WM-jcV" secondAttribute="top" id="cVM-DD-FTR"/>
+                            <constraint firstAttribute="bottom" secondItem="0mg-p4-XIA" secondAttribute="bottom" id="e9V-E1-uaN"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="My Lit List" id="2iH-Xj-oCC"/>
+                    <connections>
+                        <outlet property="tableView" destination="0mg-p4-XIA" id="1GL-oI-L0A"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fkr-Dv-rZG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="404" y="761"/>
+        </scene>
         <!--Second-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
@@ -47,25 +85,47 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="362" y="761"/>
+            <point key="canvasLocation" x="1300" y="760.56971514242889"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
                 <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                    <tabBar key="tabBar" clipsSubviews="YES" alpha="0.5" contentMode="scaleToFill" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
+                        <segue destination="SHR-cj-RDs" kind="relationship" relationship="viewControllers" id="iLK-pp-aYD"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+        <!--Main List-->
+        <scene sceneID="oz9-o8-fDh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SHR-cj-RDs" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Main List" id="PVT-er-qOw"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="JQq-Yf-bLE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Lcl-Aj-7az" kind="relationship" relationship="rootViewController" id="hJc-OK-9SZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tsh-n0-Tpb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-391.19999999999999" y="760.56971514242889"/>
         </scene>
     </scenes>
     <resources>

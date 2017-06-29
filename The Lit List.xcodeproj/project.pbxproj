@@ -14,6 +14,11 @@
 		BA4974751F03FE62004FE18B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA4974741F03FE62004FE18B /* LaunchScreen.storyboard */; };
 		BA4974771F03FE6A004FE18B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA4974761F03FE6A004FE18B /* Main.storyboard */; };
 		BA8E27F61F04060F00105C0E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8E27F51F04060F00105C0E /* Constants.swift */; };
+		BA8E27FA1F0410F700105C0E /* YourLitListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8E27F91F0410F700105C0E /* YourLitListViewController.swift */; };
+		BA8E27FD1F041BFA00105C0E /* ColorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8E27FC1F041BFA00105C0E /* ColorHelper.swift */; };
+		BA8E28001F041C3000105C0E /* UIColor+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8E27FF1F041C3000105C0E /* UIColor+Utility.swift */; };
+		BA8E28031F04239000105C0E /* LitLitItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8E28021F04239000105C0E /* LitLitItemCell.swift */; };
+		BA8E28071F042DD800105C0E /* LitListItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA8E28051F042DD800105C0E /* LitListItemCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +33,11 @@
 		BA4974741F03FE62004FE18B /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Storyboards/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BA4974761F03FE6A004FE18B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Storyboards/Main.storyboard; sourceTree = "<group>"; };
 		BA8E27F51F04060F00105C0E /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Supporting/Constants.swift; sourceTree = "<group>"; };
+		BA8E27F91F0410F700105C0E /* YourLitListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = YourLitListViewController.swift; path = Controllers/YourLitListViewController.swift; sourceTree = "<group>"; };
+		BA8E27FC1F041BFA00105C0E /* ColorHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColorHelper.swift; path = Helpers/ColorHelper.swift; sourceTree = "<group>"; };
+		BA8E27FF1F041C3000105C0E /* UIColor+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+Utility.swift"; path = "Extensions/UIColor+Utility.swift"; sourceTree = "<group>"; };
+		BA8E28021F04239000105C0E /* LitLitItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LitLitItemCell.swift; path = Views/LitLitItemCell.swift; sourceTree = "<group>"; };
+		BA8E28051F042DD800105C0E /* LitListItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LitListItemCell.xib; path = Views/LitListItemCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,7 +92,10 @@
 			children = (
 				BA4974571F03FD62004FE18B /* AppDelegate.swift */,
 				BA49746B1F03FE22004FE18B /* View Controllers */,
+				BA8E28011F04235700105C0E /* Views */,
 				BA4974711F03FE40004FE18B /* Storyboards */,
+				BA8E27FB1F041BC400105C0E /* Helper */,
+				BA8E27FE1F041C1600105C0E /* Extensions */,
 				BA4974701F03FE39004FE18B /* Supporting */,
 				BA4974601F03FD62004FE18B /* Assets.xcassets */,
 			);
@@ -93,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				BA49746D1F03FE32004FE18B /* SecondViewController.swift */,
+				BA8E27F91F0410F700105C0E /* YourLitListViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -111,8 +125,33 @@
 			isa = PBXGroup;
 			children = (
 				BA4974761F03FE6A004FE18B /* Main.storyboard */,
+				BA8E28051F042DD800105C0E /* LitListItemCell.xib */,
 			);
 			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		BA8E27FB1F041BC400105C0E /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				BA8E27FC1F041BFA00105C0E /* ColorHelper.swift */,
+			);
+			name = Helper;
+			sourceTree = "<group>";
+		};
+		BA8E27FE1F041C1600105C0E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BA8E27FF1F041C3000105C0E /* UIColor+Utility.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		BA8E28011F04235700105C0E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BA8E28021F04239000105C0E /* LitLitItemCell.swift */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,7 +189,7 @@
 				TargetAttributes = {
 					BA4974531F03FD62004FE18B = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = C9L43P9G27;
+						DevelopmentTeam = 856MTFRCV6;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -181,6 +220,7 @@
 				BA4974751F03FE62004FE18B /* LaunchScreen.storyboard in Resources */,
 				BA4974611F03FD62004FE18B /* Assets.xcassets in Resources */,
 				BA4974771F03FE6A004FE18B /* Main.storyboard in Resources */,
+				BA8E28071F042DD800105C0E /* LitListItemCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,7 +279,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA8E28031F04239000105C0E /* LitLitItemCell.swift in Sources */,
 				BA49746F1F03FE32004FE18B /* SecondViewController.swift in Sources */,
+				BA8E27FD1F041BFA00105C0E /* ColorHelper.swift in Sources */,
+				BA8E28001F041C3000105C0E /* UIColor+Utility.swift in Sources */,
+				BA8E27FA1F0410F700105C0E /* YourLitListViewController.swift in Sources */,
 				BA4974581F03FD62004FE18B /* AppDelegate.swift in Sources */,
 				BA8E27F61F04060F00105C0E /* Constants.swift in Sources */,
 			);
@@ -346,7 +390,7 @@
 			baseConfigurationReference = 54256F4762E52C2FE0D3B337 /* Pods-The Lit List.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = C9L43P9G27;
+				DEVELOPMENT_TEAM = 856MTFRCV6;
 				INFOPLIST_FILE = "$(SRCROOT)/The Lit List/Supporting/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jharveymorgan.The-Lit-List";
@@ -360,7 +404,7 @@
 			baseConfigurationReference = 66E0EDB4EB425508C3406D67 /* Pods-The Lit List.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = C9L43P9G27;
+				DEVELOPMENT_TEAM = 856MTFRCV6;
 				INFOPLIST_FILE = "$(SRCROOT)/The Lit List/Supporting/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jharveymorgan.The-Lit-List";

@@ -12,5 +12,6 @@ struct Constants {
     // Cells
     struct TableViewCell {
         static let listItemCell = "listItemCell"
+        static let litListContentCell = "litListContentCell"
     }
 }
