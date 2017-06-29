@@ -32,7 +32,7 @@ class ResultsViewController: UIViewController {
         
         // configure background and nav bar
         cancelButton.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "SourceSansPro-Bold", size: 18)!], for: .normal)
-        UIViewController.configureBackgroundColor(view: self.view)
+        UIViewController.configureBackgroundGradient(view: self.view)
         UINavigationController.configureNavBar(viewController: self)
     }
     

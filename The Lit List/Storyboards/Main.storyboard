@@ -66,7 +66,7 @@
             </objects>
             <point key="canvasLocation" x="249" y="1170"/>
         </scene>
-        <!--Search By View Controller-->
+        <!--Search-->
         <scene sceneID="2LI-Co-wpP">
             <objects>
                 <viewController id="qhe-oE-BzB" customClass="SearchByViewController" customModule="The_Lit_List" customModuleProvider="target" sceneMemberID="viewController">
@@ -179,9 +179,7 @@
                             <constraint firstItem="sgx-da-4f2" firstAttribute="centerX" secondItem="JTn-5g-sdk" secondAttribute="centerX" id="xxv-gV-81S"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="icons8-Search-50" id="E2r-Sf-nK9">
-                        <inset key="imageInsets" minX="-10" minY="8" maxX="10" maxY="-8"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="Search" image="icons8-Search-25" id="E2r-Sf-nK9"/>
                     <connections>
                         <segue destination="f3t-4I-gAo" kind="presentation" identifier="showResults" id="Q5K-fU-C4g"/>
                     </connections>
@@ -217,13 +215,11 @@
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--My Lit List-->
         <scene sceneID="lJ8-hM-prl">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="P8G-cP-Hpm" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="icons8-Book Shelf-50" id="q7B-At-cRC">
-                        <inset key="imageInsets" minX="0.0" minY="8" maxX="0.0" maxY="-8"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="My Lit List" image="icons8-Bookmark Ribbon-25" id="q7B-At-cRC"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Lb7-Zm-KVc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -243,7 +239,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="icons8-Book Shelf-50" width="50" height="50"/>
-        <image name="icons8-Search-50" width="50" height="50"/>
+        <image name="icons8-Bookmark Ribbon-25" width="25" height="25"/>
+        <image name="icons8-Search-25" width="25" height="25"/>
     </resources>
 </document>

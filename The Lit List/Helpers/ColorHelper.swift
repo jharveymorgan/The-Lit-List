@@ -11,7 +11,7 @@ import UIKit
 struct ColorHelper {
     let gradient: CAGradientLayer!
     
-    // gradient for main background
+    // gradient for main background gradient
     static func  backgroundGradient() -> CAGradientLayer {
         
         let colorTop = UIColor(red: 184/255.0, green: 217/255.0, blue: 255/255.0, alpha: 1).cgColor

@@ -9,10 +9,17 @@
 import UIKit
 
 extension UIViewController {
-    static func configureBackgroundColor(view: UIView) {
-        // background color
+    static func configureBackgroundGradient(view: UIView) {
         let backgroundLayer = ColorHelper.backgroundGradient()
         backgroundLayer.frame = view.frame
         view.layer.insertSublayer(backgroundLayer, at: 0)
+    }
+    
+    static func configureBackgroundHoki(view: UIView) {
+        view.backgroundColor = UIColor(red: 103/255, green: 128/255, blue: 159/255, alpha: 1)
+    }
+    
+    static func configureBackgroundWaxFlower(view: UIView) {
+        view.backgroundColor = UIColor(red: 241/255, green: 169/255, blue: 160/255, alpha: 1)
     }
 }

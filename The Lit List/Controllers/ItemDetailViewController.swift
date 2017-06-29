@@ -19,7 +19,7 @@ class ItemDetailViewController: UIViewController {
         
         // configure view
         doneButton.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "SourceSansPro-Bold", size: 19)!], for: .normal)
-        UIViewController.configureBackgroundColor(view: self.view)
+        UIViewController.configureBackgroundGradient(view: self.view)
         UINavigationController.configureNavBar(viewController: self)
         
     }

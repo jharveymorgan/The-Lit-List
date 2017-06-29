@@ -17,6 +17,8 @@ class ResultDetailViewController: UIViewController {
         super.viewDidLoad()
         
         self.navigationController?.navigationBar.tintColor = UIColor.black
+        UIViewController.configureBackgroundGradient(view: self.view)
+        UINavigationController.configureNavBar(viewController: self)
 
     }
     

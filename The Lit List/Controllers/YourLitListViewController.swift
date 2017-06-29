@@ -23,7 +23,7 @@ class YourLitListViewController: UIViewController {
         tableView.register(xib, forCellReuseIdentifier: Constants.TableViewCell.listItemCell)
         
         // configure main view
-        UIViewController.configureBackgroundColor(view: self.view)
+        UIViewController.configureBackgroundGradient(view: self.view)
         UINavigationController.configureNavBar(viewController: self)
     }
     

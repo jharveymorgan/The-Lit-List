@@ -15,7 +15,7 @@ class SearchByViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        UIViewController.configureBackgroundColor(view: self.view)
+        UIViewController.configureBackgroundGradient(view: self.view)
     }
     
     // MARK: - Function(s)
