@@ -12,6 +12,7 @@ extension UIStoryboard{
     enum LLType: String {
         case Main
         case ItemDetail
+        case SearchResult
         
         var filename: String {
             return rawValue

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="kZn-KZ-hlI">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--RESULTS-->
+        <scene sceneID="L8q-do-juf">
+            <objects>
+                <viewController id="Ir4-ot-AIm" customClass="ResultsViewController" customModule="The_Lit_List" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rp6-CW-iv1"/>
+                        <viewControllerLayoutGuide type="bottom" id="Cs9-ap-i64"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MWd-RQ-d5J">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pDI-Lh-r3K">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Ir4-ot-AIm" id="wHN-Pn-hxK"/>
+                                    <outlet property="delegate" destination="Ir4-ot-AIm" id="cC1-BZ-KXD"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pDI-Lh-r3K" firstAttribute="top" secondItem="MWd-RQ-d5J" secondAttribute="top" id="GlR-Qj-ufG"/>
+                            <constraint firstAttribute="trailing" secondItem="pDI-Lh-r3K" secondAttribute="trailing" id="Mce-cg-ovG"/>
+                            <constraint firstAttribute="bottom" secondItem="pDI-Lh-r3K" secondAttribute="bottom" id="gKE-CE-F28"/>
+                            <constraint firstItem="pDI-Lh-r3K" firstAttribute="leading" secondItem="MWd-RQ-d5J" secondAttribute="leading" id="rTQ-rJ-oR1"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="RESULTS" id="RUG-Kh-DxX">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="vDn-Sd-Ane">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="cancelButtonTapped:" destination="Ir4-ot-AIm" id="nRb-5u-4My"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="cancelButton" destination="vDn-Sd-Ane" id="ZlC-l2-kc4"/>
+                        <outlet property="tableView" destination="pDI-Lh-r3K" id="vwk-4L-sF2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eK1-Cc-s3z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1188" y="1553.9730134932536"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="qyt-ZU-h72">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kZn-KZ-hlI" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="bvu-qs-LZl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="SourceSansPro-Semibold" family="Source Sans Pro" pointSize="22"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Ir4-ot-AIm" kind="relationship" relationship="rootViewController" id="r08-cF-Chw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7cU-Ui-NJY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="248.80000000000001" y="1553.9730134932536"/>
+        </scene>
+    </scenes>
+</document>

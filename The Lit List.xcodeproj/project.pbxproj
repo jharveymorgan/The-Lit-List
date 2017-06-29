@@ -30,6 +30,8 @@
 		BA7779A11F056DF100128AA9 /* UIViewController+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7779A01F056DF100128AA9 /* UIViewController+Utility.swift */; };
 		BA7779A31F056F5200128AA9 /* UINavigationController+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7779A21F056F5200128AA9 /* UINavigationController+Utility.swift */; };
 		BA7779A51F0575B600128AA9 /* SearchByViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7779A41F0575B600128AA9 /* SearchByViewController.swift */; };
+		BA7779A71F057C9600128AA9 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7779A61F057C9600128AA9 /* ResultsViewController.swift */; };
+		BA7779AF1F05841000128AA9 /* SearchResult.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA7779AE1F05841000128AA9 /* SearchResult.storyboard */; };
 		BA8E27F61F04060F00105C0E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8E27F51F04060F00105C0E /* Constants.swift */; };
 		BA8E27FA1F0410F700105C0E /* YourLitListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8E27F91F0410F700105C0E /* YourLitListViewController.swift */; };
 		BA8E27FD1F041BFA00105C0E /* ColorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8E27FC1F041BFA00105C0E /* ColorHelper.swift */; };
@@ -66,6 +68,8 @@
 		BA7779A01F056DF100128AA9 /* UIViewController+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIViewController+Utility.swift"; path = "Extensions/UIViewController+Utility.swift"; sourceTree = "<group>"; };
 		BA7779A21F056F5200128AA9 /* UINavigationController+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UINavigationController+Utility.swift"; path = "Extensions/UINavigationController+Utility.swift"; sourceTree = "<group>"; };
 		BA7779A41F0575B600128AA9 /* SearchByViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchByViewController.swift; path = Controllers/SearchByViewController.swift; sourceTree = "<group>"; };
+		BA7779A61F057C9600128AA9 /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResultsViewController.swift; path = Controllers/ResultsViewController.swift; sourceTree = "<group>"; };
+		BA7779AE1F05841000128AA9 /* SearchResult.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = SearchResult.storyboard; path = Storyboards/SearchResult.storyboard; sourceTree = "<group>"; };
 		BA8E27F51F04060F00105C0E /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Supporting/Constants.swift; sourceTree = "<group>"; };
 		BA8E27F91F0410F700105C0E /* YourLitListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = YourLitListViewController.swift; path = Controllers/YourLitListViewController.swift; sourceTree = "<group>"; };
 		BA8E27FC1F041BFA00105C0E /* ColorHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColorHelper.swift; path = Helpers/ColorHelper.swift; sourceTree = "<group>"; };
@@ -143,6 +147,7 @@
 				BA8E27F91F0410F700105C0E /* YourLitListViewController.swift */,
 				BA77799A1F0549C600128AA9 /* ItemDetailViewController.swift */,
 				BA7779A41F0575B600128AA9 /* SearchByViewController.swift */,
+				BA7779A61F057C9600128AA9 /* ResultsViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -161,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				BA4974761F03FE6A004FE18B /* Main.storyboard */,
+				BA7779AE1F05841000128AA9 /* SearchResult.storyboard */,
 				BA77799C1F05518B00128AA9 /* ItemDetail.storyboard */,
 				BA8E28051F042DD800105C0E /* LitListItemCell.xib */,
 			);
@@ -289,6 +295,7 @@
 				BA4974751F03FE62004FE18B /* LaunchScreen.storyboard in Resources */,
 				BA7779951F05461A00128AA9 /* SourceSansPro-Light.otf in Resources */,
 				BA4974611F03FD62004FE18B /* Assets.xcassets in Resources */,
+				BA7779AF1F05841000128AA9 /* SearchResult.storyboard in Resources */,
 				BA4974771F03FE6A004FE18B /* Main.storyboard in Resources */,
 				BA77798E1F05461A00128AA9 /* SourceSansPro-Black.otf in Resources */,
 				BA7779931F05461A00128AA9 /* SourceSansPro-ExtraLightIt.otf in Resources */,
@@ -362,6 +369,7 @@
 				BA4974581F03FD62004FE18B /* AppDelegate.swift in Sources */,
 				BA8E27F61F04060F00105C0E /* Constants.swift in Sources */,
 				BA7779A11F056DF100128AA9 /* UIViewController+Utility.swift in Sources */,
+				BA7779A71F057C9600128AA9 /* ResultsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
