@@ -10,28 +10,34 @@ import UIKit
 
 class YourLitListViewController: UIViewController {
     // MARK: - Properties
-    let xib = UINib(nibName: "LitListItemCell", bundle: nil)
     @IBOutlet weak var tableView: UITableView!
+    
+    let xib = UINib(nibName: "LitListItemCell", bundle: nil)
     
     // MARK: - VC Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         // nib for the main list
         tableView.register(xib, forCellReuseIdentifier: Constants.TableViewCell.listItemCell)
         
-        // background color
-        let backgroundLayer = ColorHelper.backgroundGradient()
-        backgroundLayer.frame = view.frame
-        view.layer.insertSublayer(backgroundLayer, at: 0)
-        
-        // clear navigation bar
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.isTranslucent = true
-        self.navigationController?.view.backgroundColor = .clear
+        // configure main view
+        UIViewController.configureBackgroundColor(view: self.view)
+        UINavigationController.configureNavBar(viewController: self)
     }
-}
+    
+    // MARK: - Function(s)
+    
+    // MARK: - Segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == Constants.Segue.showItemDetail {
+            // show detail
+            let navController = segue.destination as! UINavigationController
+            let _ = navController.topViewController as! ItemDetailViewController
+        }
+    }
+}// end classs
 
 // MARK: - UITableViewDataSource
 extension YourLitListViewController: UITableViewDataSource {
@@ -52,5 +58,10 @@ extension YourLitListViewController: UITableViewDelegate {
     // height for each cell
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 120
+    }
+    
+    // show detail about each book
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: Constants.Segue.showItemDetail, sender: self)
     }
 }

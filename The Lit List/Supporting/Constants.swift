@@ -9,6 +9,11 @@
 import Foundation
 
 struct Constants {
+    // Segues
+    struct Segue {
+        static let showItemDetail = "showItemDetail"
+    }
+    
     // Cells
     struct TableViewCell {
         static let listItemCell = "listItemCell"

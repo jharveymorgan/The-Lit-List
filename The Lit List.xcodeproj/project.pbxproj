@@ -25,6 +25,11 @@
 		BA7779971F05461A00128AA9 /* SourceSansPro-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = BA77798B1F05461A00128AA9 /* SourceSansPro-Regular.otf */; };
 		BA7779981F05461A00128AA9 /* SourceSansPro-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = BA77798C1F05461A00128AA9 /* SourceSansPro-Semibold.otf */; };
 		BA7779991F05461A00128AA9 /* SourceSansPro-SemiboldIt.otf in Resources */ = {isa = PBXBuildFile; fileRef = BA77798D1F05461A00128AA9 /* SourceSansPro-SemiboldIt.otf */; };
+		BA77799B1F0549C600128AA9 /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA77799A1F0549C600128AA9 /* ItemDetailViewController.swift */; };
+		BA77799D1F05518B00128AA9 /* ItemDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA77799C1F05518B00128AA9 /* ItemDetail.storyboard */; };
+		BA77799F1F05521000128AA9 /* Storyboard+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA77799E1F05521000128AA9 /* Storyboard+Utility.swift */; };
+		BA7779A11F056DF100128AA9 /* UIViewController+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7779A01F056DF100128AA9 /* UIViewController+Utility.swift */; };
+		BA7779A31F056F5200128AA9 /* UINavigationController+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7779A21F056F5200128AA9 /* UINavigationController+Utility.swift */; };
 		BA8E27F61F04060F00105C0E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8E27F51F04060F00105C0E /* Constants.swift */; };
 		BA8E27FA1F0410F700105C0E /* YourLitListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8E27F91F0410F700105C0E /* YourLitListViewController.swift */; };
 		BA8E27FD1F041BFA00105C0E /* ColorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8E27FC1F041BFA00105C0E /* ColorHelper.swift */; };
@@ -56,6 +61,11 @@
 		BA77798B1F05461A00128AA9 /* SourceSansPro-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SourceSansPro-Regular.otf"; path = "Resources/source-sans-pro/SourceSansPro-Regular.otf"; sourceTree = "<group>"; };
 		BA77798C1F05461A00128AA9 /* SourceSansPro-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SourceSansPro-Semibold.otf"; path = "Resources/source-sans-pro/SourceSansPro-Semibold.otf"; sourceTree = "<group>"; };
 		BA77798D1F05461A00128AA9 /* SourceSansPro-SemiboldIt.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SourceSansPro-SemiboldIt.otf"; path = "Resources/source-sans-pro/SourceSansPro-SemiboldIt.otf"; sourceTree = "<group>"; };
+		BA77799A1F0549C600128AA9 /* ItemDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemDetailViewController.swift; path = Controllers/ItemDetailViewController.swift; sourceTree = "<group>"; };
+		BA77799C1F05518B00128AA9 /* ItemDetail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = ItemDetail.storyboard; path = Storyboards/ItemDetail.storyboard; sourceTree = "<group>"; };
+		BA77799E1F05521000128AA9 /* Storyboard+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Storyboard+Utility.swift"; path = "Extensions/Storyboard+Utility.swift"; sourceTree = "<group>"; };
+		BA7779A01F056DF100128AA9 /* UIViewController+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIViewController+Utility.swift"; path = "Extensions/UIViewController+Utility.swift"; sourceTree = "<group>"; };
+		BA7779A21F056F5200128AA9 /* UINavigationController+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UINavigationController+Utility.swift"; path = "Extensions/UINavigationController+Utility.swift"; sourceTree = "<group>"; };
 		BA8E27F51F04060F00105C0E /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Supporting/Constants.swift; sourceTree = "<group>"; };
 		BA8E27F91F0410F700105C0E /* YourLitListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = YourLitListViewController.swift; path = Controllers/YourLitListViewController.swift; sourceTree = "<group>"; };
 		BA8E27FC1F041BFA00105C0E /* ColorHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColorHelper.swift; path = Helpers/ColorHelper.swift; sourceTree = "<group>"; };
@@ -131,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				BA8E27F91F0410F700105C0E /* YourLitListViewController.swift */,
+				BA77799A1F0549C600128AA9 /* ItemDetailViewController.swift */,
 				BA49746D1F03FE32004FE18B /* SecondViewController.swift */,
 			);
 			name = "View Controllers";
@@ -139,9 +150,9 @@
 		BA4974701F03FE39004FE18B /* Supporting */ = {
 			isa = PBXGroup;
 			children = (
-				BA4974741F03FE62004FE18B /* LaunchScreen.storyboard */,
-				BA4974721F03FE52004FE18B /* Info.plist */,
 				BA8E27F51F04060F00105C0E /* Constants.swift */,
+				BA4974721F03FE52004FE18B /* Info.plist */,
+				BA4974741F03FE62004FE18B /* LaunchScreen.storyboard */,
 			);
 			name = Supporting;
 			sourceTree = "<group>";
@@ -150,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				BA4974761F03FE6A004FE18B /* Main.storyboard */,
+				BA77799C1F05518B00128AA9 /* ItemDetail.storyboard */,
 				BA8E28051F042DD800105C0E /* LitListItemCell.xib */,
 			);
 			name = Storyboards;
@@ -186,6 +198,9 @@
 			isa = PBXGroup;
 			children = (
 				BA8E27FF1F041C3000105C0E /* UIColor+Utility.swift */,
+				BA77799E1F05521000128AA9 /* Storyboard+Utility.swift */,
+				BA7779A01F056DF100128AA9 /* UIViewController+Utility.swift */,
+				BA7779A21F056F5200128AA9 /* UINavigationController+Utility.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -263,6 +278,7 @@
 			files = (
 				BA7779941F05461A00128AA9 /* SourceSansPro-It.otf in Resources */,
 				BA77798F1F05461A00128AA9 /* SourceSansPro-BlackIt.otf in Resources */,
+				BA77799D1F05518B00128AA9 /* ItemDetail.storyboard in Resources */,
 				BA7779911F05461A00128AA9 /* SourceSansPro-BoldIt.otf in Resources */,
 				BA7779991F05461A00128AA9 /* SourceSansPro-SemiboldIt.otf in Resources */,
 				BA7779921F05461A00128AA9 /* SourceSansPro-ExtraLight.otf in Resources */,
@@ -337,11 +353,15 @@
 			files = (
 				BA8E28031F04239000105C0E /* LitLitItemCell.swift in Sources */,
 				BA49746F1F03FE32004FE18B /* SecondViewController.swift in Sources */,
+				BA77799B1F0549C600128AA9 /* ItemDetailViewController.swift in Sources */,
 				BA8E27FD1F041BFA00105C0E /* ColorHelper.swift in Sources */,
+				BA7779A31F056F5200128AA9 /* UINavigationController+Utility.swift in Sources */,
 				BA8E28001F041C3000105C0E /* UIColor+Utility.swift in Sources */,
 				BA8E27FA1F0410F700105C0E /* YourLitListViewController.swift in Sources */,
+				BA77799F1F05521000128AA9 /* Storyboard+Utility.swift in Sources */,
 				BA4974581F03FD62004FE18B /* AppDelegate.swift in Sources */,
 				BA8E27F61F04060F00105C0E /* Constants.swift in Sources */,
+				BA7779A11F056DF100128AA9 /* UIViewController+Utility.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

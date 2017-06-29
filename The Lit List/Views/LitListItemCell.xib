@@ -34,7 +34,7 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="OGx-8p-RTy">
-                                <rect key="frame" x="89" y="39" width="267" height="58"/>
+                                <rect key="frame" x="89" y="38" width="267" height="58"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DUq-iz-9Fn">
                                         <rect key="frame" x="0.0" y="0.0" width="267" height="19"/>

@@ -41,11 +41,22 @@
                     <navigationItem key="navigationItem" title="My Lit List" id="2iH-Xj-oCC"/>
                     <connections>
                         <outlet property="tableView" destination="0mg-p4-XIA" id="1GL-oI-L0A"/>
+                        <segue destination="xj8-Kf-JiU" kind="popoverPresentation" identifier="showItemDetail" popoverAnchorView="0mg-p4-XIA" id="YPo-NL-peG">
+                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                        </segue>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fkr-Dv-rZG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="434" y="761"/>
+            <point key="canvasLocation" x="-309" y="1585"/>
+        </scene>
+        <!--ItemDetail-->
+        <scene sceneID="iKj-d8-dbZ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ItemDetail" id="xj8-Kf-JiU" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Rv-M8-LUd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-310" y="2086"/>
         </scene>
         <!--Second-->
         <scene sceneID="wg7-f3-ORb">
@@ -85,7 +96,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2239.1999999999998" y="760.56971514242889"/>
+            <point key="canvasLocation" x="458" y="761"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
