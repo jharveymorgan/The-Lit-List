@@ -181,6 +181,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Search" image="icons8-Search-25" id="E2r-Sf-nK9"/>
                     <connections>
+                        <outlet property="authorTextField" destination="l1W-Jj-4eS" id="uaH-KD-ntE"/>
+                        <outlet property="isbnTextField" destination="k6f-ZO-7I1" id="QP1-rh-lsH"/>
+                        <outlet property="titleTextField" destination="IGq-V5-SZw" id="BRj-zV-Bbn"/>
                         <segue destination="f3t-4I-gAo" kind="presentation" identifier="showResults" id="Q5K-fU-C4g"/>
                     </connections>
                 </viewController>

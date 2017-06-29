@@ -21,4 +21,10 @@ struct Constants {
         static let listItemCell = "listItemCell"
         static let litListContentCell = "litListContentCell"
     }
+    
+    // Errors
+    enum SearchError: Error {
+        case invalidSearchParameters
+        case NoSearchParameters
+    }
 }

@@ -19,6 +19,7 @@ class ResultsViewController: UIViewController {
     @IBOutlet weak var cancelButton: UIBarButtonItem!
     
     weak var delegate: ResultsViewControllerDelegate?
+    var searchParameter = ""
     
     // MARK: - Subviews
     @IBOutlet weak var tableView: UITableView!
@@ -26,6 +27,10 @@ class ResultsViewController: UIViewController {
     // MARK: - VC Lifecyle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        print(searchParameter)
+        
         
         // nib for the results list
         tableView.register(xib, forCellReuseIdentifier: Constants.TableViewCell.listItemCell)
