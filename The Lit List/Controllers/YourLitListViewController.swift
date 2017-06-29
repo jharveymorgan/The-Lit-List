@@ -60,7 +60,7 @@ extension YourLitListViewController: UITableViewDelegate {
         return 120
     }
     
-    // show detail about each book
+    // show detail about selected book
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: Constants.Segue.showItemDetail, sender: self)
     }

@@ -13,6 +13,7 @@ struct Constants {
     struct Segue {
         static let showItemDetail = "showItemDetail"
         static let showResults = "showResults"
+        static let showResultDetail = "showResultDetail"
     }
     
     // Cells

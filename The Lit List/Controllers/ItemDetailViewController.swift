@@ -24,11 +24,11 @@ class ItemDetailViewController: UIViewController {
         
     }
     
+    // MARK: - Function(s)
+    
     // MARK: - IBActions
     @IBAction func doneButtonTapped(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
-    
-    // MARK: - Function(s)
 
 }

@@ -32,6 +32,7 @@
 		BA7779A51F0575B600128AA9 /* SearchByViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7779A41F0575B600128AA9 /* SearchByViewController.swift */; };
 		BA7779A71F057C9600128AA9 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7779A61F057C9600128AA9 /* ResultsViewController.swift */; };
 		BA7779AF1F05841000128AA9 /* SearchResult.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA7779AE1F05841000128AA9 /* SearchResult.storyboard */; };
+		BA7779B11F05938400128AA9 /* ResultDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7779B01F05938400128AA9 /* ResultDetailViewController.swift */; };
 		BA8E27F61F04060F00105C0E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8E27F51F04060F00105C0E /* Constants.swift */; };
 		BA8E27FA1F0410F700105C0E /* YourLitListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8E27F91F0410F700105C0E /* YourLitListViewController.swift */; };
 		BA8E27FD1F041BFA00105C0E /* ColorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8E27FC1F041BFA00105C0E /* ColorHelper.swift */; };
@@ -70,6 +71,7 @@
 		BA7779A41F0575B600128AA9 /* SearchByViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchByViewController.swift; path = Controllers/SearchByViewController.swift; sourceTree = "<group>"; };
 		BA7779A61F057C9600128AA9 /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResultsViewController.swift; path = Controllers/ResultsViewController.swift; sourceTree = "<group>"; };
 		BA7779AE1F05841000128AA9 /* SearchResult.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = SearchResult.storyboard; path = Storyboards/SearchResult.storyboard; sourceTree = "<group>"; };
+		BA7779B01F05938400128AA9 /* ResultDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResultDetailViewController.swift; path = Controllers/ResultDetailViewController.swift; sourceTree = "<group>"; };
 		BA8E27F51F04060F00105C0E /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Supporting/Constants.swift; sourceTree = "<group>"; };
 		BA8E27F91F0410F700105C0E /* YourLitListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = YourLitListViewController.swift; path = Controllers/YourLitListViewController.swift; sourceTree = "<group>"; };
 		BA8E27FC1F041BFA00105C0E /* ColorHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColorHelper.swift; path = Helpers/ColorHelper.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 				BA77799A1F0549C600128AA9 /* ItemDetailViewController.swift */,
 				BA7779A41F0575B600128AA9 /* SearchByViewController.swift */,
 				BA7779A61F057C9600128AA9 /* ResultsViewController.swift */,
+				BA7779B01F05938400128AA9 /* ResultDetailViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -368,6 +371,7 @@
 				BA77799F1F05521000128AA9 /* Storyboard+Utility.swift in Sources */,
 				BA4974581F03FD62004FE18B /* AppDelegate.swift in Sources */,
 				BA8E27F61F04060F00105C0E /* Constants.swift in Sources */,
+				BA7779B11F05938400128AA9 /* ResultDetailViewController.swift in Sources */,
 				BA7779A11F056DF100128AA9 /* UIViewController+Utility.swift in Sources */,
 				BA7779A71F057C9600128AA9 /* ResultsViewController.swift in Sources */,
 			);
