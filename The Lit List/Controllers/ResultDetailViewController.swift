@@ -8,10 +8,12 @@
 
 import UIKit
 import CoreData
+import SwiftyJSON
 
 class ResultDetailViewController: UIViewController {
     // MARK: - Properties
-    var book = NSEntityDescription.insertNewObject(forEntityName: "Book", into: CoreDataHelper.managedContext) as! Book
+    var bookToDisplay = BookToDisplay()
+    var bookToSaveJSON = JSON("")
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var authorLabel: UILabel!
@@ -41,7 +43,8 @@ class ResultDetailViewController: UIViewController {
         self.descriptionView.layer.backgroundColor = UIColor.clear.cgColor
         
         // display book information
-        configureBookDetail(book: book)
+        configureBookDetail(book: bookToDisplay)
+        bookToSaveJSON = bookToDisplay.json
 
     }
     // make sure nav bar doesn't stay clear after view is dismissed
@@ -52,7 +55,7 @@ class ResultDetailViewController: UIViewController {
     
     // MARK: - Functions
     // display information
-    func configureBookDetail(book: Book) {
+    func configureBookDetail(book: BookToDisplay) {
         // format date
         if let releaseDate = book.correctDate {
             releaseDateLabel.text = timestampFormatter.string(from: releaseDate as Date)
@@ -62,19 +65,20 @@ class ResultDetailViewController: UIViewController {
         
         titleLabel.text = book.title
         authorLabel.text = book.author
-        descriptionView.text = book.bookDescription
+        descriptionView.text = book.description
         
         // cover image
-        if let coverLink = book.imageLink {
-            let coverURL = URL(string: coverLink)
-            coverImage.kf.setImage(with: coverURL)
-        }
+        let coverURL = URL(string: book.imageLink)
+        coverImage.kf.setImage(with: coverURL)
     }
     
     
     // MARK: IBActions
     @IBAction func addToListTapped(_ sender: Any) {
+        let bookToSave = CoreDataHelper.newBook(json: bookToSaveJSON)
+        CoreDataHelper.saveBook()
         print("add to list tapped")
+        //CoreDataHelper.saveBook(book: book)
     }
     
     // MARK: - Segue(s)

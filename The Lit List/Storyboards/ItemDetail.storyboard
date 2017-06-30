@@ -35,7 +35,7 @@
                                 </constraints>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cWY-fm-y5L">
-                                <rect key="frame" x="16" y="278.5" width="343" height="154.5"/>
+                                <rect key="frame" x="16" y="278.5" width="343" height="218.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="15"/>
@@ -64,8 +64,8 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="L1P-Jc-fBc">
-                                <rect key="frame" x="16" y="463" width="343" height="140"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="L1P-Jc-fBc">
+                                <rect key="frame" x="16" y="527" width="343" height="110"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xaN-5b-Tyw">
                                         <rect key="frame" x="104" y="0.0" width="135" height="45"/>
@@ -83,7 +83,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kwG-Md-yUo">
-                                        <rect key="frame" x="104" y="95" width="135" height="45"/>
+                                        <rect key="frame" x="104" y="65" width="135" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="ka7-Vh-mOH"/>
                                             <constraint firstAttribute="width" constant="135" id="yzx-P9-geH"/>
@@ -102,7 +102,7 @@
                             <constraint firstItem="L1P-Jc-fBc" firstAttribute="leading" secondItem="IaX-Os-3zb" secondAttribute="leadingMargin" id="C4n-2g-dUC"/>
                             <constraint firstItem="38L-xg-4jj" firstAttribute="top" secondItem="3Fg-pZ-jMi" secondAttribute="bottom" constant="8" id="FOg-4V-eEN"/>
                             <constraint firstItem="cWY-fm-y5L" firstAttribute="trailing" secondItem="IaX-Os-3zb" secondAttribute="trailingMargin" id="IyQ-bK-J7J"/>
-                            <constraint firstItem="rRf-F0-9Zx" firstAttribute="top" secondItem="L1P-Jc-fBc" secondAttribute="bottom" constant="64" id="JUg-dg-3ye"/>
+                            <constraint firstItem="rRf-F0-9Zx" firstAttribute="top" secondItem="L1P-Jc-fBc" secondAttribute="bottom" constant="30" id="JUg-dg-3ye"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Dyb-i1-ofZ" secondAttribute="trailing" id="Tue-x3-zM8"/>
                             <constraint firstItem="Dyb-i1-ofZ" firstAttribute="top" secondItem="3Fg-pZ-jMi" secondAttribute="bottom" constant="40" id="VJg-vL-pet"/>
                             <constraint firstItem="L1P-Jc-fBc" firstAttribute="centerX" secondItem="IaX-Os-3zb" secondAttribute="centerX" id="Xee-di-zUa"/>
@@ -126,7 +126,6 @@
                     <connections>
                         <outlet property="authorLabel" destination="VTM-CO-lER" id="v9S-qv-Yau"/>
                         <outlet property="buyBookButton" destination="kwG-Md-yUo" id="ql0-bI-Qwr"/>
-                        <outlet property="buyBookButtonTapped" destination="kwG-Md-yUo" id="U1Z-0E-VMC"/>
                         <outlet property="coverImage" destination="38L-xg-4jj" id="dQT-wa-Q29"/>
                         <outlet property="descriptionView" destination="cWY-fm-y5L" id="7E7-5q-kFL"/>
                         <outlet property="doneButton" destination="Zte-cI-rXC" id="5Z1-K0-1KR"/>

@@ -44,7 +44,7 @@ class ItemDetailViewController: UIViewController {
         self.descriptionView.layer.backgroundColor = UIColor.clear.cgColor
         
         // display book information
-        //configureBookDetail(book: book)
+        configureBookDetail(book: book)
         
     }
     
@@ -66,9 +66,10 @@ class ItemDetailViewController: UIViewController {
         
         titleLabel.text = book.title
         authorLabel.text = book.author
-        descriptionView.text = book.description
+        descriptionView.text = book.bookDescription
         
         // cover image
+        print(book.imageLink as Any)
         if let coverLink = book.imageLink {
             let coverURL = URL(string: coverLink)
             coverImage.kf.setImage(with: coverURL)

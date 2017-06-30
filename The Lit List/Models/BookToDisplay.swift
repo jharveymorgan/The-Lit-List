@@ -1,15 +1,15 @@
 //
-//  Book.swift
+//  bookToDisplay.swift
 //  The Lit List
 //
-//  Created by Jordan Harvey-Morgan on 6/29/17.
+//  Created by Jordan Harvey-Morgan on 6/30/17.
 //  Copyright © 2017 Jordan Harvey-Morgan. All rights reserved.
 //
 
 import Foundation
 import SwiftyJSON
 
-/*class Book {
+class BookToDisplay {
     var title: String
     var author: String
     var releaseDate: String
@@ -17,6 +17,7 @@ import SwiftyJSON
     var imageLink: String
     var isbn: String
     var description: String
+    var json: JSON
     
     // convert the dateto the correct format
     var correctDate: Date? {
@@ -62,7 +63,9 @@ import SwiftyJSON
         self.imageLink = json["volumeInfo"]["imageLinks"]["thumbnail"].stringValue
         self.isbn = json["volumeInfo"]["industryIdentifiers"][0]["identifier"].stringValue
         self.description = json["volumeInfo"]["description"].stringValue
-     }
+        
+        self.json = json
+    }
     
     init() {
         self.title = ""
@@ -72,5 +75,7 @@ import SwiftyJSON
         self.imageLink = ""
         self.isbn = ""
         self.description = ""
+        self.json = JSON("")
     }
-} */
+
+}

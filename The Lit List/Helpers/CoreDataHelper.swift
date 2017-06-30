@@ -15,6 +15,7 @@ class CoreDataHelper {
     static let persistentContainer = appDelegate.persistentContainer
     static let managedContext = persistentContainer.viewContext
     
+    // create a new book
     static func newBook(json: JSON) -> Book {
         let book = NSEntityDescription.insertNewObject(forEntityName: "Book", into: managedContext) as! Book
         
@@ -73,6 +74,24 @@ class CoreDataHelper {
         } catch let error as NSError {
             print("Could not save \(error)")
         }
+    }
+    
+    // delete
+    static func delete(book: Book) {
+        managedContext.delete(book)
+        saveBook()
+    }
+    
+    // get book
+    static func retrieveBooks() -> [Book] {
+        let fetchRequest = NSFetchRequest<Book>(entityName: "Book")
+        do {
+            let results = try managedContext.fetch(fetchRequest)
+            return results
+        } catch let error as NSError {
+            print("Could not fetch \(error)")
+        }
+        return []
     }
     
     
