@@ -22,6 +22,7 @@ class ResultsViewController: UIViewController {
     
     let xib = UINib(nibName: "LitListItemCell", bundle: nil)
     @IBOutlet weak var cancelButton: UIBarButtonItem!
+    var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
     
     // MARK: - Subviews
     @IBOutlet weak var tableView: UITableView!
@@ -35,11 +36,14 @@ class ResultsViewController: UIViewController {
         
         // configure background and nav bar
         cancelButton.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "SourceSansPro-Bold", size: 18)!], for: .normal)
-        UIViewController.configureBackgroundGradient(view: self.view)
-        UINavigationController.configureNavBar(viewController: self)
+        UIViewController.configureBackgroundGradient(view: self.view)      
         
         // results of search
         getBookResults()
+        
+        // start activity indicator
+        configureActivityIndicator()
+        activityIndicator.startAnimating()
         
     }
     
@@ -50,10 +54,23 @@ class ResultsViewController: UIViewController {
             
             for count in 0..<bookTotal {
                 let book = Book(json: response["items"][count])
-                self.bookResults.append(book)            }
+                self.bookResults.append(book)
+            }
+            
             // display results
             self.tableView.reloadData()
+            
+            // stop activity indicator after books are loaded
+            self.activityIndicator.stopAnimating()
         }
+    }
+    
+    // configure activity indicator
+    func configureActivityIndicator() {
+        self.activityIndicator.center = self.view.center
+        self.activityIndicator.hidesWhenStopped = true
+        self.activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
+        self.view.addSubview(activityIndicator)
     }
     
     // MARK: - IBActions

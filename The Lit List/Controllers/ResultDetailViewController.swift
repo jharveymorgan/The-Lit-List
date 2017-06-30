@@ -30,15 +30,23 @@ class ResultDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // configure view
+        // configure navigation bar and view's background
         self.navigationController?.navigationBar.tintColor = UIColor.black
-        self.descriptionView.layer.backgroundColor = UIColor.clear.cgColor
-        UIViewController.configureBackgroundGradient(view: self.view)
         UINavigationController.configureNavBar(viewController: self)
+        UIViewController.configureBackgroundGradient(view: self.view)
+        
+        // configure the description view so its clear and starts at the top
+        self.descriptionView.contentInset = UIEdgeInsetsMake(-2,-5,0,0)
+        self.descriptionView.layer.backgroundColor = UIColor.clear.cgColor
         
         // display book information
         configureBookDetail(book: book)
 
+    }
+    // make sure nav bar doesn't stay clear after view is dismissed
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.navigationBar.setBackgroundImage(nil, for: .default)
+        self.navigationController?.navigationBar.shadowImage = nil
     }
     
     // MARK: - Functions
@@ -61,5 +69,8 @@ class ResultDetailViewController: UIViewController {
     
     // MARK: IBActions
     
+    @IBAction func addToListTapped(_ sender: Any) {
+        print("add to list tapped")
+    }
 
 }

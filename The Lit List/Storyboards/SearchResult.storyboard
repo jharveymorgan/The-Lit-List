@@ -55,7 +55,7 @@
                     <connections>
                         <outlet property="cancelButton" destination="vDn-Sd-Ane" id="ZlC-l2-kc4"/>
                         <outlet property="tableView" destination="pDI-Lh-r3K" id="vwk-4L-sF2"/>
-                        <segue destination="nNH-bR-zpg" kind="show" identifier="showResultDetail" id="dk3-NC-e3C"/>
+                        <segue destination="nNH-bR-zpg" kind="show" identifier="showResultDetail" id="XsF-oe-9RK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eK1-Cc-s3z" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -125,6 +125,9 @@
                                         <state key="normal" title="ADD TO MY LIST">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="addToListTapped:" destination="nNH-bR-zpg" eventType="touchUpInside" id="Wpt-8g-Ijq"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -149,6 +152,7 @@
                         </constraints>
                     </view>
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="yIF-aH-z4B"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="authorLabel" destination="feg-Qw-gdU" id="9bO-PI-rDn"/>
@@ -160,7 +164,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gVy-92-SY1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2117.5999999999999" y="1553.9730134932536"/>
+            <point key="canvasLocation" x="2246" y="1554"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qyt-ZU-h72">

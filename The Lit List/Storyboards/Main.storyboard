@@ -26,11 +26,11 @@
                         <viewControllerLayoutGuide type="bottom" id="Apa-yo-3zh"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="7ts-WM-jcV">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0mg-p4-XIA">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="Lcl-Aj-7az" id="LrP-lE-l4k"/>
@@ -75,7 +75,7 @@
                         <viewControllerLayoutGuide type="bottom" id="jhn-KO-RX4"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="JTn-5g-sdk">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="sgx-da-4f2">
@@ -204,10 +204,10 @@
             <objects>
                 <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
-                    <tabBar key="tabBar" clipsSubviews="YES" alpha="0.5" contentMode="scaleToFill" id="W28-zg-YXA">
+                    <tabBar key="tabBar" clipsSubviews="YES" alpha="0.5" contentMode="scaleToFill" translucent="NO" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
                         <segue destination="P8G-cP-Hpm" kind="relationship" relationship="viewControllers" id="qIo-mw-1Ic"/>
@@ -224,7 +224,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="P8G-cP-Hpm" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="My Lit List" image="icons8-Bookmark Ribbon-25" id="q7B-At-cRC"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Lb7-Zm-KVc">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Lb7-Zm-KVc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">

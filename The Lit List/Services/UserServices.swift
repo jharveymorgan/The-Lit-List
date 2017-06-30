@@ -17,7 +17,7 @@ struct UserService {
         let apiToContact = "https://www.googleapis.com/books/v1/volumes"
         
         // initial parameters
-        let parameters: Parameters = ["q": userParameter, "printType": "books", "maxResults": "10", "key": HideAPIKey.apiKey]
+        let parameters: Parameters = ["q": userParameter, "printType": "books", "maxResults": "10", "key": Constants.APIKey.apiKey]
         
         // Alamofire request
         Alamofire.request(apiToContact, parameters: parameters).responseJSON() { (response) in

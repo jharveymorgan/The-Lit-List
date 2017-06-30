@@ -15,4 +15,9 @@ extension UINavigationController {
         viewController.navigationController?.navigationBar.isTranslucent = true
         viewController.navigationController?.view.backgroundColor = .clear
     }
+    
+    static func resetNavBar(viewController: UIViewController) {
+        viewController.navigationController?.navigationBar.isTranslucent = true
+        viewController.navigationController?.view.backgroundColor = .white
+    }
 }
