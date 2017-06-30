@@ -7,10 +7,11 @@
 //
 
 import UIKit
+import CoreData
 
 class ResultDetailViewController: UIViewController {
     // MARK: - Properties
-    var book = Book()
+    var book = NSEntityDescription.insertNewObject(forEntityName: "Book", into: CoreDataHelper.managedContext) as! Book
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var authorLabel: UILabel!
@@ -54,23 +55,27 @@ class ResultDetailViewController: UIViewController {
     func configureBookDetail(book: Book) {
         // format date
         if let releaseDate = book.correctDate {
-            releaseDateLabel.text = timestampFormatter.string(from: releaseDate)
+            releaseDateLabel.text = timestampFormatter.string(from: releaseDate as Date)
         } else {
             releaseDateLabel.text = "No Release Date Found"
         }
         
         titleLabel.text = book.title
         authorLabel.text = book.author
-        descriptionView.text = book.description
-        let coverURL = URL(string: book.imageLink)
-        coverImage.kf.setImage(with: coverURL)
+        descriptionView.text = book.bookDescription
+        
+        // cover image
+        if let coverLink = book.imageLink {
+            let coverURL = URL(string: coverLink)
+            coverImage.kf.setImage(with: coverURL)
+        }
     }
     
     
     // MARK: IBActions
-    
     @IBAction func addToListTapped(_ sender: Any) {
         print("add to list tapped")
     }
-
+    
+    // MARK: - Segue(s)
 }

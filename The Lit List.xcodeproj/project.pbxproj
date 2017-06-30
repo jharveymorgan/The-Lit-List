@@ -41,6 +41,8 @@
 		BA8E28001F041C3000105C0E /* UIColor+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8E27FF1F041C3000105C0E /* UIColor+Utility.swift */; };
 		BA8E28031F04239000105C0E /* LitLitItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8E28021F04239000105C0E /* LitLitItemCell.swift */; };
 		BA8E28071F042DD800105C0E /* LitListItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA8E28051F042DD800105C0E /* LitListItemCell.xib */; };
+		BAD4F53D1F06A61D00BAAFA0 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD4F53C1F06A61D00BAAFA0 /* CoreDataHelper.swift */; };
+		BAD4F5401F06A6BC00BAAFA0 /* The Lit List.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BAD4F53E1F06A6BC00BAAFA0 /* The Lit List.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +84,8 @@
 		BA8E27FF1F041C3000105C0E /* UIColor+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+Utility.swift"; path = "Extensions/UIColor+Utility.swift"; sourceTree = "<group>"; };
 		BA8E28021F04239000105C0E /* LitLitItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LitLitItemCell.swift; path = Views/LitLitItemCell.swift; sourceTree = "<group>"; };
 		BA8E28051F042DD800105C0E /* LitListItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LitListItemCell.xib; path = Views/LitListItemCell.xib; sourceTree = "<group>"; };
+		BAD4F53C1F06A61D00BAAFA0 /* CoreDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataHelper.swift; path = Helpers/CoreDataHelper.swift; sourceTree = "<group>"; };
+		BAD4F53F1F06A6BC00BAAFA0 /* The Lit List.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "The Lit List.xcdatamodel"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				BA247C041F05C33F003A5593 /* Book.swift */,
+				BAD4F53E1F06A6BC00BAAFA0 /* The Lit List.xcdatamodeld */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -221,6 +226,7 @@
 			isa = PBXGroup;
 			children = (
 				BA8E27FC1F041BFA00105C0E /* ColorHelper.swift */,
+				BAD4F53C1F06A61D00BAAFA0 /* CoreDataHelper.swift */,
 			);
 			name = Helper;
 			sourceTree = "<group>";
@@ -385,6 +391,7 @@
 			files = (
 				BA8E28031F04239000105C0E /* LitLitItemCell.swift in Sources */,
 				BA77799B1F0549C600128AA9 /* ItemDetailViewController.swift in Sources */,
+				BAD4F53D1F06A61D00BAAFA0 /* CoreDataHelper.swift in Sources */,
 				BA247C051F05C33F003A5593 /* Book.swift in Sources */,
 				BA7779A51F0575B600128AA9 /* SearchByViewController.swift in Sources */,
 				BA8E27FD1F041BFA00105C0E /* ColorHelper.swift in Sources */,
@@ -396,6 +403,7 @@
 				BA77799F1F05521000128AA9 /* Storyboard+Utility.swift in Sources */,
 				BA4974581F03FD62004FE18B /* AppDelegate.swift in Sources */,
 				BA7779B11F05938400128AA9 /* ResultDetailViewController.swift in Sources */,
+				BAD4F5401F06A6BC00BAAFA0 /* The Lit List.xcdatamodeld in Sources */,
 				BA7779A11F056DF100128AA9 /* UIViewController+Utility.swift in Sources */,
 				BA7779A71F057C9600128AA9 /* ResultsViewController.swift in Sources */,
 			);
@@ -547,6 +555,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BAD4F53E1F06A6BC00BAAFA0 /* The Lit List.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BAD4F53F1F06A6BC00BAAFA0 /* The Lit List.xcdatamodel */,
+			);
+			currentVersion = BAD4F53F1F06A6BC00BAAFA0 /* The Lit List.xcdatamodel */;
+			name = "The Lit List.xcdatamodeld";
+			path = "Models/The Lit List.xcdatamodeld";
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = BA49744C1F03FD62004FE18B /* Project object */;
 }

@@ -8,6 +8,7 @@
 
 import UIKit
 import Kingfisher
+import CoreData
 
 // MARK: - Protocol
 protocol ResultsViewControllerDelegate: class {
@@ -18,7 +19,8 @@ class ResultsViewController: UIViewController {
     // MARK: - Properties
     weak var delegate: ResultsViewControllerDelegate?
     var searchParameter = ""
-    var bookResults = [Book]()
+    //var bookResults = [Book]()
+    var bookResults = [NSEntityDescription.insertNewObject(forEntityName: "Book", into: CoreDataHelper.managedContext) as! Book]
     
     let xib = UINib(nibName: "LitListItemCell", bundle: nil)
     @IBOutlet weak var cancelButton: UIBarButtonItem!
@@ -53,8 +55,12 @@ class ResultsViewController: UIViewController {
             let bookTotal = response["items"].count
             
             for count in 0..<bookTotal {
-                let book = Book(json: response["items"][count])
-                self.bookResults.append(book)
+                if count == 0 {
+                    self.bookResults[count] = CoreDataHelper.newBook(json: response["items"][count])
+                } else  {
+                    let book = CoreDataHelper.newBook(json: response["items"][count])
+                    self.bookResults.append(book)
+                }
             }
             
             // display results
@@ -108,9 +114,11 @@ extension ResultsViewController: UITableViewDataSource {
         // handle multiple authors, if necessary
         cell.authorLabel.text = book.author
         
-        // display cover iamge
-        let coverURL = URL(string: book.imageLink)
-        cell.coverImage.kf.setImage(with: coverURL)
+        // display cover image
+        if let coverLink = book.imageLink {
+            let coverURL = URL(string: coverLink)
+            cell.coverImage.kf.setImage(with: coverURL)
+        }
         
         return cell
     }

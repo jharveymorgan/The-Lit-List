@@ -78,6 +78,9 @@
                                         <state key="normal" title="REMIND ME">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="remindMeButtonTapped:" destination="242-ZQ-LMS" eventType="touchUpInside" id="z9P-ed-NyS"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kwG-Md-yUo">
                                         <rect key="frame" x="104" y="95" width="135" height="45"/>
@@ -86,6 +89,9 @@
                                             <constraint firstAttribute="width" constant="135" id="yzx-P9-geH"/>
                                         </constraints>
                                         <state key="normal" image="Get_it_on_iBooks_Badge_US_1114"/>
+                                        <connections>
+                                            <action selector="buyBookButtonTapped:" destination="242-ZQ-LMS" eventType="touchUpInside" id="GO3-Ca-Rgg"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -118,7 +124,15 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="authorLabel" destination="VTM-CO-lER" id="v9S-qv-Yau"/>
+                        <outlet property="buyBookButton" destination="kwG-Md-yUo" id="ql0-bI-Qwr"/>
+                        <outlet property="buyBookButtonTapped" destination="kwG-Md-yUo" id="U1Z-0E-VMC"/>
+                        <outlet property="coverImage" destination="38L-xg-4jj" id="dQT-wa-Q29"/>
+                        <outlet property="descriptionView" destination="cWY-fm-y5L" id="7E7-5q-kFL"/>
                         <outlet property="doneButton" destination="Zte-cI-rXC" id="5Z1-K0-1KR"/>
+                        <outlet property="releaseDateLabel" destination="zrc-Mo-Dom" id="cQt-UI-exZ"/>
+                        <outlet property="remindMeButton" destination="xaN-5b-Tyw" id="8MX-s9-KfG"/>
+                        <outlet property="titleLabel" destination="VTB-5S-Oc8" id="olD-hO-WQA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ibz-gP-JaD" userLabel="First Responder" sceneMemberID="firstResponder"/>

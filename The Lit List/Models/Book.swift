@@ -9,7 +9,7 @@
 import Foundation
 import SwiftyJSON
 
-class Book {
+/*class Book {
     var title: String
     var author: String
     var releaseDate: String
@@ -73,4 +73,4 @@ class Book {
         self.isbn = ""
         self.description = ""
     }
-}
+} */
