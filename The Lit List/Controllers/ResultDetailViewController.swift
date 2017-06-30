@@ -75,7 +75,7 @@ class ResultDetailViewController: UIViewController {
     
     // MARK: IBActions
     @IBAction func addToListTapped(_ sender: Any) {
-        let bookToSave = CoreDataHelper.newBook(json: bookToSaveJSON)
+        let _ = CoreDataHelper.newBook(json: bookToSaveJSON)
         CoreDataHelper.saveBook()
         print("add to list tapped")
         //CoreDataHelper.saveBook(book: book)
