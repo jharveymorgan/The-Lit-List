@@ -69,7 +69,6 @@ class ItemDetailViewController: UIViewController {
         descriptionView.text = book.bookDescription
         
         // cover image
-        print(book.imageLink as Any)
         if let coverLink = book.imageLink {
             let coverURL = URL(string: coverLink)
             coverImage.kf.setImage(with: coverURL)

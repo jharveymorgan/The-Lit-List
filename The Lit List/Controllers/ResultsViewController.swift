@@ -8,7 +8,6 @@
 
 import UIKit
 import Kingfisher
-import CoreData
 
 // MARK: - Protocol
 protocol ResultsViewControllerDelegate: class {

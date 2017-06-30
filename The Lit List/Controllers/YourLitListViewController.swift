@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import CoreData
 
 class YourLitListViewController: UIViewController {
     // MARK: - Properties
@@ -26,7 +25,6 @@ class YourLitListViewController: UIViewController {
         
         // configure main view
         UIViewController.configureBackgroundGradient(view: self.view)
-        UINavigationController.configureNavBar(viewController: self)
     }
     
     // display current list of books
@@ -80,11 +78,7 @@ extension YourLitListViewController: UITableViewDataSource {
         if editingStyle == .delete {
             CoreDataHelper.delete(book: myLitList[indexPath.row])
             myLitList = CoreDataHelper.retrieveBooks()
-            
-            print(myLitList.count)
-            
             tableView.reloadData()
-            print("delete")
         }
     }
 }

@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import CoreData
 import SwiftyJSON
 
 class ResultDetailViewController: UIViewController {
@@ -74,12 +73,36 @@ class ResultDetailViewController: UIViewController {
     
     
     // MARK: IBActions
+    // TODO: Dismiss view after button is tapped
     @IBAction func addToListTapped(_ sender: Any) {
-        let _ = CoreDataHelper.newBook(json: bookToSaveJSON)
+        let bookToSave = CoreDataHelper.newBook(json: bookToSaveJSON)
         CoreDataHelper.saveBook()
+        
+        bookAddedToLitList(book: bookToSave)
         print("add to list tapped")
-        //CoreDataHelper.saveBook(book: book)
     }
     
     // MARK: - Segue(s)
+}
+
+// MARK: - AlertController
+extension ResultDetailViewController {
+    // alert to tell user to only search by one parameter
+    func bookAddedToLitList(book: Book) {
+        guard let bookTitle = book.title else {
+            return
+        }
+        let messageText = "\(String(describing: bookTitle)) has been added to your Lit List."
+        
+        // alert and action
+        let alert = UIAlertController(title: nil, message: messageText, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Okay", style: .default, handler: nil)
+        alert.addAction(okAction)
+        
+        // configure alert text
+        alert.setValue(NSAttributedString(string: messageText, attributes: [NSFontAttributeName: UIFont(name: "SourceSansPro-Bold", size: 18)!]), forKey: "attributedMessage")
+        
+        self.present(alert, animated: true)
+    }
+    
 }
