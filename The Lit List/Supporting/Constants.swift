@@ -28,8 +28,8 @@ struct Constants {
         case NoSearchParameters
     }
     
-    // Google Books API Key
-    struct GoogleApiKey {
-        static let apiKey = "AIzaSyALwNfdyBATnBcX3jNn-SW3hWL4OEuLifY"
+    // Affiliate LInk
+    struct iTunesAffiliate {
+        static let affiliateID = "1001lxxD"
     }
 }

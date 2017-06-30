@@ -10,6 +10,7 @@
 		0FD42AC30E1A6B5E178D6B8B /* Pods_The_Lit_List.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29F21216A15ADE8B16190E21 /* Pods_The_Lit_List.framework */; };
 		BA247C051F05C33F003A5593 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA247C041F05C33F003A5593 /* Book.swift */; };
 		BA247C081F05C3C6003A5593 /* UserServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA247C071F05C3C6003A5593 /* UserServices.swift */; };
+		BA247C0A1F05F7BC003A5593 /* HideAPIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA247C091F05F7BC003A5593 /* HideAPIKey.swift */; };
 		BA4974581F03FD62004FE18B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4974571F03FD62004FE18B /* AppDelegate.swift */; };
 		BA4974611F03FD62004FE18B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA4974601F03FD62004FE18B /* Assets.xcassets */; };
 		BA4974751F03FE62004FE18B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA4974741F03FE62004FE18B /* LaunchScreen.storyboard */; };
@@ -49,6 +50,7 @@
 		66E0EDB4EB425508C3406D67 /* Pods-The Lit List.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-The Lit List.release.xcconfig"; path = "Pods/Target Support Files/Pods-The Lit List/Pods-The Lit List.release.xcconfig"; sourceTree = "<group>"; };
 		BA247C041F05C33F003A5593 /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Book.swift; path = Models/Book.swift; sourceTree = "<group>"; };
 		BA247C071F05C3C6003A5593 /* UserServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserServices.swift; path = Services/UserServices.swift; sourceTree = "<group>"; };
+		BA247C091F05F7BC003A5593 /* HideAPIKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HideAPIKey.swift; path = Supporting/HideAPIKey.swift; sourceTree = "<group>"; };
 		BA4974541F03FD62004FE18B /* The Lit List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Lit List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA4974571F03FD62004FE18B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA4974601F03FD62004FE18B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 		BA4974701F03FE39004FE18B /* Supporting */ = {
 			isa = PBXGroup;
 			children = (
+				BA247C091F05F7BC003A5593 /* HideAPIKey.swift */,
 				BA8E27F51F04060F00105C0E /* Constants.swift */,
 				BA4974721F03FE52004FE18B /* Info.plist */,
 				BA4974741F03FE62004FE18B /* LaunchScreen.storyboard */,
@@ -391,6 +394,7 @@
 				BA7779A31F056F5200128AA9 /* UINavigationController+Utility.swift in Sources */,
 				BA8E28001F041C3000105C0E /* UIColor+Utility.swift in Sources */,
 				BA247C081F05C3C6003A5593 /* UserServices.swift in Sources */,
+				BA247C0A1F05F7BC003A5593 /* HideAPIKey.swift in Sources */,
 				BA8E27FA1F0410F700105C0E /* YourLitListViewController.swift in Sources */,
 				BA77799F1F05521000128AA9 /* Storyboard+Utility.swift in Sources */,
 				BA4974581F03FD62004FE18B /* AppDelegate.swift in Sources */,
