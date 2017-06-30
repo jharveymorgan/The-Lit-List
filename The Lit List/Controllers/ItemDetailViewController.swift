@@ -25,6 +25,11 @@ class ItemDetailViewController: UIViewController {
     }
     
     // MARK: - Function(s)
+    // construct the affiliate link
+    func createAffiliateLink(for bookISBN: String) -> String {
+        let affiliateLink = "https://geo.itunes.apple.com/us/book/isbn\(bookISBN)?mt=11&at=\(Constants.iTunesAffiliate.affiliateID)"
+        return affiliateLink
+    }
     
     // MARK: - IBActions
     @IBAction func doneButtonTapped(_ sender: Any) {

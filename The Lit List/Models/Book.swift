@@ -11,17 +11,22 @@ import SwiftyJSON
 
 class Book {
     var title: String
-    var author: [String]
+    var author: String
     var releaseDate: String
     var price: String
     var imageLink: String
     var isbn: String
+    var description: String
     
     // convert the dateto the correct format
-    var correctDate: Date {
+    var correctDate: Date? {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
-        let date = dateFormatter.date(from: releaseDate)!
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        
+        guard let date = dateFormatter.date(from: releaseDate) else {
+            self.releaseDate = "No Release Date Available"
+            return nil
+        }
         let calendar = Calendar.current
         let components = calendar.dateComponents([.year, .month, .day, .hour], from: date)
         let finalDate = calendar.date(from:components)
@@ -30,17 +35,24 @@ class Book {
     }
     
     
+    // TODO: failable initializer?
     init(json: JSON) {
         
         // check for multiple authors
-        let bookAuthors = json["items"][0]["volumeInfo"]["authors"]
-        self.author = [String]()
-        if bookAuthors.count > 1 {
-            for author in bookAuthors {
-                self.author.append(String(describing: author))
+        let authorsTotal = json["volumeInfo"]["authors"].count
+        let authors = json["volumeInfo"]["authors"]
+        
+        self.author = ""
+        if authorsTotal > 1 {
+            for count in 0..<authorsTotal {
+                if count == (authorsTotal - 1) {
+                    self.author.append(authors[count].stringValue)
+                } else {
+                    self.author.append(authors[count].stringValue + ", ")
+                }
             }
         } else {
-            self.author = [json["items"][0]["volumeInfo"]["authors"][0].stringValue]
+            self.author = json["volumeInfo"]["authors"][0].stringValue
         }
         
         
@@ -49,23 +61,16 @@ class Book {
         self.price = json["saleInfo"]["retailPrice"]["amount"].stringValue
         self.imageLink = json["volumeInfo"]["imageLinks"]["thumbnail"].stringValue
         self.isbn = json["volumeInfo"]["industryIdentifiers"][0]["identifier"].stringValue
+        self.description = json["volumeInfo"]["description"].stringValue
      }
-     
-     /*init(title: String, author: String, releaseDate: String, price: String, link: String, id: Int) {
-     self.title = title
-     self.author = author
-     self.releaseDate = releaseDate
-     self.price = price
-     self.link = link
-     self.id = id
-     } */
     
     init() {
         self.title = ""
-        self.author = [""]
+        self.author = ""
         self.releaseDate = ""
         self.price = ""
         self.imageLink = ""
-        self.isbn = "0"
+        self.isbn = ""
+        self.description = ""
     }
 }

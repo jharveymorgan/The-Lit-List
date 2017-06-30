@@ -40,6 +40,7 @@ class ResultsViewController: UIViewController {
         
         // results of search
         getBookResults()
+        
     }
     
     // MARK: - Function(s)
@@ -49,9 +50,7 @@ class ResultsViewController: UIViewController {
             
             for count in 0..<bookTotal {
                 let book = Book(json: response["items"][count])
-                self.bookResults.append(book)
-            }
-            
+                self.bookResults.append(book)            }
             // display results
             self.tableView.reloadData()
         }
@@ -63,6 +62,15 @@ class ResultsViewController: UIViewController {
     }
     
     // MARK: - Segue(s)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == Constants.Segue.showResultDetail {
+            let detailController = segue.destination as! ResultDetailViewController
+            
+            // get path and book for row that was tapped
+            let indexPath = tableView.indexPathForSelectedRow
+            detailController.book = bookResults[(indexPath?.row)!]
+        }
+    }
 }
 
 // MARK: - UITableViewDataSource
@@ -81,11 +89,7 @@ extension ResultsViewController: UITableViewDataSource {
         cell.titleLabel.text = book.title
         
         // handle multiple authors, if necessary
-        var authorText = ""
-        for count in 0..<book.author.count {
-            authorText.append(book.author[count] + " ")
-        }
-        cell.authorLabel.text = authorText
+        cell.authorLabel.text = book.author
         
         // display cover iamge
         let coverURL = URL(string: book.imageLink)
