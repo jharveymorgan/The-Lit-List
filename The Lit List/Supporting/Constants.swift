@@ -27,4 +27,9 @@ struct Constants {
         case invalidSearchParameters
         case NoSearchParameters
     }
+    
+    // Google Books API Key
+    struct GoogleApiKey {
+        static let apiKey = "AIzaSyALwNfdyBATnBcX3jNn-SW3hWL4OEuLifY"
+    }
 }

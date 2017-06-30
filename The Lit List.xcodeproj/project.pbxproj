@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0FD42AC30E1A6B5E178D6B8B /* Pods_The_Lit_List.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29F21216A15ADE8B16190E21 /* Pods_The_Lit_List.framework */; };
+		BA247C051F05C33F003A5593 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA247C041F05C33F003A5593 /* Book.swift */; };
+		BA247C081F05C3C6003A5593 /* UserServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA247C071F05C3C6003A5593 /* UserServices.swift */; };
 		BA4974581F03FD62004FE18B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4974571F03FD62004FE18B /* AppDelegate.swift */; };
 		BA4974611F03FD62004FE18B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA4974601F03FD62004FE18B /* Assets.xcassets */; };
 		BA4974751F03FE62004FE18B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA4974741F03FE62004FE18B /* LaunchScreen.storyboard */; };
@@ -45,6 +47,8 @@
 		29F21216A15ADE8B16190E21 /* Pods_The_Lit_List.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_The_Lit_List.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		54256F4762E52C2FE0D3B337 /* Pods-The Lit List.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-The Lit List.debug.xcconfig"; path = "Pods/Target Support Files/Pods-The Lit List/Pods-The Lit List.debug.xcconfig"; sourceTree = "<group>"; };
 		66E0EDB4EB425508C3406D67 /* Pods-The Lit List.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-The Lit List.release.xcconfig"; path = "Pods/Target Support Files/Pods-The Lit List/Pods-The Lit List.release.xcconfig"; sourceTree = "<group>"; };
+		BA247C041F05C33F003A5593 /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Book.swift; path = Models/Book.swift; sourceTree = "<group>"; };
+		BA247C071F05C3C6003A5593 /* UserServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserServices.swift; path = Services/UserServices.swift; sourceTree = "<group>"; };
 		BA4974541F03FD62004FE18B /* The Lit List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Lit List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA4974571F03FD62004FE18B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA4974601F03FD62004FE18B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -109,6 +113,22 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		BA247C031F05C313003A5593 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BA247C041F05C33F003A5593 /* Book.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		BA247C061F05C3A7003A5593 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				BA247C071F05C3C6003A5593 /* UserServices.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
 		BA49744B1F03FD62004FE18B = {
 			isa = PBXGroup;
 			children = (
@@ -131,8 +151,10 @@
 			isa = PBXGroup;
 			children = (
 				BA4974571F03FD62004FE18B /* AppDelegate.swift */,
+				BA247C061F05C3A7003A5593 /* Services */,
 				BA49746B1F03FE22004FE18B /* View Controllers */,
 				BA8E28011F04235700105C0E /* Views */,
+				BA247C031F05C313003A5593 /* Models */,
 				BA4974711F03FE40004FE18B /* Storyboards */,
 				BA8E27FB1F041BC400105C0E /* Helper */,
 				BA8E27FE1F041C1600105C0E /* Extensions */,
@@ -363,10 +385,12 @@
 			files = (
 				BA8E28031F04239000105C0E /* LitLitItemCell.swift in Sources */,
 				BA77799B1F0549C600128AA9 /* ItemDetailViewController.swift in Sources */,
+				BA247C051F05C33F003A5593 /* Book.swift in Sources */,
 				BA7779A51F0575B600128AA9 /* SearchByViewController.swift in Sources */,
 				BA8E27FD1F041BFA00105C0E /* ColorHelper.swift in Sources */,
 				BA7779A31F056F5200128AA9 /* UINavigationController+Utility.swift in Sources */,
 				BA8E28001F041C3000105C0E /* UIColor+Utility.swift in Sources */,
+				BA247C081F05C3C6003A5593 /* UserServices.swift in Sources */,
 				BA8E27FA1F0410F700105C0E /* YourLitListViewController.swift in Sources */,
 				BA77799F1F05521000128AA9 /* Storyboard+Utility.swift in Sources */,
 				BA4974581F03FD62004FE18B /* AppDelegate.swift in Sources */,
