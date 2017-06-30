@@ -32,4 +32,8 @@ struct Constants {
     struct iTunesAffiliate {
         static let affiliateID = "1001lxxD"
     }
+    
+    struct HideAPIKey {
+        static let apiKey = "AIzaSyALwNfdyBATnBcX3jNn-SW3hWL4OEuLifY"
+    }
 }
