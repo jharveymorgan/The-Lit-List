@@ -41,6 +41,7 @@ class ResultsViewController: UIViewController {
         // results of search
         getBookResults()
         
+        
         // start activity indicator
         configureActivityIndicator()
         activityIndicator.startAnimating()
@@ -49,7 +50,11 @@ class ResultsViewController: UIViewController {
     
     // MARK: - Function(s)
     func getBookResults() {
-        UserService.searchGoogleBookssearchiTunesAPI(by: searchParameter) { (response) in
+        
+        // so user can't tap cancel button mid-request. see if this fixes memory leak(s)
+        cancelButton.isEnabled = false
+        
+        UserService.searchGoogleBookssearchiTunesAPI(by: searchParameter) { [unowned self] (response) in
             let bookTotal = response["items"].count
             
             for count in 0..<bookTotal {
@@ -63,6 +68,9 @@ class ResultsViewController: UIViewController {
             // stop activity indicator after books are loaded
             self.activityIndicator.stopAnimating()
         }
+        
+        // enable button so user can leave after results have returned
+        cancelButton.isEnabled = true
     }
     
     // configure activity indicator

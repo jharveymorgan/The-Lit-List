@@ -7,11 +7,14 @@
 //
 
 import UIKit
+import EventKit
 
 class ItemDetailViewController: UIViewController {
 
     // MARK: - Properties
     var book = Book()
+    var eventStore: EKEventStore!
+    //var eventStore = EKEventStore()
     
     @IBOutlet weak var coverImage: UIImageView!
     @IBOutlet weak var descriptionView: UITextView!
@@ -81,10 +84,44 @@ class ItemDetailViewController: UIViewController {
     }
     
     @IBAction func remindMeButtonTapped(_ sender: Any) {
-        print("remind me button tapped")
+        // check for a book title
+        guard let bookTitle = book.title else {
+            print("Error getting book's title when trying to set a reminder")
+            return
+        }
+        
+        // check for reminder date
+        guard let reminderDateComponents = book.correctDate else {
+            print("Error getting book's correct date when trying to set a reminder")
+            noReleaseDate()
+            return
+        }
+        
+        // configure reminder
+        self.eventStore = EKEventStore()
+        let reminder = EKReminder(eventStore: self.eventStore)
+        reminder.title = "\(bookTitle) was released today!"
+        reminder.dueDateComponents = ReminderHelper.dateComponentFromNSDate(date: reminderDateComponents) as DateComponents
+        reminder.calendar = self.eventStore.defaultCalendarForNewReminders()
+        
+        // check for access to Reminders
+        ReminderHelper.checkReminderAuthorizationStatus(view: self, reminder: reminder, eventStore: self.eventStore)
+        
     }
 
     @IBAction func buyBookButtonTapped(_ sender: Any) {
         print("buy book button tapped")
+    }
+}
+
+
+extension ItemDetailViewController {
+    func noReleaseDate() {
+        let alert = UIAlertController(title: nil, message: "Unable to set a reminder because there is no release date available.", preferredStyle: .alert)
+        
+        let okAction = UIAlertAction(title: "Okay", style: .default, handler: nil)
+        alert.addAction(okAction)
+        
+        self.present(alert, animated: true)
     }
 }

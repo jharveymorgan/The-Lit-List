@@ -35,6 +35,7 @@
 		BA7779A71F057C9600128AA9 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7779A61F057C9600128AA9 /* ResultsViewController.swift */; };
 		BA7779AF1F05841000128AA9 /* SearchResult.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA7779AE1F05841000128AA9 /* SearchResult.storyboard */; };
 		BA7779B11F05938400128AA9 /* ResultDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7779B01F05938400128AA9 /* ResultDetailViewController.swift */; };
+		BA876F601F074451008425E1 /* ReminderHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA876F5F1F074451008425E1 /* ReminderHelper.swift */; };
 		BA8E27FA1F0410F700105C0E /* YourLitListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8E27F91F0410F700105C0E /* YourLitListViewController.swift */; };
 		BA8E27FD1F041BFA00105C0E /* ColorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8E27FC1F041BFA00105C0E /* ColorHelper.swift */; };
 		BA8E28001F041C3000105C0E /* UIColor+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8E27FF1F041C3000105C0E /* UIColor+Utility.swift */; };
@@ -78,6 +79,7 @@
 		BA7779A61F057C9600128AA9 /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResultsViewController.swift; path = Controllers/ResultsViewController.swift; sourceTree = "<group>"; };
 		BA7779AE1F05841000128AA9 /* SearchResult.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = SearchResult.storyboard; path = Storyboards/SearchResult.storyboard; sourceTree = "<group>"; };
 		BA7779B01F05938400128AA9 /* ResultDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResultDetailViewController.swift; path = Controllers/ResultDetailViewController.swift; sourceTree = "<group>"; };
+		BA876F5F1F074451008425E1 /* ReminderHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReminderHelper.swift; path = Helpers/ReminderHelper.swift; sourceTree = "<group>"; };
 		BA8E27F91F0410F700105C0E /* YourLitListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = YourLitListViewController.swift; path = Controllers/YourLitListViewController.swift; sourceTree = "<group>"; };
 		BA8E27FC1F041BFA00105C0E /* ColorHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColorHelper.swift; path = Helpers/ColorHelper.swift; sourceTree = "<group>"; };
 		BA8E27FF1F041C3000105C0E /* UIColor+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+Utility.swift"; path = "Extensions/UIColor+Utility.swift"; sourceTree = "<group>"; };
@@ -227,6 +229,7 @@
 			children = (
 				BA8E27FC1F041BFA00105C0E /* ColorHelper.swift */,
 				BAD4F53C1F06A61D00BAAFA0 /* CoreDataHelper.swift */,
+				BA876F5F1F074451008425E1 /* ReminderHelper.swift */,
 			);
 			name = Helper;
 			sourceTree = "<group>";
@@ -398,6 +401,7 @@
 				BA247C0C1F05FD09003A5593 /* Constants.swift in Sources */,
 				BA7779A31F056F5200128AA9 /* UINavigationController+Utility.swift in Sources */,
 				BA8E28001F041C3000105C0E /* UIColor+Utility.swift in Sources */,
+				BA876F601F074451008425E1 /* ReminderHelper.swift in Sources */,
 				BA247C081F05C3C6003A5593 /* UserServices.swift in Sources */,
 				BA8E27FA1F0410F700105C0E /* YourLitListViewController.swift in Sources */,
 				BA77799F1F05521000128AA9 /* Storyboard+Utility.swift in Sources */,
