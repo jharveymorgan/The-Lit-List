@@ -23,6 +23,8 @@ struct ReminderHelper {
             print("authorized")
             
             saveReminder(reminder: reminder, eventStore: eventStore)
+            reminderWasSaved(viewController: view)
+            
             print("reminder saved")
         
         case EKAuthorizationStatus.notDetermined:
@@ -33,6 +35,8 @@ struct ReminderHelper {
             requestAccessToReminders(eventStore: eventStore) { (access) in
                 if access == true {
                     saveReminder(reminder: reminder, eventStore: eventStore)
+                    reminderWasSaved(viewController: view)
+                    
                     print("reminder saved")
                 } else {
                     accessDeniedAlert(viewController: view)
@@ -82,7 +86,7 @@ struct ReminderHelper {
     
     // if adding the reminder was successful
     static func reminderWasSaved(viewController: UIViewController) {
-        let message = "You got it. We'll remind you when this title comes out"
+        let message = "You got it. We added a reminder for when this title comes out."
         let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
         
         // thanks
