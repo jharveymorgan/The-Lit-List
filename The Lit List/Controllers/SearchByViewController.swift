@@ -20,7 +20,7 @@ class SearchByViewController: UIViewController {
         
         self.titleTextField.delegate = self
         
-        UIViewController.configureBackgroundGradient(view: self.view)
+        UIViewController.configureBackgroundHoki(view: self.view)
     }
     
     // MARK: - Function(s)
@@ -130,7 +130,6 @@ extension SearchByViewController {
         
         self.present(alert, animated: true)
     }
-    
 }
 
 // MARK: - UITextFieldDelegate

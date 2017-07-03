@@ -39,7 +39,7 @@ class ItemDetailViewController: UIViewController {
         
         // configure view
         doneButton.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "SourceSansPro-Bold", size: 19)!], for: .normal)
-        UIViewController.configureBackgroundGradient(view: self.view)
+        UIViewController.configureBackgroundHoki(view: self.view)
         UINavigationController.configureNavBar(viewController: self)
         
         // configure the description view so it hasea clear background clear and starts at the top

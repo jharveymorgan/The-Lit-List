@@ -36,7 +36,11 @@ class ResultsViewController: UIViewController {
         
         // configure background and nav bar
         cancelButton.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "SourceSansPro-Bold", size: 18)!], for: .normal)
-        UIViewController.configureBackgroundGradient(view: self.view)      
+        UIViewController.configureBackgroundHoki(view: self.view)
+        
+        
+        // so user can't tap cancel button mid-request. see if this fixes memory leak(s)
+        cancelButton.isEnabled = false
         
         // results of search
         getBookResults()
@@ -52,7 +56,7 @@ class ResultsViewController: UIViewController {
     func getBookResults() {
         
         // so user can't tap cancel button mid-request. see if this fixes memory leak(s)
-        cancelButton.isEnabled = false
+        //cancelButton.isEnabled = false
         
         UserService.searchGoogleBookssearchiTunesAPI(by: searchParameter) { [unowned self] (response) in
             let bookTotal = response["items"].count

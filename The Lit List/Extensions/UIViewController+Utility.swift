@@ -22,4 +22,8 @@ extension UIViewController {
     static func configureBackgroundWaxFlower(view: UIView) {
         view.backgroundColor = UIColor(red: 241/255, green: 169/255, blue: 160/255, alpha: 1)
     }
+    
+    static func configureBackgroundLightGrey(view: UIView) {
+        view.backgroundColor = UIColor(red: 212/255, green: 212/255, blue: 212/255, alpha: 1)
+    }
 }
