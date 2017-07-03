@@ -66,21 +66,25 @@
                                 </constraints>
                             </stackView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cWY-fm-y5L">
-                                <rect key="frame" x="16" y="278" width="343" height="219"/>
+                                <rect key="frame" x="16" y="278" width="343" height="161"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="219" id="RZO-He-GY3"/>
+                                    <constraint firstAttribute="height" constant="161" id="RZO-He-GY3"/>
                                 </constraints>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="isp-DW-4DC">
-                                <rect key="frame" x="32" y="606" width="311" height="45"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="isp-DW-4DC">
+                                <rect key="frame" x="120" y="462" width="135" height="185"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xaN-5b-Tyw">
-                                        <rect key="frame" x="0.0" y="0.0" width="143" height="45"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="135" height="45"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="4Xp-0e-MfT"/>
+                                            <constraint firstAttribute="width" constant="135" id="e6j-cK-178"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="18"/>
                                         <state key="normal" title="REMIND ME">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -90,29 +94,37 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kwG-Md-yUo">
-                                        <rect key="frame" x="168" y="0.0" width="143" height="45"/>
+                                        <rect key="frame" x="0.0" y="70" width="135" height="45"/>
                                         <state key="normal" image="Get_it_on_iBooks_Badge_US_1114"/>
                                         <connections>
                                             <action selector="buyBookButtonTapped:" destination="242-ZQ-LMS" eventType="touchUpInside" id="GO3-Ca-Rgg"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iQ4-6R-YTW">
+                                        <rect key="frame" x="0.0" y="140" width="135" height="45"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="17"/>
+                                        <state key="normal" title="GOOGLE BOOKS"/>
+                                        <connections>
+                                            <action selector="buyBookButtonTapped:" destination="242-ZQ-LMS" eventType="touchUpInside" id="Eyp-rX-Sex"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="wRD-Sg-yPJ"/>
+                                    <constraint firstAttribute="width" constant="135" id="r3y-7c-n4t"/>
                                 </constraints>
                             </stackView>
                         </subviews>
                         <constraints>
                             <constraint firstItem="cWY-fm-y5L" firstAttribute="trailing" secondItem="IaX-Os-3zb" secondAttribute="trailingMargin" id="IyQ-bK-J7J"/>
+                            <constraint firstItem="isp-DW-4DC" firstAttribute="centerX" secondItem="IaX-Os-3zb" secondAttribute="centerX" id="JQU-jl-FdZ"/>
                             <constraint firstItem="KNW-4H-Uvf" firstAttribute="top" secondItem="3Fg-pZ-jMi" secondAttribute="bottom" constant="8" id="Kps-ft-vN2"/>
+                            <constraint firstItem="rRf-F0-9Zx" firstAttribute="top" secondItem="isp-DW-4DC" secondAttribute="bottom" constant="20" id="Yvx-PX-PMx"/>
                             <constraint firstItem="cWY-fm-y5L" firstAttribute="leading" secondItem="IaX-Os-3zb" secondAttribute="leadingMargin" id="Z4h-Bc-wgs"/>
                             <constraint firstItem="cWY-fm-y5L" firstAttribute="centerX" secondItem="IaX-Os-3zb" secondAttribute="centerX" id="dcy-Dq-u2z"/>
                             <constraint firstItem="cWY-fm-y5L" firstAttribute="top" secondItem="KNW-4H-Uvf" secondAttribute="bottom" constant="35" id="k4g-Eq-dXy"/>
-                            <constraint firstItem="isp-DW-4DC" firstAttribute="leading" secondItem="IaX-Os-3zb" secondAttribute="leadingMargin" constant="16" id="o9W-mg-ptf"/>
                             <constraint firstItem="KNW-4H-Uvf" firstAttribute="leading" secondItem="IaX-Os-3zb" secondAttribute="leadingMargin" id="s4C-zb-tWn"/>
                             <constraint firstAttribute="trailingMargin" secondItem="KNW-4H-Uvf" secondAttribute="trailing" id="uat-Un-pp8"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="isp-DW-4DC" secondAttribute="trailing" constant="16" id="uzb-G5-OOs"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="isp-DW-4DC" secondAttribute="bottom" constant="16" id="wfc-dV-k6w"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="9jo-YC-sVD">
@@ -136,7 +148,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ibz-gP-JaD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="809" y="2193"/>
+            <point key="canvasLocation" x="808.79999999999995" y="2192.6536731634183"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5hx-WF-6gS">

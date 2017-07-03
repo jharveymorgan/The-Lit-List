@@ -172,9 +172,18 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="poweredby" translatesAutoresizingMaskIntoConstraints="NO" id="mvh-TJ-KAP">
+                                <rect key="frame" x="157" y="575" width="60" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="2qd-ai-F6E"/>
+                                    <constraint firstAttribute="width" constant="60" id="ofC-Gk-hRE"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="mvh-TJ-KAP" firstAttribute="centerX" secondItem="JTn-5g-sdk" secondAttribute="centerX" id="MRy-qL-aD3"/>
+                            <constraint firstItem="jhn-KO-RX4" firstAttribute="top" secondItem="mvh-TJ-KAP" secondAttribute="bottom" constant="8" id="kKc-hD-PZc"/>
                             <constraint firstItem="sgx-da-4f2" firstAttribute="top" secondItem="662-ku-ZuV" secondAttribute="bottom" constant="49" id="ri8-Lb-Q7A"/>
                             <constraint firstItem="sgx-da-4f2" firstAttribute="centerX" secondItem="JTn-5g-sdk" secondAttribute="centerX" id="xxv-gV-81S"/>
                         </constraints>
@@ -224,7 +233,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="P8G-cP-Hpm" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="My Lit List" image="icons8-Bookmark Ribbon-25" id="q7B-At-cRC"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Lb7-Zm-KVc">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Lb7-Zm-KVc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
@@ -244,5 +253,6 @@
     <resources>
         <image name="icons8-Bookmark Ribbon-25" width="25" height="25"/>
         <image name="icons8-Search-25" width="25" height="25"/>
+        <image name="poweredby" width="62" height="30"/>
     </resources>
 </document>
