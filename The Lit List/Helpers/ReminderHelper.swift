@@ -13,7 +13,7 @@ import EventKit
 struct ReminderHelper {
     
     // check if user authorized access to their Reminders app
-    static func checkReminderAuthorizationStatus(view: UIViewController, reminder: EKReminder, eventStore: EKEventStore) {
+    static func checkReminderAuthorizationStatus(view: UIViewController, bookTitle: String,reminder: EKReminder, eventStore: EKEventStore) {
         let status = EKEventStore.authorizationStatus(for: EKEntityType.event)
 
         
@@ -23,7 +23,7 @@ struct ReminderHelper {
             print("authorized")
             
             saveReminder(reminder: reminder, eventStore: eventStore)
-            reminderWasSaved(viewController: view)
+            reminderWasSaved(viewController: view, bookTitle: bookTitle)
             
             print("reminder saved")
         
@@ -35,7 +35,7 @@ struct ReminderHelper {
             requestAccessToReminders(eventStore: eventStore) { (access) in
                 if access == true {
                     saveReminder(reminder: reminder, eventStore: eventStore)
-                    reminderWasSaved(viewController: view)
+                    reminderWasSaved(viewController: view, bookTitle: bookTitle)
                     
                     print("reminder saved")
                 } else {
@@ -85,8 +85,9 @@ struct ReminderHelper {
     }
     
     // if adding the reminder was successful
-    static func reminderWasSaved(viewController: UIViewController) {
-        let message = "You got it. We added a reminder for when this title comes out."
+    static func reminderWasSaved(viewController: UIViewController, bookTitle: String) {
+        
+        let message = "You got it. We added a reminder for when \(bookTitle) comes out."
         let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
         
         // thanks

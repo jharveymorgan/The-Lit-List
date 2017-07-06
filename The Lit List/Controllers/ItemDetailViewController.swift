@@ -14,7 +14,6 @@ class ItemDetailViewController: UIViewController {
     // MARK: - Properties
     var book = Book()
     var eventStore: EKEventStore!
-    //var eventStore = EKEventStore()
     
     @IBOutlet weak var coverImage: UIImageView!
     @IBOutlet weak var descriptionView: UITextView!
@@ -106,7 +105,7 @@ class ItemDetailViewController: UIViewController {
         reminder.calendar = self.eventStore.defaultCalendarForNewReminders()
         
         // check for access to Reminders
-        ReminderHelper.checkReminderAuthorizationStatus(view: self, reminder: reminder, eventStore: self.eventStore)
+        ReminderHelper.checkReminderAuthorizationStatus(view: self, bookTitle: bookTitle,reminder: reminder, eventStore: self.eventStore)
         
     }
 
@@ -138,7 +137,7 @@ class ItemDetailViewController: UIViewController {
     
 }
 
-
+// MARK: - AlertController
 extension ItemDetailViewController {
     func noReleaseDate() {
         let alert = UIAlertController(title: nil, message: "Unable to set a reminder because there is no release date available.", preferredStyle: .alert)
