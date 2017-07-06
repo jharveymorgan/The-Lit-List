@@ -35,7 +35,7 @@ class ResultDetailViewController: UIViewController {
         // configure navigation bar and view's background
         self.navigationController?.navigationBar.tintColor = UIColor.black
         UINavigationController.configureNavBar(viewController: self)
-        UIViewController.configureBackgroundHoki(view: self.view)
+        UIViewController.configureBackgroundAliceBlue(view: self.view)
         
         // configure the description view so its clear and starts at the top
         self.descriptionView.contentInset = UIEdgeInsetsMake(-2,-5,0,0)

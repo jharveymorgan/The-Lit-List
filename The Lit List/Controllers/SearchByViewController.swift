@@ -20,7 +20,7 @@ class SearchByViewController: UIViewController {
         
         self.titleTextField.delegate = self
         
-        UIViewController.configureBackgroundHoki(view: self.view)
+        UIViewController.configureBackgroundAliceBlue(view: self.view)
     }
     
     // MARK: - Function(s)

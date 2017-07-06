@@ -24,7 +24,7 @@ class YourLitListViewController: UIViewController {
         tableView.register(xib, forCellReuseIdentifier: Constants.TableViewCell.listItemCell)
         
         // configure main view
-        UIViewController.configureBackgroundHoki(view: self.view)
+        UIViewController.configureBackgroundAliceBlue(view: self.view)
     }
     
     // display current list of books

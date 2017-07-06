@@ -26,11 +26,11 @@
                         <viewControllerLayoutGuide type="bottom" id="Apa-yo-3zh"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="7ts-WM-jcV">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0mg-p4-XIA">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="Lcl-Aj-7az" id="LrP-lE-l4k"/>
@@ -46,7 +46,13 @@
                             <constraint firstAttribute="bottom" secondItem="0mg-p4-XIA" secondAttribute="bottom" id="e9V-E1-uaN"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="My Lit List" id="2iH-Xj-oCC"/>
+                    <navigationItem key="navigationItem" title="My Lit List" id="2iH-Xj-oCC">
+                        <barButtonItem key="rightBarButtonItem" image="icons8-Settings-25" id="k9W-x4-eZk">
+                            <connections>
+                                <segue destination="0wl-ZE-pJ6" kind="show" identifier="showSettings" id="6IV-jT-2kz"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="0mg-p4-XIA" id="1GL-oI-L0A"/>
                         <segue destination="xj8-Kf-JiU" kind="popoverPresentation" identifier="showItemDetail" popoverAnchorView="0mg-p4-XIA" id="YPo-NL-peG">
@@ -56,7 +62,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fkr-Dv-rZG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-570" y="1474"/>
+            <point key="canvasLocation" x="-570" y="1543"/>
         </scene>
         <!--SearchResult-->
         <scene sceneID="mOS-22-QpX">
@@ -66,7 +72,7 @@
             </objects>
             <point key="canvasLocation" x="249" y="1170"/>
         </scene>
-        <!--Search-->
+        <!--Search By View Controller-->
         <scene sceneID="2LI-Co-wpP">
             <objects>
                 <viewController id="qhe-oE-BzB" customClass="SearchByViewController" customModule="The_Lit_List" customModuleProvider="target" sceneMemberID="viewController">
@@ -75,7 +81,7 @@
                         <viewControllerLayoutGuide type="bottom" id="jhn-KO-RX4"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="JTn-5g-sdk">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="sgx-da-4f2">
@@ -188,7 +194,7 @@
                             <constraint firstItem="sgx-da-4f2" firstAttribute="centerX" secondItem="JTn-5g-sdk" secondAttribute="centerX" id="xxv-gV-81S"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Search" image="icons8-Search-25" id="E2r-Sf-nK9"/>
+                    <tabBarItem key="tabBarItem" systemItem="search" id="E2r-Sf-nK9"/>
                     <connections>
                         <outlet property="authorTextField" destination="l1W-Jj-4eS" id="uaH-KD-ntE"/>
                         <outlet property="isbnTextField" destination="k6f-ZO-7I1" id="QP1-rh-lsH"/>
@@ -206,17 +212,22 @@
                 <viewControllerPlaceholder storyboardName="ItemDetail" id="xj8-Kf-JiU" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Rv-M8-LUd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-571" y="1863"/>
+            <point key="canvasLocation" x="-570" y="1946"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
                 <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
-                    <tabBar key="tabBar" clipsSubviews="YES" alpha="0.5" contentMode="scaleToFill" translucent="NO" id="W28-zg-YXA">
+                    <tabBar key="tabBar" clipsSubviews="YES" alpha="0.5" contentMode="scaleToFill" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
                         <segue destination="P8G-cP-Hpm" kind="relationship" relationship="viewControllers" id="qIo-mw-1Ic"/>
@@ -231,11 +242,12 @@
         <scene sceneID="lJ8-hM-prl">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="P8G-cP-Hpm" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="My Lit List" image="icons8-Bookmark Ribbon-25" id="q7B-At-cRC"/>
+                    <tabBarItem key="tabBarItem" title="My Lit List" image="icons8-Bookmark Ribbon-25" selectedImage="icons8-Bookmark Ribbon Filled-25" id="q7B-At-cRC"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Lb7-Zm-KVc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="SourceSansPro-Semibold" family="Source Sans Pro" pointSize="23"/>
                         </textAttributes>
@@ -249,10 +261,19 @@
             </objects>
             <point key="canvasLocation" x="-569" y="780"/>
         </scene>
+        <!--Settings-->
+        <scene sceneID="odF-CI-sB5">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Settings" id="0wl-ZE-pJ6" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bzJ-J4-6NR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1" y="1542"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="icons8-Bookmark Ribbon Filled-25" width="25" height="25"/>
         <image name="icons8-Bookmark Ribbon-25" width="25" height="25"/>
-        <image name="icons8-Search-25" width="25" height="25"/>
+        <image name="icons8-Settings-25" width="25" height="25"/>
         <image name="poweredby" width="62" height="30"/>
     </resources>
 </document>

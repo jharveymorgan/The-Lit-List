@@ -15,15 +15,11 @@ extension UIViewController {
         view.layer.insertSublayer(backgroundLayer, at: 0)
     }
     
-    static func configureBackgroundHoki(view: UIView) {
-        view.backgroundColor = UIColor(red: 103/255, green: 128/255, blue: 159/255, alpha: 1)
-    }
-    
-    static func configureBackgroundWaxFlower(view: UIView) {
-        view.backgroundColor = UIColor(red: 241/255, green: 169/255, blue: 160/255, alpha: 1)
-    }
-    
     static func configureBackgroundLightGrey(view: UIView) {
         view.backgroundColor = UIColor(red: 212/255, green: 212/255, blue: 212/255, alpha: 1)
+    }
+    
+    static func configureBackgroundAliceBlue(view: UIView) {
+        view.backgroundColor = UIColor(red: 228/255, green: 241/255, blue: 254/255, alpha: 1)
     }
 }
