@@ -131,6 +131,13 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="poweredby" translatesAutoresizingMaskIntoConstraints="NO" id="VFH-gV-oo7">
+                                <rect key="frame" x="157" y="580" width="60" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="M9U-sP-agg"/>
+                                    <constraint firstAttribute="height" constant="35" id="q6T-Ck-E9h"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -141,6 +148,8 @@
                             <constraint firstItem="KeR-MC-cjc" firstAttribute="leading" secondItem="KdU-3z-B3g" secondAttribute="leadingMargin" id="F4A-Zd-vmS"/>
                             <constraint firstAttribute="trailingMargin" secondItem="KeR-MC-cjc" secondAttribute="trailing" id="NIL-4C-uY9"/>
                             <constraint firstItem="O4V-ax-8ah" firstAttribute="centerY" secondItem="aoL-Ty-vuu" secondAttribute="centerY" id="XT4-Yw-TAB"/>
+                            <constraint firstItem="xF1-d7-ozR" firstAttribute="top" secondItem="VFH-gV-oo7" secondAttribute="bottom" constant="8" id="cEs-dN-CL5"/>
+                            <constraint firstItem="VFH-gV-oo7" firstAttribute="centerX" secondItem="KdU-3z-B3g" secondAttribute="centerX" id="dJJ-Zd-Z7z"/>
                             <constraint firstItem="O4V-ax-8ah" firstAttribute="top" secondItem="GFK-bC-5kx" secondAttribute="bottom" constant="40" id="f6M-Or-RVs"/>
                             <constraint firstItem="7n0-1Q-X8Y" firstAttribute="top" secondItem="aoL-Ty-vuu" secondAttribute="bottom" constant="35" id="fGi-cN-1l4"/>
                             <constraint firstItem="7n0-1Q-X8Y" firstAttribute="trailing" secondItem="KdU-3z-B3g" secondAttribute="trailingMargin" id="gsq-ym-voC"/>
@@ -189,4 +198,7 @@
             <point key="canvasLocation" x="248.80000000000001" y="1553.9730134932536"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="poweredby" width="62" height="30"/>
+    </resources>
 </document>

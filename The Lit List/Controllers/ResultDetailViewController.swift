@@ -100,7 +100,7 @@ extension ResultDetailViewController {
         alert.addAction(okAction)
         
         // configure alert text
-        alert.setValue(NSAttributedString(string: messageText, attributes: [NSFontAttributeName: UIFont(name: "SourceSansPro-Bold", size: 18)!]), forKey: "attributedMessage")
+//        alert.setValue(NSAttributedString(string: messageText, attributes: [NSFontAttributeName: UIFont(name: "SourceSansPro-Bold", size: 18)!]), forKey: "attributedMessage")
         
         self.present(alert, animated: true)
     }

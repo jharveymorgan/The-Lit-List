@@ -77,9 +77,5 @@ class BookToDisplay {
         self.description = ""
         self.json = JSON("")
     }
-    
-    deinit {
-        print("book to display deallocated")
-    }
 
 }

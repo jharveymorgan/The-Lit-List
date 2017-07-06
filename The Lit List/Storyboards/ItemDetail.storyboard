@@ -66,11 +66,8 @@
                                 </constraints>
                             </stackView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cWY-fm-y5L">
-                                <rect key="frame" x="16" y="278" width="343" height="161"/>
+                                <rect key="frame" x="16" y="253" width="343" height="199"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="161" id="RZO-He-GY3"/>
-                                </constraints>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -106,7 +103,7 @@
                                         <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="17"/>
                                         <state key="normal" title="GOOGLE BOOKS"/>
                                         <connections>
-                                            <action selector="buyBookButtonTapped:" destination="242-ZQ-LMS" eventType="touchUpInside" id="Eyp-rX-Sex"/>
+                                            <action selector="googleBooksButtonTapped:" destination="242-ZQ-LMS" eventType="touchUpInside" id="fyq-qV-6CY"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -121,8 +118,9 @@
                             <constraint firstItem="KNW-4H-Uvf" firstAttribute="top" secondItem="3Fg-pZ-jMi" secondAttribute="bottom" constant="8" id="Kps-ft-vN2"/>
                             <constraint firstItem="rRf-F0-9Zx" firstAttribute="top" secondItem="isp-DW-4DC" secondAttribute="bottom" constant="20" id="Yvx-PX-PMx"/>
                             <constraint firstItem="cWY-fm-y5L" firstAttribute="leading" secondItem="IaX-Os-3zb" secondAttribute="leadingMargin" id="Z4h-Bc-wgs"/>
+                            <constraint firstItem="isp-DW-4DC" firstAttribute="top" secondItem="cWY-fm-y5L" secondAttribute="bottom" constant="10" id="ate-Lg-RTh"/>
                             <constraint firstItem="cWY-fm-y5L" firstAttribute="centerX" secondItem="IaX-Os-3zb" secondAttribute="centerX" id="dcy-Dq-u2z"/>
-                            <constraint firstItem="cWY-fm-y5L" firstAttribute="top" secondItem="KNW-4H-Uvf" secondAttribute="bottom" constant="35" id="k4g-Eq-dXy"/>
+                            <constraint firstItem="cWY-fm-y5L" firstAttribute="top" secondItem="KNW-4H-Uvf" secondAttribute="bottom" constant="10" id="k4g-Eq-dXy"/>
                             <constraint firstItem="KNW-4H-Uvf" firstAttribute="leading" secondItem="IaX-Os-3zb" secondAttribute="leadingMargin" id="s4C-zb-tWn"/>
                             <constraint firstAttribute="trailingMargin" secondItem="KNW-4H-Uvf" secondAttribute="trailing" id="uat-Un-pp8"/>
                         </constraints>
@@ -141,6 +139,7 @@
                         <outlet property="coverImage" destination="38L-xg-4jj" id="dQT-wa-Q29"/>
                         <outlet property="descriptionView" destination="cWY-fm-y5L" id="7E7-5q-kFL"/>
                         <outlet property="doneButton" destination="Zte-cI-rXC" id="5Z1-K0-1KR"/>
+                        <outlet property="googleBooksButton" destination="iQ4-6R-YTW" id="iuF-Co-WJW"/>
                         <outlet property="releaseDateLabel" destination="zrc-Mo-Dom" id="cQt-UI-exZ"/>
                         <outlet property="remindMeButton" destination="xaN-5b-Tyw" id="8MX-s9-KfG"/>
                         <outlet property="titleLabel" destination="VTB-5S-Oc8" id="olD-hO-WQA"/>

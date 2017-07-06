@@ -12,7 +12,7 @@ import SwiftyJSON
 
 struct UserService {
     
-    static func searchGoogleBookssearchiTunesAPI(by userParameter: String, completion: @escaping (JSON) -> Void) {
+    static func searchGoogleBooksAPI(by userParameter: String, completion: @escaping (JSON) -> Void) {
         // Google books api
         let apiToContact = "https://www.googleapis.com/books/v1/volumes"
         
@@ -30,10 +30,28 @@ struct UserService {
                     completion(json)
                 }
             case .failure(let error):
+                
+//                // request time out
+//                if error._code == NSURLErrorTimedOut {
+//                    //timeout here
+//                }
+                
+                
                 print(error)
                 return
             }
         }
     }
     
+    
+    // alert to tell user to only search by one parameter
+    static func requestTimeout(view: UIViewController) {
+        
+        // alert and action
+        let alert = UIAlertController(title: nil, message: "Request timed out. Please check internect connection and try again.", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Okay", style: .default, handler: nil)
+        alert.addAction(okAction)
+        
+        view.present(alert, animated: true)
+    }
 }

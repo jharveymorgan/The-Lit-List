@@ -24,6 +24,7 @@ class ItemDetailViewController: UIViewController {
     
     @IBOutlet weak var remindMeButton: UIButton!
     @IBOutlet weak var buyBookButton: UIButton!
+    @IBOutlet weak var googleBooksButton: UIButton!
     @IBOutlet weak var doneButton: UIBarButtonItem!
     
     let timestampFormatter: DateFormatter = {
@@ -109,9 +110,32 @@ class ItemDetailViewController: UIViewController {
         
     }
 
+    // buy in iBooks Store
     @IBAction func buyBookButtonTapped(_ sender: Any) {
-        print("buy book button tapped")
+        
+        // check for isbn
+        guard let bookISBN = book.isbn else {
+            print("Error getting book's isbn when trying to buy via iBooks")
+            return
+        }
+        // open in iBooks Store
+        let iBooksLink = createAffiliateLink(for: bookISBN)
+        UIApplication.shared.open(URL(string: iBooksLink)!, options: [:], completionHandler: nil)
     }
+    
+    // Google Books info page
+    @IBAction func googleBooksButtonTapped(_ sender: Any) {
+        
+        // check for google books link
+        guard let googleBooksLink = book.googleBooksLink else {
+            print("Error getting google book's link when trying to get information via Google Books")
+            return
+        }
+        
+        // open google books link
+        UIApplication.shared.open(URL(string: googleBooksLink)!, options: [:], completionHandler: nil)
+    }
+    
 }
 
 

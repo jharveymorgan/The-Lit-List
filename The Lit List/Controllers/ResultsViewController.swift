@@ -58,14 +58,15 @@ class ResultsViewController: UIViewController {
         // so user can't tap cancel button mid-request. see if this fixes memory leak(s)
         //cancelButton.isEnabled = false
         
-        UserService.searchGoogleBookssearchiTunesAPI(by: searchParameter) { [unowned self] (response) in
+        UserService.searchGoogleBooksAPI(by: searchParameter) { [unowned self] (response) in
+            
             let bookTotal = response["items"].count
             
             for count in 0..<bookTotal {
                 let book = BookToDisplay(json: response["items"][count])
                 self.bookResults.append(book)
             }
-            
+
             // display results
             self.tableView.reloadData()
             
@@ -88,6 +89,7 @@ class ResultsViewController: UIViewController {
     // MARK: - IBActions
     @IBAction func cancelButtonTapped(_ sender: Any) {
         delegate?.resultsViewControllerDidCancel(self)
+        self.bookResults = []
     }
     
     // MARK: - Segue(s)

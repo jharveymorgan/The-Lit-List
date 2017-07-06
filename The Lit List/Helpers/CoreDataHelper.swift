@@ -43,6 +43,7 @@ class CoreDataHelper {
         book.imageLink = json["volumeInfo"]["imageLinks"]["thumbnail"].stringValue
         book.isbn = json["volumeInfo"]["industryIdentifiers"][0]["identifier"].stringValue
         book.bookDescription = json["volumeInfo"]["description"].stringValue
+        book.googleBooksLink = json["volumeInfo"]["canonicalVolumeLink"].stringValue
         
         // correct date
         var correctDate: Date? {

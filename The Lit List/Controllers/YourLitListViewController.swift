@@ -74,6 +74,7 @@ extension YourLitListViewController: UITableViewDataSource {
         return cell
     }
     
+    // swipe to delete
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             CoreDataHelper.delete(book: myLitList[indexPath.row])
