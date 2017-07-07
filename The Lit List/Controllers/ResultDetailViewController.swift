@@ -79,7 +79,6 @@ class ResultDetailViewController: UIViewController {
         CoreDataHelper.saveBook()
         
         bookAddedToLitList(book: bookToSave)
-        print("add to list tapped")
     }
     
     // MARK: - Segue(s)

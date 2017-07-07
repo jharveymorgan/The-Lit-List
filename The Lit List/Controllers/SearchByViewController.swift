@@ -80,8 +80,6 @@ class SearchByViewController: UIViewController {
         let proceed = try? checkFields()
         if let _ = proceed {
             performSegue(withIdentifier: Constants.Segue.showResults, sender: self)
-        } else {
-            print("do not pass go")
         }
     }
     

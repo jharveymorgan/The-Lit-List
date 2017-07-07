@@ -66,14 +66,14 @@
                                 </constraints>
                             </stackView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cWY-fm-y5L">
-                                <rect key="frame" x="16" y="253" width="343" height="199"/>
+                                <rect key="frame" x="16" y="253" width="343" height="229"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="isp-DW-4DC">
-                                <rect key="frame" x="120" y="462" width="135" height="185"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="isp-DW-4DC">
+                                <rect key="frame" x="120" y="492" width="135" height="155"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xaN-5b-Tyw">
                                         <rect key="frame" x="0.0" y="0.0" width="135" height="45"/>
@@ -91,14 +91,14 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kwG-Md-yUo">
-                                        <rect key="frame" x="0.0" y="70" width="135" height="45"/>
+                                        <rect key="frame" x="0.0" y="55" width="135" height="45"/>
                                         <state key="normal" image="Get_it_on_iBooks_Badge_US_1114"/>
                                         <connections>
                                             <action selector="buyBookButtonTapped:" destination="242-ZQ-LMS" eventType="touchUpInside" id="GO3-Ca-Rgg"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iQ4-6R-YTW">
-                                        <rect key="frame" x="0.0" y="140" width="135" height="45"/>
+                                        <rect key="frame" x="0.0" y="110" width="135" height="45"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="17"/>
                                         <state key="normal" title="GOOGLE BOOKS"/>
@@ -154,7 +154,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hBu-P3-NqH" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="h21-3U-Vhg">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="h21-3U-Vhg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

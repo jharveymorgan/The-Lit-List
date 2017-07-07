@@ -14,18 +14,15 @@ struct ReminderHelper {
     
     // check if user authorized access to their Reminders app
     static func checkReminderAuthorizationStatus(view: UIViewController, bookTitle: String,reminder: EKReminder, eventStore: EKEventStore) {
-        let status = EKEventStore.authorizationStatus(for: EKEntityType.event)
-
+        let status = EKEventStore.authorizationStatus(for: EKEntityType.reminder)
         
         switch (status) {
         case EKAuthorizationStatus.authorized:
             // Things are in line with being able to show the calendars in the table view
             print("authorized")
             
-            saveReminder(reminder: reminder, eventStore: eventStore)
-            reminderWasSaved(viewController: view, bookTitle: bookTitle)
-            
-            print("reminder saved")
+            reminder.calendar = eventStore.defaultCalendarForNewReminders()
+            saveReminder(reminder: reminder, eventStore: eventStore, view: view, bookTitle: bookTitle)
         
         case EKAuthorizationStatus.notDetermined:
             // This happens on first-run
@@ -34,10 +31,8 @@ struct ReminderHelper {
             // save the reminder if the user is approving reminders for the first time
             requestAccessToReminders(eventStore: eventStore) { (access) in
                 if access == true {
-                    saveReminder(reminder: reminder, eventStore: eventStore)
-                    reminderWasSaved(viewController: view, bookTitle: bookTitle)
-                    
-                    print("reminder saved")
+                    reminder.calendar = eventStore.defaultCalendarForNewReminders()
+                    saveReminder(reminder: reminder, eventStore: eventStore, view: view, bookTitle: bookTitle)
                 } else {
                     accessDeniedAlert(viewController: view)
                 }
@@ -101,10 +96,11 @@ struct ReminderHelper {
     }
     
     // add a reminder
-    static func saveReminder(reminder: EKReminder, eventStore: EKEventStore) {
+    static func saveReminder(reminder: EKReminder, eventStore: EKEventStore, view: UIViewController, bookTitle: String) {
         do {
             try eventStore.save(reminder, commit: true)
-        }catch{
+            reminderWasSaved(viewController: view, bookTitle: bookTitle)
+        } catch {
             print("Error creating and saving new reminder: \(error)")
         }
     }

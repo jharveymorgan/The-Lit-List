@@ -102,7 +102,6 @@ class ItemDetailViewController: UIViewController {
         let reminder = EKReminder(eventStore: self.eventStore)
         reminder.title = "\(bookTitle) was released today!"
         reminder.dueDateComponents = ReminderHelper.dateComponentFromNSDate(date: reminderDateComponents) as DateComponents
-        reminder.calendar = self.eventStore.defaultCalendarForNewReminders()
         
         // check for access to Reminders
         ReminderHelper.checkReminderAuthorizationStatus(view: self, bookTitle: bookTitle,reminder: reminder, eventStore: self.eventStore)
