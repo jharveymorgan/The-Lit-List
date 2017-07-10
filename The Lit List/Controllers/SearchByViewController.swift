@@ -20,7 +20,11 @@ class SearchByViewController: UIViewController {
         
         self.titleTextField.delegate = self
         
+        // configure background
         UIViewController.configureBackgroundAliceBlue(view: self.view)
+        
+        // configure placeholder isbn text
+        //isbnTextField.attributedPlaceholder = NSAttributedString(string: "9780545582957", attributes: [NSForegroundColorAttributeName: UIColor.black])
     }
     
     // MARK: - Function(s)

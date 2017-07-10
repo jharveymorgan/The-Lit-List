@@ -36,7 +36,6 @@ struct UserService {
 //                    //timeout here
 //                }
                 
-                
                 print(error)
                 return
             }
