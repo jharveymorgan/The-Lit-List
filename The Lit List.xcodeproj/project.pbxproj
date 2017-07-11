@@ -11,6 +11,10 @@
 		BA10316A1F0E9B6B0024859A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1031691F0E9B6B0024859A /* SettingsViewController.swift */; };
 		BA247C081F05C3C6003A5593 /* UserServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA247C071F05C3C6003A5593 /* UserServices.swift */; };
 		BA247C0C1F05FD09003A5593 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA247C0B1F05FD09003A5593 /* Constants.swift */; };
+		BA2A3D3F1F151A760015C58C /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA2A3D3E1F151A760015C58C /* Onboarding.storyboard */; };
+		BA2A3D421F151A9F0015C58C /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2A3D401F151A9F0015C58C /* OnboardingCollectionViewCell.swift */; };
+		BA2A3D431F151A9F0015C58C /* OnboardingCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA2A3D411F151A9F0015C58C /* OnboardingCollectionViewCell.xib */; };
+		BA2A3D451F151AFA0015C58C /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2A3D441F151AFA0015C58C /* OnboardingViewController.swift */; };
 		BA4974581F03FD62004FE18B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4974571F03FD62004FE18B /* AppDelegate.swift */; };
 		BA4974611F03FD62004FE18B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA4974601F03FD62004FE18B /* Assets.xcassets */; };
 		BA4974751F03FE62004FE18B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA4974741F03FE62004FE18B /* LaunchScreen.storyboard */; };
@@ -55,6 +59,10 @@
 		BA1031691F0E9B6B0024859A /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsViewController.swift; path = Controllers/SettingsViewController.swift; sourceTree = "<group>"; };
 		BA247C071F05C3C6003A5593 /* UserServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserServices.swift; path = Services/UserServices.swift; sourceTree = "<group>"; };
 		BA247C0B1F05FD09003A5593 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = IgnoreFolder/Constants.swift; sourceTree = "<group>"; };
+		BA2A3D3E1F151A760015C58C /* Onboarding.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Onboarding.storyboard; path = Storyboards/Onboarding.storyboard; sourceTree = "<group>"; };
+		BA2A3D401F151A9F0015C58C /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OnboardingCollectionViewCell.swift; path = Views/OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
+		BA2A3D411F151A9F0015C58C /* OnboardingCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = OnboardingCollectionViewCell.xib; path = Views/OnboardingCollectionViewCell.xib; sourceTree = "<group>"; };
+		BA2A3D441F151AFA0015C58C /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OnboardingViewController.swift; path = Controllers/OnboardingViewController.swift; sourceTree = "<group>"; };
 		BA4974541F03FD62004FE18B /* The Lit List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Lit List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA4974571F03FD62004FE18B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA4974601F03FD62004FE18B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -185,6 +193,7 @@
 				BA7779A61F057C9600128AA9 /* ResultsViewController.swift */,
 				BA7779B01F05938400128AA9 /* ResultDetailViewController.swift */,
 				BA1031691F0E9B6B0024859A /* SettingsViewController.swift */,
+				BA2A3D441F151AFA0015C58C /* OnboardingViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -206,6 +215,8 @@
 				BA77799C1F05518B00128AA9 /* ItemDetail.storyboard */,
 				BA7779AE1F05841000128AA9 /* SearchResult.storyboard */,
 				BAB8DAD41F0EB29200B87B7E /* Settings.storyboard */,
+				BA2A3D3E1F151A760015C58C /* Onboarding.storyboard */,
+				BA2A3D411F151A9F0015C58C /* OnboardingCollectionViewCell.xib */,
 				BA8E28051F042DD800105C0E /* LitListItemCell.xib */,
 			);
 			name = Storyboards;
@@ -255,6 +266,7 @@
 			isa = PBXGroup;
 			children = (
 				BA8E28021F04239000105C0E /* LitLitItemCell.swift */,
+				BA2A3D401F151A9F0015C58C /* OnboardingCollectionViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -334,6 +346,8 @@
 				BA7779901F05461A00128AA9 /* SourceSansPro-Bold.otf in Resources */,
 				BA7779961F05461A00128AA9 /* SourceSansPro-LightIt.otf in Resources */,
 				BA7779971F05461A00128AA9 /* SourceSansPro-Regular.otf in Resources */,
+				BA2A3D431F151A9F0015C58C /* OnboardingCollectionViewCell.xib in Resources */,
+				BA2A3D3F1F151A760015C58C /* Onboarding.storyboard in Resources */,
 				BA4974751F03FE62004FE18B /* LaunchScreen.storyboard in Resources */,
 				BA7779951F05461A00128AA9 /* SourceSansPro-Light.otf in Resources */,
 				BA4974611F03FD62004FE18B /* Assets.xcassets in Resources */,
@@ -418,9 +432,11 @@
 				BAD4F5421F06D7EA00BAAFA0 /* BookToDisplay.swift in Sources */,
 				BAD4F53D1F06A61D00BAAFA0 /* CoreDataHelper.swift in Sources */,
 				BA7779A51F0575B600128AA9 /* SearchByViewController.swift in Sources */,
+				BA2A3D421F151A9F0015C58C /* OnboardingCollectionViewCell.swift in Sources */,
 				BA10316A1F0E9B6B0024859A /* SettingsViewController.swift in Sources */,
 				BA8E27FD1F041BFA00105C0E /* ColorHelper.swift in Sources */,
 				BA247C0C1F05FD09003A5593 /* Constants.swift in Sources */,
+				BA2A3D451F151AFA0015C58C /* OnboardingViewController.swift in Sources */,
 				BA7779A31F056F5200128AA9 /* UINavigationController+Utility.swift in Sources */,
 				BA8E28001F041C3000105C0E /* UIColor+Utility.swift in Sources */,
 				BA876F601F074451008425E1 /* ReminderHelper.swift in Sources */,

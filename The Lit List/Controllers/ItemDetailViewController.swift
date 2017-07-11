@@ -118,7 +118,22 @@ class ItemDetailViewController: UIViewController {
         }
         // open in iBooks Store
         let iBooksLink = createAffiliateLink(for: bookISBN)
+        
+//        // suport for ios9
+//        guard #available(iOS 10, *) else {
+//            UIApplication.shared.openURL(URL(string: iBooksLink)!)
+//            return
+//        }
+        
+        // open link normally if it is running ios 10
         UIApplication.shared.open(URL(string: iBooksLink)!, options: [:], completionHandler: nil)
+        
+//        // Add ios9 support for opening links, open ibooks link
+//        if #available(iOS 10.0, *) {
+//            UIApplication.shared.open(URL(string: iBooksLink)!, options: [:], completionHandler: nil)
+//        } else {
+//            // Fallback on earlier versions
+//        }
     }
     
     // Google Books info page
@@ -132,6 +147,7 @@ class ItemDetailViewController: UIViewController {
         
         // open google books link
         UIApplication.shared.open(URL(string: googleBooksLink)!, options: [:], completionHandler: nil)
+        
     }
     
 }

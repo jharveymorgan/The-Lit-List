@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Hle-Bk-v8n">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SourceSansPro-Regular.otf">
+            <string>SourceSansPro-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Onboarding View Controller-->
+        <scene sceneID="8JJ-U2-mvX">
+            <objects>
+                <viewController id="Hle-Bk-v8n" customClass="OnboardingViewController" customModule="The_Lit_List" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gUq-7E-2hi"/>
+                        <viewControllerLayoutGuide type="bottom" id="f0d-FP-He7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uxB-JT-rAh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="aC5-x7-Jcd">
+                                <rect key="frame" x="8" y="601" width="359" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0yU-z8-Ok8">
+                                        <rect key="frame" x="0.0" y="0.0" width="167" height="50"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="20"/>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Log In">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="loginButtonTapped:" destination="Hle-Bk-v8n" eventType="touchUpInside" id="cKa-6t-VQ9"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xXV-VM-aeZ">
+                                        <rect key="frame" x="192" y="0.0" width="167" height="50"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="20"/>
+                                        <state key="normal" title="Sign Up">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="signupButtonTapped:" destination="Hle-Bk-v8n" eventType="touchUpInside" id="uvS-bh-qbx"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="ltA-P6-u2Q"/>
+                                </constraints>
+                            </stackView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9J0-V9-UHG">
+                                <rect key="frame" x="0.0" y="28" width="375" height="558"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="yH8-al-rux">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Hle-Bk-v8n" id="YB8-tp-WLE"/>
+                                    <outlet property="delegate" destination="Hle-Bk-v8n" id="x3c-7G-HQ2"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.76862745098039209" green="0.80000000000000004" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="9J0-V9-UHG" firstAttribute="leading" secondItem="uxB-JT-rAh" secondAttribute="leading" id="5kv-Tz-saG"/>
+                            <constraint firstItem="aC5-x7-Jcd" firstAttribute="leading" secondItem="uxB-JT-rAh" secondAttribute="leading" constant="8" id="GYa-TQ-R8J"/>
+                            <constraint firstAttribute="trailing" secondItem="9J0-V9-UHG" secondAttribute="trailing" id="Imf-Zl-p4h"/>
+                            <constraint firstItem="aC5-x7-Jcd" firstAttribute="top" secondItem="9J0-V9-UHG" secondAttribute="bottom" constant="15" id="OCL-rg-sAJ"/>
+                            <constraint firstAttribute="trailing" secondItem="aC5-x7-Jcd" secondAttribute="trailing" constant="8" id="QVr-It-grX"/>
+                            <constraint firstItem="f0d-FP-He7" firstAttribute="top" secondItem="aC5-x7-Jcd" secondAttribute="bottom" constant="16" id="V6g-hc-ebe"/>
+                            <constraint firstItem="9J0-V9-UHG" firstAttribute="top" secondItem="gUq-7E-2hi" secondAttribute="bottom" constant="8" id="s4l-uW-j09"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="9J0-V9-UHG" id="ikt-5O-ILe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y4Q-L9-yck" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="44" y="124.58770614692655"/>
+        </scene>
+    </scenes>
+</document>

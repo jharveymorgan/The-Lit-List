@@ -26,6 +26,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Crashlytics
         Fabric.with([Crashlytics.self])
         
+        // show onboarding
+        let initialViewController = UIStoryboard.initialViewController(for: .Onboarding)
+        window?.rootViewController = initialViewController
+        window?.makeKeyAndVisible()
+        
         return true
     }
 
