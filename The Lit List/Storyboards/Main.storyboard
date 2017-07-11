@@ -237,7 +237,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="P8G-cP-Hpm" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="My Lit List" image="icons8-Bookmark Ribbon-25" selectedImage="icons8-Bookmark Ribbon Filled-25" id="q7B-At-cRC"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Lb7-Zm-KVc">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Lb7-Zm-KVc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
