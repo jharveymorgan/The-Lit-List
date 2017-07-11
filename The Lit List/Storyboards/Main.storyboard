@@ -9,9 +9,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="SourceSansPro-Regular.otf">
-            <string>SourceSansPro-Regular</string>
-        </array>
         <array key="SourceSansPro-Semibold.otf">
             <string>SourceSansPro-Semibold</string>
         </array>
@@ -164,16 +161,17 @@
                                             </stackView>
                                         </subviews>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X3R-0k-X8P">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X3R-0k-X8P">
                                         <rect key="frame" x="0.0" y="312" width="290" height="45.5"/>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45.5" id="9Tm-gV-9Qv"/>
                                             <constraint firstAttribute="width" constant="290" id="LSh-bg-2QG"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="25"/>
-                                        <state key="normal" title="SEARCH">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="SourceSansPro-Semibold" family="Source Sans Pro" pointSize="18"/>
+                                        <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="130" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="150" minY="12" maxX="0.0" maxY="5"/>
+                                        <state key="normal" title="SEARCH" image="poweredby">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
                                             <action selector="searchButtonTapped:" destination="qhe-oE-BzB" eventType="touchUpInside" id="JAn-MJ-xD4"/>
@@ -181,18 +179,9 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="poweredby" translatesAutoresizingMaskIntoConstraints="NO" id="mvh-TJ-KAP">
-                                <rect key="frame" x="157" y="575" width="60" height="35"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="2qd-ai-F6E"/>
-                                    <constraint firstAttribute="width" constant="60" id="ofC-Gk-hRE"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="mvh-TJ-KAP" firstAttribute="centerX" secondItem="JTn-5g-sdk" secondAttribute="centerX" id="MRy-qL-aD3"/>
-                            <constraint firstItem="jhn-KO-RX4" firstAttribute="top" secondItem="mvh-TJ-KAP" secondAttribute="bottom" constant="8" id="kKc-hD-PZc"/>
                             <constraint firstItem="sgx-da-4f2" firstAttribute="top" secondItem="662-ku-ZuV" secondAttribute="bottom" constant="49" id="ri8-Lb-Q7A"/>
                             <constraint firstItem="sgx-da-4f2" firstAttribute="centerX" secondItem="JTn-5g-sdk" secondAttribute="centerX" id="xxv-gV-81S"/>
                         </constraints>
@@ -201,6 +190,7 @@
                     <connections>
                         <outlet property="authorTextField" destination="l1W-Jj-4eS" id="uaH-KD-ntE"/>
                         <outlet property="isbnTextField" destination="k6f-ZO-7I1" id="QP1-rh-lsH"/>
+                        <outlet property="searchButton" destination="X3R-0k-X8P" id="dIt-rr-1JT"/>
                         <outlet property="titleTextField" destination="IGq-V5-SZw" id="BRj-zV-Bbn"/>
                         <segue destination="f3t-4I-gAo" kind="presentation" identifier="showResults" id="Q5K-fU-C4g"/>
                     </connections>

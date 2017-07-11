@@ -13,6 +13,7 @@ class SearchByViewController: UIViewController {
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var authorTextField: UITextField!
     @IBOutlet weak var isbnTextField: UITextField!
+    @IBOutlet weak var searchButton: UIButton!
     
     // MARK: - VC Lifecyle
     override func viewDidLoad() {
@@ -23,7 +24,16 @@ class SearchByViewController: UIViewController {
         // configure background
         UIViewController.configureBackgroundAliceBlue(view: self.view)
         
-        // configure placeholder isbn text
+        // configure text fields
+        titleTextField.layer.borderWidth = 2
+        authorTextField.layer.borderWidth = 2
+        isbnTextField.layer.borderWidth = 2
+        
+        // configure submit button
+        searchButton.layer.borderColor = UIColor.black.cgColor
+        searchButton.layer.borderWidth = 3
+        
+        // configure isbn textfield
         //isbnTextField.attributedPlaceholder = NSAttributedString(string: "9780545582957", attributes: [NSForegroundColorAttributeName: UIColor.black])
     }
     
