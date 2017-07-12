@@ -31,7 +31,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="8xF-ul-9UE">
-                                <rect key="frame" x="16" y="209" width="343" height="105"/>
+                                <rect key="frame" x="16" y="194" width="343" height="105"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="email" textAlignment="center" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="ZYr-z7-bSK">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="45"/>
@@ -105,7 +105,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="8xF-ul-9UE" firstAttribute="leading" secondItem="XNr-0M-08v" secondAttribute="leadingMargin" id="P0P-YE-0gg"/>
-                            <constraint firstItem="8xF-ul-9UE" firstAttribute="top" secondItem="pYq-QL-KSX" secondAttribute="bottom" constant="70" id="P8y-Iz-Cd2"/>
+                            <constraint firstItem="8xF-ul-9UE" firstAttribute="top" secondItem="pYq-QL-KSX" secondAttribute="bottom" constant="55" id="P8y-Iz-Cd2"/>
                             <constraint firstAttribute="trailingMargin" secondItem="8xF-ul-9UE" secondAttribute="trailing" id="X0n-rR-8Lf"/>
                             <constraint firstItem="bQe-Nd-vUN" firstAttribute="trailing" secondItem="XNr-0M-08v" secondAttribute="trailingMargin" id="ZBI-d4-aig"/>
                             <constraint firstItem="VCQ-8p-rEb" firstAttribute="centerX" secondItem="XNr-0M-08v" secondAttribute="centerX" id="a5e-rb-p31"/>
@@ -169,7 +169,7 @@
                                 </subviews>
                             </stackView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="email" textAlignment="center" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="Tcl-Uc-5Pj">
-                                <rect key="frame" x="16" y="262" width="343" height="45"/>
+                                <rect key="frame" x="16" y="247" width="343" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="lEw-0i-OFg"/>
                                 </constraints>
@@ -199,7 +199,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="Tcl-Uc-5Pj" secondAttribute="trailing" id="RuV-cp-vHh"/>
                             <constraint firstItem="6ET-3x-GpH" firstAttribute="leading" secondItem="ZNx-Bb-Pca" secondAttribute="leadingMargin" id="UZs-3m-Lfs"/>
                             <constraint firstItem="6ET-3x-GpH" firstAttribute="top" secondItem="wXj-Oi-aS7" secondAttribute="bottom" constant="35" id="Zre-zk-yjt"/>
-                            <constraint firstItem="Tcl-Uc-5Pj" firstAttribute="top" secondItem="6ET-3x-GpH" secondAttribute="bottom" constant="70" id="gHB-Qz-th8"/>
+                            <constraint firstItem="Tcl-Uc-5Pj" firstAttribute="top" secondItem="6ET-3x-GpH" secondAttribute="bottom" constant="55" id="gHB-Qz-th8"/>
                             <constraint firstItem="mbE-sT-tMK" firstAttribute="top" secondItem="Ohc-Q2-eaB" secondAttribute="bottom" constant="59" id="h1W-O3-iw1"/>
                             <constraint firstItem="Ohc-Q2-eaB" firstAttribute="leading" secondItem="ZNx-Bb-Pca" secondAttribute="leadingMargin" id="s5P-nv-D9S"/>
                         </constraints>

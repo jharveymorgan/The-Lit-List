@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="595-lC-2SA">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -52,10 +56,19 @@ Enter your information below to get started.</string>
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="aZF-C7-bCj">
-                                <rect key="frame" x="16" y="310" width="343" height="105"/>
+                                <rect key="frame" x="16" y="295" width="343" height="165"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="email" textAlignment="center" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="EbW-FR-Avo">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="full name" textAlignment="center" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="lJO-JH-9T5">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="xsc-Ye-KwJ"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="SourceSansPro-Semibold" family="Source Sans Pro" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="email" textAlignment="center" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="EbW-FR-Avo">
+                                        <rect key="frame" x="0.0" y="60" width="343" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="PON-KR-0mS"/>
                                         </constraints>
@@ -64,7 +77,7 @@ Enter your information below to get started.</string>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="password" textAlignment="center" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="GiI-ZQ-KZT">
-                                        <rect key="frame" x="0.0" y="60" width="343" height="45"/>
+                                        <rect key="frame" x="0.0" y="120" width="343" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="ekh-5F-f8n"/>
                                         </constraints>
@@ -91,7 +104,7 @@ Enter your information below to get started.</string>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="aZF-C7-bCj" firstAttribute="top" secondItem="0x5-os-Huj" secondAttribute="bottom" constant="70" id="4u6-13-p7Y"/>
+                            <constraint firstItem="aZF-C7-bCj" firstAttribute="top" secondItem="0x5-os-Huj" secondAttribute="bottom" constant="55" id="4u6-13-p7Y"/>
                             <constraint firstItem="0x5-os-Huj" firstAttribute="leading" secondItem="IeU-0P-ezS" secondAttribute="leadingMargin" id="A2H-Xj-c9k"/>
                             <constraint firstItem="aZF-C7-bCj" firstAttribute="leading" secondItem="IeU-0P-ezS" secondAttribute="leadingMargin" id="O8B-cZ-oAJ"/>
                             <constraint firstItem="Yle-iI-RDe" firstAttribute="leading" secondItem="IeU-0P-ezS" secondAttribute="leadingMargin" id="YcH-Te-BGy"/>
@@ -111,6 +124,7 @@ Enter your information below to get started.</string>
                     </navigationItem>
                     <connections>
                         <outlet property="emailTextField" destination="EbW-FR-Avo" id="07X-F4-bBd"/>
+                        <outlet property="fullNameTextField" destination="lJO-JH-9T5" id="2bh-B4-hUc"/>
                         <outlet property="passwordTextField" destination="GiI-ZQ-KZT" id="5UP-D2-cbI"/>
                     </connections>
                 </viewController>
@@ -123,8 +137,7 @@ Enter your information below to get started.</string>
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="595-lC-2SA" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4_7.fullscreen"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="l4B-Gm-jNa">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="l4B-Gm-jNa">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>

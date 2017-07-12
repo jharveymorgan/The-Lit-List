@@ -19,7 +19,10 @@ class SearchByViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // set textfield delegates
         self.titleTextField.delegate = self
+        self.authorTextField.delegate = self
+        self.isbnTextField.delegate = self
         
         // configure background
         UIViewController.configureBackgroundAliceBlue(view: self.view)
@@ -153,6 +156,7 @@ extension SearchByViewController: UITextFieldDelegate {
     
     // TODO: - return key tapped
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
         searchButtonTapped(self)
         return true
     }

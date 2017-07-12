@@ -32,6 +32,7 @@ class LoginViewController: UIViewController {
         
         // set textfield delegate
         self.emailTextField.delegate = self
+        self.passwordTextField.delegate = self
     }
     
     // MARK: - IBActions
@@ -71,5 +72,11 @@ extension LoginViewController: UITextFieldDelegate {
     // dismiss keyboard when user touches outside
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
+    }
+    
+    // if user uses return key
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 }

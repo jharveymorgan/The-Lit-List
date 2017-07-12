@@ -9,6 +9,9 @@
 import Foundation
 import Alamofire
 import SwiftyJSON
+import Firebase
+import FirebaseAuth
+import FirebaseDatabase
 
 struct UserService {
     
@@ -42,7 +45,12 @@ struct UserService {
         }
     }
     
+    // create a new user
     
+}// end struct
+
+// MARK: - UIAlertController
+extension UserService {
     // alert to tell user to only search by one parameter
     static func requestTimeout(view: UIViewController) {
         

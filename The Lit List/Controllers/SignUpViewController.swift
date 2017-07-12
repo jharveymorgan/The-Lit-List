@@ -11,6 +11,7 @@ import UIKit
 class SignUpViewController: UIViewController {
     
     // MARK: - Properties
+    @IBOutlet weak var fullNameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
@@ -31,8 +32,13 @@ class SignUpViewController: UIViewController {
         passwordTextField.configureBorder()
         passwordTextField.configurePlaceholderText(placeholderText: "PASSWORD")
         
-        // set textfield delegate
+        fullNameTextField.configureBorder()
+        fullNameTextField.configurePlaceholderText(placeholderText: "FULL NAME")
+        
+        // set textfield delegates
+        self.fullNameTextField.delegate = self
         self.emailTextField.delegate = self
+        self.passwordTextField.delegate = self
     }
 
     // MARK: IBActions
@@ -43,7 +49,7 @@ class SignUpViewController: UIViewController {
     @IBAction func submitButtonTapped(_ sender: Any) {
         
         // check for empty textfields
-        guard let email = emailTextField.text, !email.isEmpty, let password = passwordTextField.text, !password.isEmpty else {
+        guard let email = emailTextField.text, !email.isEmpty, let password = passwordTextField.text, !password.isEmpty, let fullName = fullNameTextField.text, !fullName.isEmpty else {
             needInformationAlert()
             return
         }
@@ -56,7 +62,7 @@ class SignUpViewController: UIViewController {
 // MARK: - UIAlertController
 extension SignUpViewController {
     func needInformationAlert() {
-        let alert = UIAlertController(title: nil, message: "Please enter an email AND password to create your account.", preferredStyle: .alert)
+        let alert = UIAlertController(title: nil, message: "Please enter all information to create your account.", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "Okay", style: .default, handler: nil)
         alert.addAction(okAction)
         
@@ -69,5 +75,11 @@ extension SignUpViewController: UITextFieldDelegate {
     // dismiss keyboard when user touches outside
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
+    }
+    
+    // if user uses return key
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 }
