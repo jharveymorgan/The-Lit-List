@@ -54,6 +54,8 @@
 		BAD4F5421F06D7EA00BAAFA0 /* BookToDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD4F5411F06D7EA00BAAFA0 /* BookToDisplay.swift */; };
 		BAFFB5FB1F16714F0019FB2B /* UITextField+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFFB5FA1F16714F0019FB2B /* UITextField+Utility.swift */; };
 		BAFFB5FD1F167C910019FB2B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFFB5FC1F167C910019FB2B /* LoginViewController.swift */; };
+		BAFFB5FF1F168C780019FB2B /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFFB5FE1F168C780019FB2B /* ForgotPasswordViewController.swift */; };
+		BAFFB6011F169AC30019FB2B /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAFFB6001F169AC30019FB2B /* Login.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -108,6 +110,8 @@
 		BAD4F5411F06D7EA00BAAFA0 /* BookToDisplay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BookToDisplay.swift; path = Models/BookToDisplay.swift; sourceTree = "<group>"; };
 		BAFFB5FA1F16714F0019FB2B /* UITextField+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UITextField+Utility.swift"; path = "Extensions/UITextField+Utility.swift"; sourceTree = "<group>"; };
 		BAFFB5FC1F167C910019FB2B /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Controllers/LoginViewController.swift; sourceTree = "<group>"; };
+		BAFFB5FE1F168C780019FB2B /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ForgotPasswordViewController.swift; path = Controllers/ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		BAFFB6001F169AC30019FB2B /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Login.storyboard; path = Storyboards/Login.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,6 +208,7 @@
 				BA2A3D441F151AFA0015C58C /* OnboardingViewController.swift */,
 				BA1C591A1F1660CF00A3E099 /* SignUpViewController.swift */,
 				BAFFB5FC1F167C910019FB2B /* LoginViewController.swift */,
+				BAFFB5FE1F168C780019FB2B /* ForgotPasswordViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -227,6 +232,7 @@
 				BA7779AE1F05841000128AA9 /* SearchResult.storyboard */,
 				BAB8DAD41F0EB29200B87B7E /* Settings.storyboard */,
 				BA2A3D3E1F151A760015C58C /* Onboarding.storyboard */,
+				BAFFB6001F169AC30019FB2B /* Login.storyboard */,
 				BA2A3D411F151A9F0015C58C /* OnboardingCollectionViewCell.xib */,
 				BA8E28051F042DD800105C0E /* LitListItemCell.xib */,
 			);
@@ -368,6 +374,7 @@
 				BA77798E1F05461A00128AA9 /* SourceSansPro-Black.otf in Resources */,
 				BA1C59191F165ECA00A3E099 /* GoogleService-Info.plist in Resources */,
 				BA7779931F05461A00128AA9 /* SourceSansPro-ExtraLightIt.otf in Resources */,
+				BAFFB6011F169AC30019FB2B /* Login.storyboard in Resources */,
 				BA8E28071F042DD800105C0E /* LitListItemCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -451,6 +458,7 @@
 				BA8E27FD1F041BFA00105C0E /* ColorHelper.swift in Sources */,
 				BA247C0C1F05FD09003A5593 /* Constants.swift in Sources */,
 				BA2A3D451F151AFA0015C58C /* OnboardingViewController.swift in Sources */,
+				BAFFB5FF1F168C780019FB2B /* ForgotPasswordViewController.swift in Sources */,
 				BAFFB5FB1F16714F0019FB2B /* UITextField+Utility.swift in Sources */,
 				BAFFB5FD1F167C910019FB2B /* LoginViewController.swift in Sources */,
 				BA7779A31F056F5200128AA9 /* UINavigationController+Utility.swift in Sources */,
