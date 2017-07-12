@@ -56,6 +56,7 @@
 		BAFFB5FD1F167C910019FB2B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFFB5FC1F167C910019FB2B /* LoginViewController.swift */; };
 		BAFFB5FF1F168C780019FB2B /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFFB5FE1F168C780019FB2B /* ForgotPasswordViewController.swift */; };
 		BAFFB6011F169AC30019FB2B /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAFFB6001F169AC30019FB2B /* Login.storyboard */; };
+		BAFFB6031F169F9C0019FB2B /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAFFB6021F169F9C0019FB2B /* SignUp.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -112,6 +113,7 @@
 		BAFFB5FC1F167C910019FB2B /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Controllers/LoginViewController.swift; sourceTree = "<group>"; };
 		BAFFB5FE1F168C780019FB2B /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ForgotPasswordViewController.swift; path = Controllers/ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		BAFFB6001F169AC30019FB2B /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Login.storyboard; path = Storyboards/Login.storyboard; sourceTree = "<group>"; };
+		BAFFB6021F169F9C0019FB2B /* SignUp.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = SignUp.storyboard; path = Storyboards/SignUp.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,6 +234,7 @@
 				BA7779AE1F05841000128AA9 /* SearchResult.storyboard */,
 				BAB8DAD41F0EB29200B87B7E /* Settings.storyboard */,
 				BA2A3D3E1F151A760015C58C /* Onboarding.storyboard */,
+				BAFFB6021F169F9C0019FB2B /* SignUp.storyboard */,
 				BAFFB6001F169AC30019FB2B /* Login.storyboard */,
 				BA2A3D411F151A9F0015C58C /* OnboardingCollectionViewCell.xib */,
 				BA8E28051F042DD800105C0E /* LitListItemCell.xib */,
@@ -367,6 +370,7 @@
 				BA2A3D431F151A9F0015C58C /* OnboardingCollectionViewCell.xib in Resources */,
 				BA2A3D3F1F151A760015C58C /* Onboarding.storyboard in Resources */,
 				BA4974751F03FE62004FE18B /* LaunchScreen.storyboard in Resources */,
+				BAFFB6031F169F9C0019FB2B /* SignUp.storyboard in Resources */,
 				BA7779951F05461A00128AA9 /* SourceSansPro-Light.otf in Resources */,
 				BA4974611F03FD62004FE18B /* Assets.xcassets in Resources */,
 				BA7779AF1F05841000128AA9 /* SearchResult.storyboard in Resources */,

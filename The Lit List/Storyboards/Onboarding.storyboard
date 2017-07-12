@@ -6,15 +6,11 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <array key="SourceSansPro-Regular.otf">
             <string>SourceSansPro-Regular</string>
-        </array>
-        <array key="SourceSansPro-Semibold.otf">
-            <string>SourceSansPro-Semibold</string>
         </array>
     </customFonts>
     <scenes>
@@ -55,7 +51,7 @@
                                         </state>
                                         <connections>
                                             <action selector="signupButtonTapped:" destination="Hle-Bk-v8n" eventType="touchUpInside" id="uvS-bh-qbx"/>
-                                            <segue destination="595-lC-2SA" kind="show" id="4xO-Gw-zmY"/>
+                                            <segue destination="tNw-Cf-aUe" kind="show" id="4xO-Gw-zmY"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -98,139 +94,21 @@
             </objects>
             <point key="canvasLocation" x="983.20000000000005" y="124.58770614692655"/>
         </scene>
-        <!--Sign Up View Controller-->
-        <scene sceneID="tGy-nO-V9N">
-            <objects>
-                <viewController id="gqp-Ed-kVh" customClass="SignUpViewController" customModule="The_Lit_List" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="b59-eJ-Dar"/>
-                        <viewControllerLayoutGuide type="bottom" id="QUw-eg-Juv"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="IeU-0P-ezS">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="0x5-os-Huj">
-                                <rect key="frame" x="16" y="99" width="312" height="141"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CREATE YOUR ACCOUNT" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LCA-Uo-U0s">
-                                        <rect key="frame" x="0.0" y="0.0" width="312" height="40"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="eve-H3-3Ef"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="SourceSansPro-Semibold" family="Source Sans Pro" pointSize="25"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AFv-Ch-hCN">
-                                        <rect key="frame" x="0.0" y="45" width="312" height="96"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="312" id="rbg-sJ-0Yl"/>
-                                        </constraints>
-                                        <string key="text">Thanks for creating an account with The Lit List!
-Enter your information below to get started.</string>
-                                        <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="19"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="aZF-C7-bCj">
-                                <rect key="frame" x="16" y="310" width="343" height="105"/>
-                                <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="email" textAlignment="center" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="EbW-FR-Avo">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="45"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="45" id="PON-KR-0mS"/>
-                                        </constraints>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" name="SourceSansPro-Semibold" family="Source Sans Pro" pointSize="15"/>
-                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
-                                    </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="password" textAlignment="center" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="GiI-ZQ-KZT">
-                                        <rect key="frame" x="0.0" y="60" width="343" height="45"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="45" id="ekh-5F-f8n"/>
-                                        </constraints>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="15"/>
-                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
-                                    </textField>
-                                </subviews>
-                            </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yle-iI-RDe">
-                                <rect key="frame" x="16" y="602" width="343" height="45"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="WFp-mj-PBx"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="SourceSansPro-Semibold" family="Source Sans Pro" pointSize="20"/>
-                                <state key="normal" title="SUBMIT">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="submitButtonTapped:" destination="gqp-Ed-kVh" eventType="touchUpInside" id="VPq-CE-lAX"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="aZF-C7-bCj" firstAttribute="top" secondItem="0x5-os-Huj" secondAttribute="bottom" constant="70" id="4u6-13-p7Y"/>
-                            <constraint firstItem="0x5-os-Huj" firstAttribute="leading" secondItem="IeU-0P-ezS" secondAttribute="leadingMargin" id="A2H-Xj-c9k"/>
-                            <constraint firstItem="aZF-C7-bCj" firstAttribute="leading" secondItem="IeU-0P-ezS" secondAttribute="leadingMargin" id="O8B-cZ-oAJ"/>
-                            <constraint firstItem="Yle-iI-RDe" firstAttribute="leading" secondItem="IeU-0P-ezS" secondAttribute="leadingMargin" id="YcH-Te-BGy"/>
-                            <constraint firstItem="Yle-iI-RDe" firstAttribute="trailing" secondItem="IeU-0P-ezS" secondAttribute="trailingMargin" id="jdy-24-6iS"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="Yle-iI-RDe" secondAttribute="bottom" constant="20" id="jhb-bL-VhH"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="aZF-C7-bCj" secondAttribute="trailing" id="qhj-Mx-4wK"/>
-                            <constraint firstItem="0x5-os-Huj" firstAttribute="top" secondItem="b59-eJ-Dar" secondAttribute="bottom" constant="35" id="xVo-uS-JRZ"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="Acd-8c-vaP">
-                        <barButtonItem key="leftBarButtonItem" image="icons8-Back Filled-25" id="Yko-qY-YVa">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                            <connections>
-                                <action selector="backButtonTapped:" destination="gqp-Ed-kVh" id="Csd-CE-7aw"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="emailTextField" destination="EbW-FR-Avo" id="07X-F4-bBd"/>
-                        <outlet property="passwordTextField" destination="GiI-ZQ-KZT" id="5UP-D2-cbI"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ada-YU-pQ1" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2432.8000000000002" y="124.58770614692655"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="UQv-Dc-rAS">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="595-lC-2SA" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="l4B-Gm-jNa">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="gqp-Ed-kVh" kind="relationship" relationship="rootViewController" id="mdU-8Y-Dhq"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xIE-go-JhC" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1712.8" y="124.58770614692655"/>
-        </scene>
         <!--Login-->
         <scene sceneID="Xg3-1l-bl2">
             <objects>
                 <viewControllerPlaceholder storyboardName="Login" id="pcW-KR-6Zf" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lej-ol-ZTX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="983" y="588"/>
+            <point key="canvasLocation" x="983" y="555"/>
+        </scene>
+        <!--SignUp-->
+        <scene sceneID="CpH-TS-4Vh">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SignUp" id="tNw-Cf-aUe" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J6L-cf-CjK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1544" y="124"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="icons8-Back Filled-25" width="25" height="25"/>
-    </resources>
 </document>
