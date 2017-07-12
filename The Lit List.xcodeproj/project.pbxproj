@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0FD42AC30E1A6B5E178D6B8B /* Pods_The_Lit_List.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29F21216A15ADE8B16190E21 /* Pods_The_Lit_List.framework */; };
 		BA10316A1F0E9B6B0024859A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1031691F0E9B6B0024859A /* SettingsViewController.swift */; };
+		BA1C59191F165ECA00A3E099 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA1C59181F165ECA00A3E099 /* GoogleService-Info.plist */; };
+		BA1C591B1F1660CF00A3E099 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1C591A1F1660CF00A3E099 /* SignUpViewController.swift */; };
 		BA247C081F05C3C6003A5593 /* UserServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA247C071F05C3C6003A5593 /* UserServices.swift */; };
 		BA247C0C1F05FD09003A5593 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA247C0B1F05FD09003A5593 /* Constants.swift */; };
 		BA2A3D3F1F151A760015C58C /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA2A3D3E1F151A760015C58C /* Onboarding.storyboard */; };
@@ -50,6 +52,8 @@
 		BAD4F53D1F06A61D00BAAFA0 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD4F53C1F06A61D00BAAFA0 /* CoreDataHelper.swift */; };
 		BAD4F5401F06A6BC00BAAFA0 /* The Lit List.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BAD4F53E1F06A6BC00BAAFA0 /* The Lit List.xcdatamodeld */; };
 		BAD4F5421F06D7EA00BAAFA0 /* BookToDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD4F5411F06D7EA00BAAFA0 /* BookToDisplay.swift */; };
+		BAFFB5FB1F16714F0019FB2B /* UITextField+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFFB5FA1F16714F0019FB2B /* UITextField+Utility.swift */; };
+		BAFFB5FD1F167C910019FB2B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFFB5FC1F167C910019FB2B /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +61,8 @@
 		54256F4762E52C2FE0D3B337 /* Pods-The Lit List.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-The Lit List.debug.xcconfig"; path = "Pods/Target Support Files/Pods-The Lit List/Pods-The Lit List.debug.xcconfig"; sourceTree = "<group>"; };
 		66E0EDB4EB425508C3406D67 /* Pods-The Lit List.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-The Lit List.release.xcconfig"; path = "Pods/Target Support Files/Pods-The Lit List/Pods-The Lit List.release.xcconfig"; sourceTree = "<group>"; };
 		BA1031691F0E9B6B0024859A /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsViewController.swift; path = Controllers/SettingsViewController.swift; sourceTree = "<group>"; };
+		BA1C59181F165ECA00A3E099 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "Supporting/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BA1C591A1F1660CF00A3E099 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = Controllers/SignUpViewController.swift; sourceTree = "<group>"; };
 		BA247C071F05C3C6003A5593 /* UserServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserServices.swift; path = Services/UserServices.swift; sourceTree = "<group>"; };
 		BA247C0B1F05FD09003A5593 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = IgnoreFolder/Constants.swift; sourceTree = "<group>"; };
 		BA2A3D3E1F151A760015C58C /* Onboarding.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Onboarding.storyboard; path = Storyboards/Onboarding.storyboard; sourceTree = "<group>"; };
@@ -100,6 +106,8 @@
 		BAD4F53C1F06A61D00BAAFA0 /* CoreDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataHelper.swift; path = Helpers/CoreDataHelper.swift; sourceTree = "<group>"; };
 		BAD4F53F1F06A6BC00BAAFA0 /* The Lit List.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "The Lit List.xcdatamodel"; sourceTree = "<group>"; };
 		BAD4F5411F06D7EA00BAAFA0 /* BookToDisplay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BookToDisplay.swift; path = Models/BookToDisplay.swift; sourceTree = "<group>"; };
+		BAFFB5FA1F16714F0019FB2B /* UITextField+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UITextField+Utility.swift"; path = "Extensions/UITextField+Utility.swift"; sourceTree = "<group>"; };
+		BAFFB5FC1F167C910019FB2B /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Controllers/LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +202,8 @@
 				BA7779B01F05938400128AA9 /* ResultDetailViewController.swift */,
 				BA1031691F0E9B6B0024859A /* SettingsViewController.swift */,
 				BA2A3D441F151AFA0015C58C /* OnboardingViewController.swift */,
+				BA1C591A1F1660CF00A3E099 /* SignUpViewController.swift */,
+				BAFFB5FC1F167C910019FB2B /* LoginViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -203,6 +213,7 @@
 			children = (
 				BA247C0B1F05FD09003A5593 /* Constants.swift */,
 				BA4974721F03FE52004FE18B /* Info.plist */,
+				BA1C59181F165ECA00A3E099 /* GoogleService-Info.plist */,
 				BA4974741F03FE62004FE18B /* LaunchScreen.storyboard */,
 			);
 			name = Supporting;
@@ -258,6 +269,7 @@
 				BA77799E1F05521000128AA9 /* Storyboard+Utility.swift */,
 				BA7779A01F056DF100128AA9 /* UIViewController+Utility.swift */,
 				BA7779A21F056F5200128AA9 /* UINavigationController+Utility.swift */,
+				BAFFB5FA1F16714F0019FB2B /* UITextField+Utility.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -354,6 +366,7 @@
 				BA7779AF1F05841000128AA9 /* SearchResult.storyboard in Resources */,
 				BA4974771F03FE6A004FE18B /* Main.storyboard in Resources */,
 				BA77798E1F05461A00128AA9 /* SourceSansPro-Black.otf in Resources */,
+				BA1C59191F165ECA00A3E099 /* GoogleService-Info.plist in Resources */,
 				BA7779931F05461A00128AA9 /* SourceSansPro-ExtraLightIt.otf in Resources */,
 				BA8E28071F042DD800105C0E /* LitListItemCell.xib in Resources */,
 			);
@@ -427,6 +440,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA1C591B1F1660CF00A3E099 /* SignUpViewController.swift in Sources */,
 				BA8E28031F04239000105C0E /* LitLitItemCell.swift in Sources */,
 				BA77799B1F0549C600128AA9 /* ItemDetailViewController.swift in Sources */,
 				BAD4F5421F06D7EA00BAAFA0 /* BookToDisplay.swift in Sources */,
@@ -437,6 +451,8 @@
 				BA8E27FD1F041BFA00105C0E /* ColorHelper.swift in Sources */,
 				BA247C0C1F05FD09003A5593 /* Constants.swift in Sources */,
 				BA2A3D451F151AFA0015C58C /* OnboardingViewController.swift in Sources */,
+				BAFFB5FB1F16714F0019FB2B /* UITextField+Utility.swift in Sources */,
+				BAFFB5FD1F167C910019FB2B /* LoginViewController.swift in Sources */,
 				BA7779A31F056F5200128AA9 /* UINavigationController+Utility.swift in Sources */,
 				BA8E28001F041C3000105C0E /* UIColor+Utility.swift in Sources */,
 				BA876F601F074451008425E1 /* ReminderHelper.swift in Sources */,

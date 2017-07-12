@@ -10,6 +10,7 @@ import UIKit
 import CoreData
 import Fabric
 import Crashlytics
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -30,6 +31,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let initialViewController = UIStoryboard.initialViewController(for: .Onboarding)
         window?.rootViewController = initialViewController
         window?.makeKeyAndVisible()
+        
+        // Firebase
+        FirebaseApp.configure()
         
         return true
     }

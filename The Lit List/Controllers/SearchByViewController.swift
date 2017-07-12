@@ -25,9 +25,9 @@ class SearchByViewController: UIViewController {
         UIViewController.configureBackgroundAliceBlue(view: self.view)
         
         // configure text fields
-        titleTextField.layer.borderWidth = 2
-        authorTextField.layer.borderWidth = 2
-        isbnTextField.layer.borderWidth = 2
+        titleTextField.configureBorder()
+        authorTextField.configureBorder()
+        isbnTextField.configureBorder()
         
         // configure submit button
         searchButton.layer.borderColor = UIColor.black.cgColor
@@ -149,5 +149,11 @@ extension SearchByViewController: UITextFieldDelegate {
     // dismiss keyboard when user touches outside
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
+    }
+    
+    // TODO: - return key tapped
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        searchButtonTapped(self)
+        return true
     }
 }

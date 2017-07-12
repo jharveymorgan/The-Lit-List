@@ -22,4 +22,9 @@ extension UIViewController {
     static func configureBackgroundAliceBlue(view: UIView) {
         view.backgroundColor = UIColor(red: 228/255, green: 241/255, blue: 254/255, alpha: 1)
     }
+    
+    static func configureBackgroundBlueGrey(view: UIView) {
+        view.backgroundColor = UIColor(red: 196/255, green: 204/255, blue: 231/255, alpha: 1)
+    }
+
 }

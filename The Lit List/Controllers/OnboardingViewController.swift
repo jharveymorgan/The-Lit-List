@@ -25,6 +25,9 @@ class OnboardingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // configure background color
+        UIViewController.configureBackgroundBlueGrey(view: self.view)
+        
         // add nib to the collection view
         collectionView.register(nib, forCellWithReuseIdentifier: Constants.CollectionViewCell.onboarding)
         
