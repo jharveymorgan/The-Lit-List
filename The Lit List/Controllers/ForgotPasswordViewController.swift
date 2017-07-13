@@ -44,8 +44,19 @@ class ForgotPasswordViewController: UIViewController {
             return
         }
         
+        // send reset link
+        UserService.sendResetLink(email: email) { (error) in
+            if error != nil {
+                print("Error trying to send reset link")
+                self.invalidEmailAlert()
+                return
+            } else {
+                self.resetLinkAlert()
+                self.navigationController?.popToRootViewController(animated: true)
+            }
+        }
+        
         print("We'll send a reset password link")
-        self.navigationController?.popToRootViewController(animated: true)
     }
     
     // MARK: - Functions
@@ -60,6 +71,22 @@ class ForgotPasswordViewController: UIViewController {
 extension ForgotPasswordViewController {
     func needInformationAlert() {
         let alert = UIAlertController(title: nil, message: "Please enter an email to send the reset password instructions.", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Okay", style: .default, handler: nil)
+        alert.addAction(okAction)
+        
+        self.present(alert, animated: true)
+    }
+    
+    func resetLinkAlert() {
+        let alert = UIAlertController(title: nil, message: "Please check your email for instructions on how to reset your password.", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Okay", style: .default, handler: nil)
+        alert.addAction(okAction)
+        
+        self.present(alert, animated: true)
+    }
+    
+    func invalidEmailAlert() {
+        let alert = UIAlertController(title: "Invalid Email", message: "Please enter a valid email address.", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "Okay", style: .default, handler: nil)
         alert.addAction(okAction)
         

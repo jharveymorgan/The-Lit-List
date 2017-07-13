@@ -46,12 +46,21 @@ struct UserService {
     }
     
     // create a new user
-    static func createUser(fullName: String, email: String, password: String) {
+    static func createUser(fullName: String, email: String, password: String, completion: @escaping (NSError?) -> Void) {
         
         Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
             
             // check for error
-            if let error = error {
+            if let error = error as NSError? {
+                
+                if error.code == AuthErrorCode.invalidEmail.rawValue {
+                    print("Invalid Email!")
+                    return completion(error)
+                } else if error.code == AuthErrorCode.weakPassword.rawValue {
+                    print("Weak Password Error Code: \(error.code)")
+                    return completion(error)
+                }
+                
                 assertionFailure(error.localizedDescription)
                 return
             }
@@ -71,9 +80,64 @@ struct UserService {
                     assertionFailure(error.localizedDescription)
                     return
                 }
+                completion(nil)
             })
         }
     }
+    
+    // login an existing user
+    static func loginUser(email: String, password: String, completion: @escaping (NSError?) -> Void) {
+        
+        Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
+            
+            // handle errors and check for invalid email or password
+            if let error = error as NSError? {
+                
+                if error.code == AuthErrorCode.wrongPassword.rawValue {
+                    print("Wrong Password!")
+                    return completion(error)
+                } else if error.code == AuthErrorCode.invalidEmail.rawValue {
+                    print("Invalid Email!")
+                    return completion(error)
+                } else if error.code == AuthErrorCode.userNotFound.rawValue {
+                    print("User does not exist")
+                    return completion(error)
+                }
+                
+                assertionFailure(error.localizedDescription)
+                return
+            }
+            
+            // if the user gets logged in, do stuff... like set the current user
+            
+            completion(nil)
+        }
+    }
+    
+    // reset a user's password
+    static func sendResetLink(email: String, completion: @escaping (NSError?) -> Void) {
+        Auth.auth().sendPasswordReset(withEmail: email) { (error) in
+            
+            if let error = error as NSError? {
+              
+                if error.code == AuthErrorCode.invalidEmail.rawValue {
+                    print("Invalid Email")
+                    return completion(error)
+                } else if error.code == AuthErrorCode.userNotFound.rawValue {
+                    print("User doesn't exist")
+                    return completion(error)
+                }
+                
+                assertionFailure(error.localizedDescription)
+                return
+            }
+            
+            // reset link was sent
+            completion(nil)
+        }
+    }
+    
+    
     
 }// end struct
 

@@ -47,11 +47,25 @@ class LoginViewController: UIViewController {
             return
         }
         
-        print("login submit button tapped")
-    }
-
-    @IBAction func forgotPasswordTapped(_ sender: Any) {
-        print("forgot password button tapped")
+        UserService.loginUser(email: email, password: password) { (error) in
+            
+            // check for login error
+            if error != nil {
+                // tell user there was an error while trying to login
+                self.invalidLoginAlert()
+                
+                // clear textfields
+                self.emailTextField.text = ""
+                self.passwordTextField.text = ""
+                
+                return
+            } else {
+                // go to main page
+                let initialViewController = UIStoryboard.initialViewController(for: .Main)
+                self.view.window?.rootViewController = initialViewController
+                self.view.window?.makeKeyAndVisible()
+            }
+        }
     }
     
 }
@@ -60,6 +74,14 @@ class LoginViewController: UIViewController {
 extension LoginViewController {
     func needInformationAlert() {
         let alert = UIAlertController(title: nil, message: "Please enter an email AND password to log into your.", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Okay", style: .default, handler: nil)
+        alert.addAction(okAction)
+        
+        self.present(alert, animated: true)
+    }
+    
+    func invalidLoginAlert() {
+        let alert = UIAlertController(title: "Invalid Email or Password", message: "Please check to make sure you enter the correct email and password.", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "Okay", style: .default, handler: nil)
         alert.addAction(okAction)
         
