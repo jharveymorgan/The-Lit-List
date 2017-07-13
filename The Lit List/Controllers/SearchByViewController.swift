@@ -154,7 +154,7 @@ extension SearchByViewController: UITextFieldDelegate {
         self.view.endEditing(true)
     }
     
-    // TODO: - return key tapped
+    // return key tapped
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         searchButtonTapped(self)

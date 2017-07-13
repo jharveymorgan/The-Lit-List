@@ -52,6 +52,7 @@
 		BAD4F53D1F06A61D00BAAFA0 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD4F53C1F06A61D00BAAFA0 /* CoreDataHelper.swift */; };
 		BAD4F5401F06A6BC00BAAFA0 /* The Lit List.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BAD4F53E1F06A6BC00BAAFA0 /* The Lit List.xcdatamodeld */; };
 		BAD4F5421F06D7EA00BAAFA0 /* BookToDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD4F5411F06D7EA00BAAFA0 /* BookToDisplay.swift */; };
+		BAF05D681F17AD7600D4CCB2 /* DatabaseReference+Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF05D671F17AD7600D4CCB2 /* DatabaseReference+Location.swift */; };
 		BAFFB5FB1F16714F0019FB2B /* UITextField+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFFB5FA1F16714F0019FB2B /* UITextField+Utility.swift */; };
 		BAFFB5FD1F167C910019FB2B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFFB5FC1F167C910019FB2B /* LoginViewController.swift */; };
 		BAFFB5FF1F168C780019FB2B /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFFB5FE1F168C780019FB2B /* ForgotPasswordViewController.swift */; };
@@ -109,6 +110,7 @@
 		BAD4F53C1F06A61D00BAAFA0 /* CoreDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataHelper.swift; path = Helpers/CoreDataHelper.swift; sourceTree = "<group>"; };
 		BAD4F53F1F06A6BC00BAAFA0 /* The Lit List.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "The Lit List.xcdatamodel"; sourceTree = "<group>"; };
 		BAD4F5411F06D7EA00BAAFA0 /* BookToDisplay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BookToDisplay.swift; path = Models/BookToDisplay.swift; sourceTree = "<group>"; };
+		BAF05D671F17AD7600D4CCB2 /* DatabaseReference+Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "DatabaseReference+Location.swift"; path = "Extensions/DatabaseReference+Location.swift"; sourceTree = "<group>"; };
 		BAFFB5FA1F16714F0019FB2B /* UITextField+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UITextField+Utility.swift"; path = "Extensions/UITextField+Utility.swift"; sourceTree = "<group>"; };
 		BAFFB5FC1F167C910019FB2B /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Controllers/LoginViewController.swift; sourceTree = "<group>"; };
 		BAFFB5FE1F168C780019FB2B /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ForgotPasswordViewController.swift; path = Controllers/ForgotPasswordViewController.swift; sourceTree = "<group>"; };
@@ -279,6 +281,7 @@
 				BA7779A01F056DF100128AA9 /* UIViewController+Utility.swift */,
 				BA7779A21F056F5200128AA9 /* UINavigationController+Utility.swift */,
 				BAFFB5FA1F16714F0019FB2B /* UITextField+Utility.swift */,
+				BAF05D671F17AD7600D4CCB2 /* DatabaseReference+Location.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -469,6 +472,7 @@
 				BA8E28001F041C3000105C0E /* UIColor+Utility.swift in Sources */,
 				BA876F601F074451008425E1 /* ReminderHelper.swift in Sources */,
 				BA247C081F05C3C6003A5593 /* UserServices.swift in Sources */,
+				BAF05D681F17AD7600D4CCB2 /* DatabaseReference+Location.swift in Sources */,
 				BA8E27FA1F0410F700105C0E /* YourLitListViewController.swift in Sources */,
 				BA77799F1F05521000128AA9 /* Storyboard+Utility.swift in Sources */,
 				BA4974581F03FD62004FE18B /* AppDelegate.swift in Sources */,

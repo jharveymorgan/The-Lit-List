@@ -54,6 +54,16 @@ class SignUpViewController: UIViewController {
             return
         }
         
+        // create a new user in firebase database
+        UserService.createUser(fullName: fullName, email: email, password: password)
+        
+        // clear textfields(?)
+        
+        // go to main page
+        let initialViewController = UIStoryboard.initialViewController(for: .Main)
+        self.view.window?.rootViewController = initialViewController
+        self.view.window?.makeKeyAndVisible()
+        
         print("sign up submit button tapped")
     }
     

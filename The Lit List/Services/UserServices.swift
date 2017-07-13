@@ -46,6 +46,34 @@ struct UserService {
     }
     
     // create a new user
+    static func createUser(fullName: String, email: String, password: String) {
+        
+        Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
+            
+            // check for error
+            if let error = error {
+                assertionFailure(error.localizedDescription)
+                return
+            }
+            
+            // check user exists
+            guard let user = user else { return }
+            
+            // create dictionary for user information
+            let userAttr: [String: Any] = ["fullName": fullName, "email": email]
+            
+            // database reference
+            let userRef = DatabaseReference.toLocation(.showUser(uid: user.uid))
+            
+            // add user's name and email to database
+            userRef.updateChildValues(userAttr, withCompletionBlock: { (error, ref) in
+                if let error = error {
+                    assertionFailure(error.localizedDescription)
+                    return
+                }
+            })
+        }
+    }
     
 }// end struct
 
