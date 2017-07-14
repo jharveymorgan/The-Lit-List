@@ -58,17 +58,14 @@ class SignUpViewController: UIViewController {
         UserService.createUser(fullName: fullName, email: email, password: password) { (error) in
             
             if let error = error {
-                
-                // weak password error
-                if error.code == 17026 {
-                    print("Password is too short")
-                    self.weakPasswordAlert()
-                    self.passwordTextField.text = ""
+                // invalid email error
+                if error.code == 17008 {
+                    self.invalidEmailAlert()
                     return
                 }
-                // other errors
-                print("Error creating user: \(String(describing: error.localizedDescription))")
-                self.invalidEmailAlert()
+                
+                // all other errors
+                self.firebaseAuthErrorAlert(error: error)
                 return
             } else {
                 
@@ -76,7 +73,6 @@ class SignUpViewController: UIViewController {
                 let initialViewController = UIStoryboard.initialViewController(for: .Main)
                 self.view.window?.rootViewController = initialViewController
                 self.view.window?.makeKeyAndVisible()
-                
             }
         }
         
@@ -97,16 +93,16 @@ extension SignUpViewController {
         self.present(alert, animated: true)
     }
     
-    func invalidEmailAlert() {
-        let alert = UIAlertController(title: nil, message: "Please enter a valid email address.", preferredStyle: .alert)
+    func firebaseAuthErrorAlert(error: NSError) {
+        let alert = UIAlertController(title: nil, message: error.localizedDescription, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "Okay", style: .default, handler: nil)
         alert.addAction(okAction)
         
         self.present(alert, animated: true)
     }
     
-    func weakPasswordAlert() {
-        let alert = UIAlertController(title: "Weak Password", message: "Password must be at least 6 characters.", preferredStyle: .alert)
+    func invalidEmailAlert() {
+        let alert = UIAlertController(title: nil, message: "Please enter a valid email address.", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "Okay", style: .default, handler: nil)
         alert.addAction(okAction)
         

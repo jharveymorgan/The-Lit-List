@@ -54,15 +54,12 @@ struct UserService {
             if let error = error as NSError? {
                 
                 if error.code == AuthErrorCode.invalidEmail.rawValue {
-                    print("Invalid Email!")
-                    return completion(error)
-                } else if error.code == AuthErrorCode.weakPassword.rawValue {
-                    print("Weak Password Error Code: \(error.code)")
+                    print("Invalid Email! Error Code: \(error.code)")
                     return completion(error)
                 }
-                
-                assertionFailure(error.localizedDescription)
-                return
+
+                //assertionFailure(error.localizedDescription)
+                return completion(error)
             }
             
             // check user exists
@@ -105,7 +102,7 @@ struct UserService {
                 }
                 
                 assertionFailure(error.localizedDescription)
-                return
+                return //completion(error)
             }
             
             // if the user gets logged in, do stuff... like set the current user

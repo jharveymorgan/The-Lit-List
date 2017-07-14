@@ -53,9 +53,8 @@ class LoginViewController: UIViewController {
             if error != nil {
                 // tell user there was an error while trying to login
                 self.invalidLoginAlert()
-                
-                // clear textfields
-                self.emailTextField.text = ""
+
+                // clear password textfield
                 self.passwordTextField.text = ""
                 
                 return
