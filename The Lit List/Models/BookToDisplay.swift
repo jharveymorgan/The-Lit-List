@@ -19,7 +19,7 @@ class BookToDisplay {
     var description: String
     var json: JSON
     
-    // convert the dateto the correct format
+    // convert the date to the correct format
     var correctDate: Date? {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"

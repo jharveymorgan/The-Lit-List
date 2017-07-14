@@ -47,7 +47,7 @@ class LoginViewController: UIViewController {
             return
         }
         
-        UserService.loginUser(email: email, password: password) { (error) in
+        UserService.loginUser(email: email, password: password) { (user, error) in
             
             // check for login error
             if error != nil {
@@ -58,12 +58,18 @@ class LoginViewController: UIViewController {
                 self.passwordTextField.text = ""
                 
                 return
-            } else {
-                // go to main page
-                let initialViewController = UIStoryboard.initialViewController(for: .Main)
-                self.view.window?.rootViewController = initialViewController
-                self.view.window?.makeKeyAndVisible()
             }
+            
+            // check for user
+            guard let user = user else { return }
+            
+            // set the current user
+            User.setCurrent(user, writeToUserDefaults: true)
+            
+            // go to main page
+            let initialViewController = UIStoryboard.initialViewController(for: .Main)
+            self.view.window?.rootViewController = initialViewController
+            self.view.window?.makeKeyAndVisible()
         }
     }
     

@@ -55,8 +55,9 @@ class SignUpViewController: UIViewController {
         }
         
         // create a new user in firebase database
-        UserService.createUser(fullName: fullName, email: email, password: password) { (error) in
+        UserService.createUser(fullName: fullName, email: email, password: password) { (user, error) in
             
+            // handle errors
             if let error = error {
                 // invalid email error
                 if error.code == 17008 {
@@ -67,13 +68,19 @@ class SignUpViewController: UIViewController {
                 // all other errors
                 self.firebaseAuthErrorAlert(error: error)
                 return
-            } else {
-                
-                // go to main page
-                let initialViewController = UIStoryboard.initialViewController(for: .Main)
-                self.view.window?.rootViewController = initialViewController
-                self.view.window?.makeKeyAndVisible()
             }
+            
+            // check for user
+            guard let user = user else { return } 
+            
+            // set current user
+            User.setCurrent(user, writeToUserDefaults: true)
+            
+            // go to main page
+            let initialViewController = UIStoryboard.initialViewController(for: .Main)
+            self.view.window?.rootViewController = initialViewController
+            self.view.window?.makeKeyAndVisible()
+        
         }
         
         // clear textfields(?)

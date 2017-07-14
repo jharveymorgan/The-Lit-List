@@ -34,16 +34,6 @@ class OnboardingViewController: UIViewController {
         // configure collection view background
         collectionView.layer.backgroundColor = UIColor.clear.cgColor
     }
-    
-    // MARK: - IBActions
-    @IBAction func signupButtonTapped(_ sender: Any) {
-        print("pressed signup button")
-    }
-    
-    @IBAction func loginButtonTapped(_ sender: Any) {
-        print("pressed login button")
-    }
-    
 
 }
 

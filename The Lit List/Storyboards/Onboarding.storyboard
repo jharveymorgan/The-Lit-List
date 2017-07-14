@@ -38,7 +38,6 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="loginButtonTapped:" destination="Hle-Bk-v8n" eventType="touchUpInside" id="cKa-6t-VQ9"/>
                                             <segue destination="pcW-KR-6Zf" kind="show" id="oIE-Bn-fix"/>
                                         </connections>
                                     </button>
@@ -50,7 +49,6 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="signupButtonTapped:" destination="Hle-Bk-v8n" eventType="touchUpInside" id="uvS-bh-qbx"/>
                                             <segue destination="tNw-Cf-aUe" kind="show" id="4xO-Gw-zmY"/>
                                         </connections>
                                     </button>

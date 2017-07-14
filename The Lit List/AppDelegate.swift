@@ -26,14 +26,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Crashlytics
         Fabric.with([Crashlytics.self])
-        
-        // show onboarding
-        let initialViewController = UIStoryboard.initialViewController(for: .Onboarding)
-        window?.rootViewController = initialViewController
-        window?.makeKeyAndVisible()
+
         
         // Firebase
         FirebaseApp.configure()
+        
+        configureInitialRootViewController(for: window)
         
         return true
     }
@@ -105,5 +103,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
     
+}
+
+// MARK: - Extension(s)
+extension AppDelegate {
+    
+    // set the initial view
+    func configureInitialRootViewController(for window: UIWindow?) {
+        let defaults = UserDefaults.standard
+        let initialViewController: UIViewController
+        
+        // which storyboard should be the initial view
+        if Auth.auth().currentUser != nil, let userData = defaults.object(forKey: Constants.UserDefaults.currentUser) as? Data,
+            let user = NSKeyedUnarchiver.unarchiveObject(with: userData) as? User {
+            
+            User.setCurrent(user)
+            
+            initialViewController = UIStoryboard.initialViewController(for: .Main)
+        } else {
+            initialViewController = UIStoryboard.initialViewController(for: .Onboarding)
+        }
+        
+        window?.rootViewController = initialViewController
+        window?.makeKeyAndVisible()
+    }
 }
 

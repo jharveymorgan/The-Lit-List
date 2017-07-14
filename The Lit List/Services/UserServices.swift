@@ -13,6 +13,8 @@ import Firebase
 import FirebaseAuth
 import FirebaseDatabase
 
+typealias FIRUser = FirebaseAuth.User
+
 struct UserService {
     
     static func searchGoogleBooksAPI(by userParameter: String, completion: @escaping (JSON) -> Void) {
@@ -46,29 +48,26 @@ struct UserService {
     }
     
     // create a new user
-    static func createUser(fullName: String, email: String, password: String, completion: @escaping (NSError?) -> Void) {
+    static func createUser(fullName: String, email: String, password: String, completion: @escaping (User?, NSError?) -> Void) {
         
-        Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
-            
+        Auth.auth().createUser(withEmail: email, password: password) { (user: FIRUser?, error) in
             // check for error
             if let error = error as NSError? {
                 
                 if error.code == AuthErrorCode.invalidEmail.rawValue {
                     print("Invalid Email! Error Code: \(error.code)")
-                    return completion(error)
+                    return completion(nil, error)
                 }
 
                 //assertionFailure(error.localizedDescription)
-                return completion(error)
+                return completion(nil, error)
             }
-            
-            // check user exists
-            guard let user = user else { return }
             
             // create dictionary for user information
             let userAttr: [String: Any] = ["fullName": fullName, "email": email]
             
-            // database reference
+            // check user exists and get path to their data
+            guard let user = user else { return }
             let userRef = DatabaseReference.toLocation(.showUser(uid: user.uid))
             
             // add user's name and email to database
@@ -77,37 +76,49 @@ struct UserService {
                     assertionFailure(error.localizedDescription)
                     return
                 }
-                completion(nil)
+                
+                // handle newly created user, ie: read data that was just written 
+                ref.observeSingleEvent(of: .value, with: { (snapshot) in
+                    let user = User(snapshot: snapshot)
+                    completion(user, nil)
+                })
             })
         }
     }
     
     // login an existing user
-    static func loginUser(email: String, password: String, completion: @escaping (NSError?) -> Void) {
+    static func loginUser(email: String, password: String, completion: @escaping (User?, NSError?) -> Void) {
         
-        Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
+        Auth.auth().signIn(withEmail: email, password: password) { (user: FIRUser?, error) in
             
             // handle errors and check for invalid email or password
             if let error = error as NSError? {
                 
                 if error.code == AuthErrorCode.wrongPassword.rawValue {
                     print("Wrong Password!")
-                    return completion(error)
+                    return completion(nil, error)
                 } else if error.code == AuthErrorCode.invalidEmail.rawValue {
                     print("Invalid Email!")
-                    return completion(error)
+                    return completion(nil, error)
                 } else if error.code == AuthErrorCode.userNotFound.rawValue {
                     print("User does not exist")
-                    return completion(error)
+                    return completion(nil, error)
                 }
                 
                 assertionFailure(error.localizedDescription)
                 return //completion(error)
             }
             
-            // if the user gets logged in, do stuff... like set the current user
+            // if the user gets logged in, get their information
+            // check user exists and get path to the data
+            guard let user = user else { return }
+            let userRef = DatabaseReference.toLocation(.showUser(uid: user.uid))
             
-            completion(nil)
+            // read data for user that was just logged in
+            userRef.observeSingleEvent(of: .value, with: { (snapshot) in
+                let user = User(snapshot: snapshot)
+                completion(user, nil)
+            })
         }
     }
     
@@ -133,9 +144,6 @@ struct UserService {
             completion(nil)
         }
     }
-    
-    
-    
 }// end struct
 
 // MARK: - UIAlertController

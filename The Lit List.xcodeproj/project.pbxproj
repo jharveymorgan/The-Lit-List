@@ -21,6 +21,8 @@
 		BA4974611F03FD62004FE18B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA4974601F03FD62004FE18B /* Assets.xcassets */; };
 		BA4974751F03FE62004FE18B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA4974741F03FE62004FE18B /* LaunchScreen.storyboard */; };
 		BA4974771F03FE6A004FE18B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA4974761F03FE6A004FE18B /* Main.storyboard */; };
+		BA761ED91F19176D00C7E2B1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA761ED81F19176D00C7E2B1 /* User.swift */; };
+		BA761EDB1F191C6200C7E2B1 /* UIString+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA761EDA1F191C6200C7E2B1 /* UIString+Utility.swift */; };
 		BA77798E1F05461A00128AA9 /* SourceSansPro-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = BA7779821F05461A00128AA9 /* SourceSansPro-Black.otf */; };
 		BA77798F1F05461A00128AA9 /* SourceSansPro-BlackIt.otf in Resources */ = {isa = PBXBuildFile; fileRef = BA7779831F05461A00128AA9 /* SourceSansPro-BlackIt.otf */; };
 		BA7779901F05461A00128AA9 /* SourceSansPro-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = BA7779841F05461A00128AA9 /* SourceSansPro-Bold.otf */; };
@@ -79,6 +81,8 @@
 		BA4974721F03FE52004FE18B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Supporting/Info.plist; sourceTree = "<group>"; };
 		BA4974741F03FE62004FE18B /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Storyboards/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BA4974761F03FE6A004FE18B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Storyboards/Main.storyboard; sourceTree = "<group>"; };
+		BA761ED81F19176D00C7E2B1 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Models/User.swift; sourceTree = "<group>"; };
+		BA761EDA1F191C6200C7E2B1 /* UIString+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIString+Utility.swift"; path = "Extensions/UIString+Utility.swift"; sourceTree = "<group>"; };
 		BA7779821F05461A00128AA9 /* SourceSansPro-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SourceSansPro-Black.otf"; path = "Resources/source-sans-pro/SourceSansPro-Black.otf"; sourceTree = "<group>"; };
 		BA7779831F05461A00128AA9 /* SourceSansPro-BlackIt.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SourceSansPro-BlackIt.otf"; path = "Resources/source-sans-pro/SourceSansPro-BlackIt.otf"; sourceTree = "<group>"; };
 		BA7779841F05461A00128AA9 /* SourceSansPro-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SourceSansPro-Bold.otf"; path = "Resources/source-sans-pro/SourceSansPro-Bold.otf"; sourceTree = "<group>"; };
@@ -150,6 +154,7 @@
 		BA247C031F05C313003A5593 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				BA761ED81F19176D00C7E2B1 /* User.swift */,
 				BAD4F5411F06D7EA00BAAFA0 /* BookToDisplay.swift */,
 				BAD4F53E1F06A6BC00BAAFA0 /* The Lit List.xcdatamodeld */,
 			);
@@ -282,6 +287,7 @@
 				BA7779A21F056F5200128AA9 /* UINavigationController+Utility.swift */,
 				BAFFB5FA1F16714F0019FB2B /* UITextField+Utility.swift */,
 				BAF05D671F17AD7600D4CCB2 /* DatabaseReference+Location.swift */,
+				BA761EDA1F191C6200C7E2B1 /* UIString+Utility.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -459,6 +465,7 @@
 				BA77799B1F0549C600128AA9 /* ItemDetailViewController.swift in Sources */,
 				BAD4F5421F06D7EA00BAAFA0 /* BookToDisplay.swift in Sources */,
 				BAD4F53D1F06A61D00BAAFA0 /* CoreDataHelper.swift in Sources */,
+				BA761ED91F19176D00C7E2B1 /* User.swift in Sources */,
 				BA7779A51F0575B600128AA9 /* SearchByViewController.swift in Sources */,
 				BA2A3D421F151A9F0015C58C /* OnboardingCollectionViewCell.swift in Sources */,
 				BA10316A1F0E9B6B0024859A /* SettingsViewController.swift in Sources */,
@@ -478,6 +485,7 @@
 				BA4974581F03FD62004FE18B /* AppDelegate.swift in Sources */,
 				BA7779B11F05938400128AA9 /* ResultDetailViewController.swift in Sources */,
 				BAD4F5401F06A6BC00BAAFA0 /* The Lit List.xcdatamodeld in Sources */,
+				BA761EDB1F191C6200C7E2B1 /* UIString+Utility.swift in Sources */,
 				BA7779A11F056DF100128AA9 /* UIViewController+Utility.swift in Sources */,
 				BA7779A71F057C9600128AA9 /* ResultsViewController.swift in Sources */,
 			);
