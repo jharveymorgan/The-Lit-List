@@ -10,7 +10,6 @@
 		0FD42AC30E1A6B5E178D6B8B /* Pods_The_Lit_List.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29F21216A15ADE8B16190E21 /* Pods_The_Lit_List.framework */; };
 		BA10316A1F0E9B6B0024859A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1031691F0E9B6B0024859A /* SettingsViewController.swift */; };
 		BA11970F1F1F9BDB00B6AE98 /* BookService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA11970E1F1F9BDB00B6AE98 /* BookService.swift */; };
-		BA1197111F1FB99900B6AE98 /* DateFormatter+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1197101F1FB99900B6AE98 /* DateFormatter+Utility.swift */; };
 		BA1C59191F165ECA00A3E099 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA1C59181F165ECA00A3E099 /* GoogleService-Info.plist */; };
 		BA1C591B1F1660CF00A3E099 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1C591A1F1660CF00A3E099 /* SignUpViewController.swift */; };
 		BA247C081F05C3C6003A5593 /* UserServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA247C071F05C3C6003A5593 /* UserServices.swift */; };
@@ -69,7 +68,6 @@
 		66E0EDB4EB425508C3406D67 /* Pods-The Lit List.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-The Lit List.release.xcconfig"; path = "Pods/Target Support Files/Pods-The Lit List/Pods-The Lit List.release.xcconfig"; sourceTree = "<group>"; };
 		BA1031691F0E9B6B0024859A /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsViewController.swift; path = Controllers/SettingsViewController.swift; sourceTree = "<group>"; };
 		BA11970E1F1F9BDB00B6AE98 /* BookService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BookService.swift; path = Services/BookService.swift; sourceTree = "<group>"; };
-		BA1197101F1FB99900B6AE98 /* DateFormatter+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "DateFormatter+Utility.swift"; path = "Extensions/DateFormatter+Utility.swift"; sourceTree = "<group>"; };
 		BA1C59181F165ECA00A3E099 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "Supporting/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BA1C591A1F1660CF00A3E099 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = Controllers/SignUpViewController.swift; sourceTree = "<group>"; };
 		BA247C071F05C3C6003A5593 /* UserServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserServices.swift; path = Services/UserServices.swift; sourceTree = "<group>"; };
@@ -290,7 +288,6 @@
 				BA7779A21F056F5200128AA9 /* UINavigationController+Utility.swift */,
 				BAFFB5FA1F16714F0019FB2B /* UITextField+Utility.swift */,
 				BAF05D671F17AD7600D4CCB2 /* DatabaseReference+Location.swift */,
-				BA1197101F1FB99900B6AE98 /* DateFormatter+Utility.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -478,7 +475,6 @@
 				BAFFB5FF1F168C780019FB2B /* ForgotPasswordViewController.swift in Sources */,
 				BAFFB5FB1F16714F0019FB2B /* UITextField+Utility.swift in Sources */,
 				BAFFB5FD1F167C910019FB2B /* LoginViewController.swift in Sources */,
-				BA1197111F1FB99900B6AE98 /* DateFormatter+Utility.swift in Sources */,
 				BA7779A31F056F5200128AA9 /* UINavigationController+Utility.swift in Sources */,
 				BA8E28001F041C3000105C0E /* UIColor+Utility.swift in Sources */,
 				BA876F601F074451008425E1 /* ReminderHelper.swift in Sources */,

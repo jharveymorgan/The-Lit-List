@@ -44,28 +44,48 @@
                                     <action selector="icons8ButtonTapped:" destination="Wo6-dS-oc3" eventType="touchUpInside" id="Krg-ok-kpp"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="11d-JO-Uo6">
-                                <rect key="frame" x="115" y="296" width="145.5" height="74"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="11d-JO-Uo6">
+                                <rect key="frame" x="115" y="259" width="145.5" height="149"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feedback?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XgT-RW-p8u">
-                                        <rect key="frame" x="29.5" y="0.0" width="86.5" height="24"/>
-                                        <fontDescription key="fontDescription" name="SourceSansPro-Semibold" family="Source Sans Pro" pointSize="19"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RkO-15-bS9">
-                                        <rect key="frame" x="0.0" y="29" width="145.5" height="45"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="TWR-oK-tHB">
+                                        <rect key="frame" x="0.0" y="0.0" width="145.5" height="74"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feedback?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XgT-RW-p8u">
+                                                <rect key="frame" x="29.5" y="0.0" width="86.5" height="24"/>
+                                                <fontDescription key="fontDescription" name="SourceSansPro-Semibold" family="Source Sans Pro" pointSize="19"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RkO-15-bS9">
+                                                <rect key="frame" x="0.0" y="29" width="145.5" height="45"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="145" id="3Ih-z4-5Se"/>
+                                                    <constraint firstAttribute="height" constant="45" id="f3L-7P-daX"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="18"/>
+                                                <state key="normal" title="Let us know!">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="feedbackButtonTapped:" destination="Wo6-dS-oc3" eventType="touchUpInside" id="OVc-II-NND"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k3E-5I-Wav">
+                                        <rect key="frame" x="0.5" y="104" width="145" height="45"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="145" id="3Ih-z4-5Se"/>
-                                            <constraint firstAttribute="height" constant="45" id="f3L-7P-daX"/>
+                                            <constraint firstAttribute="height" constant="45" id="mu8-l7-ad0"/>
+                                            <constraint firstAttribute="width" constant="145" id="xD9-Z3-qiJ"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="18"/>
-                                        <state key="normal" title="Let us know!">
+                                        <state key="normal" title="Sign Out">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="feedbackButtonTapped:" destination="Wo6-dS-oc3" eventType="touchUpInside" id="OVc-II-NND"/>
+                                            <action selector="signOut:" destination="Wo6-dS-oc3" eventType="touchUpInside" id="dXs-MW-ZXf"/>
                                         </connections>
                                     </button>
                                 </subviews>

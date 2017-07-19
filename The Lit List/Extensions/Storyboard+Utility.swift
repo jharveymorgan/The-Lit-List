@@ -16,6 +16,7 @@ extension UIStoryboard{
         case Settings
         case Onboarding
         case Login
+        case SignUp
         
         var filename: String {
             return rawValue
