@@ -12,7 +12,8 @@ import EventKit
 class ItemDetailViewController: UIViewController {
 
     // MARK: - Properties
-    var book = Book()
+//    var book = Book()
+    var book = BookToDisplay()
     var eventStore: EKEventStore!
     
     @IBOutlet weak var coverImage: UIImageView!
@@ -59,23 +60,25 @@ class ItemDetailViewController: UIViewController {
     }
     
     // display information
-    func configureBookDetail(book: Book) {
+    func configureBookDetail(book: BookToDisplay) {
         // format date
-        if let releaseDate = book.correctDate {
-            releaseDateLabel.text = timestampFormatter.string(from: releaseDate as Date)
-        } else {
-            releaseDateLabel.text = "No Release Date Found"
-        }
+//        if let releaseDate = book.correctDate {
+//            releaseDateLabel.text = timestampFormatter.string(from: releaseDate as Date)
+//        } else {
+//            releaseDateLabel.text = "No Release Date Found"
+//        }
+        releaseDateLabel.text = book.releaseDate
         
         titleLabel.text = book.title
         authorLabel.text = book.author
-        descriptionView.text = book.bookDescription
+        //descriptionView.text = book.bookDescription
+        descriptionView.text = book.description
         
         // cover image
-        if let coverLink = book.imageLink {
-            let coverURL = URL(string: coverLink)
+//        if let coverLink = book.imageLink {
+            let coverURL = URL(string: book.imageLink)
             coverImage.kf.setImage(with: coverURL)
-        }
+//        }
     }
     
     // MARK: - IBActions
@@ -85,10 +88,10 @@ class ItemDetailViewController: UIViewController {
     
     @IBAction func remindMeButtonTapped(_ sender: Any) {
         // check for a book title
-        guard let bookTitle = book.title else {
-            print("Error getting book's title when trying to set a reminder")
-            return
-        }
+//        guard let bookTitle = book.title else {
+//            print("Error getting book's title when trying to set a reminder")
+//            return
+//        }
         
         // check for reminder date
         guard let reminderDateComponents = book.correctDate else {
@@ -100,11 +103,11 @@ class ItemDetailViewController: UIViewController {
         // configure reminder
         self.eventStore = EKEventStore()
         let reminder = EKReminder(eventStore: self.eventStore)
-        reminder.title = "\(bookTitle) was released today!"
-        reminder.dueDateComponents = ReminderHelper.dateComponentFromNSDate(date: reminderDateComponents) as DateComponents
+        reminder.title = "\(book.title) was released today!"
+        reminder.dueDateComponents = ReminderHelper.dateComponentFromNSDate(date: reminderDateComponents as NSDate) as DateComponents
         
         // check for access to Reminders
-        ReminderHelper.checkReminderAuthorizationStatus(view: self, bookTitle: bookTitle,reminder: reminder, eventStore: self.eventStore)
+        ReminderHelper.checkReminderAuthorizationStatus(view: self, bookTitle: book.title,reminder: reminder, eventStore: self.eventStore)
         
     }
 
@@ -112,12 +115,13 @@ class ItemDetailViewController: UIViewController {
     @IBAction func buyBookButtonTapped(_ sender: Any) {
         
         // check for isbn
-        guard let bookISBN = book.isbn else {
-            print("Error getting book's isbn when trying to buy via iBooks")
-            return
-        }
+//        guard let bookISBN = book.isbn else {
+//            print("Error getting book's isbn when trying to buy via iBooks")
+//            return
+//        }
+        
         // open in iBooks Store
-        let iBooksLink = createAffiliateLink(for: bookISBN)
+        let iBooksLink = createAffiliateLink(for: book.isbn)
         
 //        // suport for ios9
 //        guard #available(iOS 10, *) else {
@@ -140,13 +144,13 @@ class ItemDetailViewController: UIViewController {
     @IBAction func googleBooksButtonTapped(_ sender: Any) {
         
         // check for google books link
-        guard let googleBooksLink = book.googleBooksLink else {
-            print("Error getting google book's link when trying to get information via Google Books")
-            return
-        }
+//        guard let googleBooksLink = book.googleBooksLink else {
+//            print("Error getting google book's link when trying to get information via Google Books")
+//            return
+//        }
         
         // open google books link
-        UIApplication.shared.open(URL(string: googleBooksLink)!, options: [:], completionHandler: nil)
+        UIApplication.shared.open(URL(string: book.googleBooksLink)!, options: [:], completionHandler: nil)
         
     }
     

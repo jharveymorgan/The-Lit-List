@@ -98,7 +98,7 @@ class ResultsViewController: UIViewController {
             
             // get path and book for row that was tapped
             let indexPath = tableView.indexPathForSelectedRow
-            detailController.bookToDisplay = bookResults[(indexPath?.row)!]
+            detailController.bookDetail = bookResults[(indexPath?.row)!]
         }
     }
 }

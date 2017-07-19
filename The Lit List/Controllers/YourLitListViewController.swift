@@ -12,7 +12,8 @@ class YourLitListViewController: UIViewController {
     // MARK: - Properties
     @IBOutlet weak var tableView: UITableView!
     
-    var myLitList = [Book]()
+    //var myLitList = [Book]()
+    var myLitList = [BookToDisplay]()
     
     let xib = UINib(nibName: "LitListItemCell", bundle: nil)
     
@@ -29,11 +30,35 @@ class YourLitListViewController: UIViewController {
     
     // display current list of books
     override func viewDidAppear(_ animated: Bool) {
-        myLitList = CoreDataHelper.retrieveBooks()
-        tableView.reloadData()
+        //myLitList = CoreDataHelper.retrieveBooks()
+        
+        // check if books should be uploaded to firebase
+        if CoreDataHelper.retrieveBooks().count > 0 {
+            let books = CoreDataHelper.retrieveBooks()
+            fromCoreDataToFirebase(books: books)
+        }
+        
+        // get all books from firebase
+        BookService.allBooks(for: User.current) { (books) in
+            self.myLitList = books
+            self.tableView.reloadData()
+        }
+        
+        
+        //tableView.reloadData()
     }
     
     // MARK: - Function(s)
+    func fromCoreDataToFirebase(books: [Book]) {
+        print("Books in CoreData")
+        
+        for book in books {
+            BookService.createFromCoreData(book: book)
+            CoreDataHelper.delete(book: book)
+        }
+        
+        print("Done uploading to firebase")
+    }
     
     // MARK: - Segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -66,10 +91,10 @@ extension YourLitListViewController: UITableViewDataSource {
         cell.authorLabel.text = book.author
         
         // display cover image
-        if let coverLink = book.imageLink {
-            let coverURL = URL(string: coverLink)
+//        if let coverLink = book.imageLink {
+            let coverURL = URL(string: book.imageLink)
             cell.coverImage.kf.setImage(with: coverURL)
-        }
+//        }
         
         return cell
     }
@@ -77,11 +102,17 @@ extension YourLitListViewController: UITableViewDataSource {
     // swipe to delete
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            CoreDataHelper.delete(book: myLitList[indexPath.row])
-            myLitList = CoreDataHelper.retrieveBooks()
-            tableView.reloadData()
+            // delete the book
+            BookService.delete(book: myLitList[indexPath.row])
+            
+            // get all books from firebase
+            BookService.allBooks(for: User.current) { (books) in
+                self.myLitList = books
+                self.tableView.reloadData()
+            }
         }
     }
+    
 }
 
 // MARK: - UITableViewDelegate

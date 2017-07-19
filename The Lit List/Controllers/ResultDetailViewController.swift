@@ -11,7 +11,7 @@ import SwiftyJSON
 
 class ResultDetailViewController: UIViewController {
     // MARK: - Properties
-    var bookToDisplay = BookToDisplay()
+    var bookDetail = BookToDisplay()
     var bookToSaveJSON = JSON("")
     
     @IBOutlet weak var titleLabel: UILabel!
@@ -42,8 +42,9 @@ class ResultDetailViewController: UIViewController {
         self.descriptionView.layer.backgroundColor = UIColor.clear.cgColor
         
         // display book information
-        configureBookDetail(book: bookToDisplay)
-        bookToSaveJSON = bookToDisplay.json
+        configureBookDetail(book: bookDetail)
+        
+        bookToSaveJSON = bookDetail.json
 
     }
     // make sure nav bar doesn't stay clear after view is dismissed
@@ -56,8 +57,10 @@ class ResultDetailViewController: UIViewController {
     // display information
     func configureBookDetail(book: BookToDisplay) {
         // format date
-        if let releaseDate = book.correctDate {
+        if let releaseDate = book.correctDateFromJSON {
             releaseDateLabel.text = timestampFormatter.string(from: releaseDate as Date)
+            // format the release date correctly
+            book.releaseDate = timestampFormatter.string(from: releaseDate as Date)
         } else {
             releaseDateLabel.text = "No Release Date Found"
         }
@@ -75,10 +78,14 @@ class ResultDetailViewController: UIViewController {
     // MARK: IBActions
     // TODO: Dismiss view after button is tapped
     @IBAction func addToListTapped(_ sender: Any) {
-        let bookToSave = CoreDataHelper.newBook(json: bookToSaveJSON)
-        CoreDataHelper.saveBook()
+//        let bookToSave = CoreDataHelper.newBook(json: bookToSaveJSON)
+//        CoreDataHelper.saveBook()
         
-        bookAddedToLitList(book: bookToSave)
+        // create a new book in firebase
+        BookService.create(book: bookDetail)
+        
+        // tell user the book was added to their lit list
+        bookAddedToLitList(book: bookDetail)
     }
     
     // MARK: - Segue(s)
@@ -87,11 +94,8 @@ class ResultDetailViewController: UIViewController {
 // MARK: - AlertController
 extension ResultDetailViewController {
     // alert to tell user to only search by one parameter
-    func bookAddedToLitList(book: Book) {
-        guard let bookTitle = book.title else {
-            return
-        }
-        let messageText = "\(String(describing: bookTitle)) has been added to your Lit List."
+    func bookAddedToLitList(book: BookToDisplay) {
+        let messageText = "\(book.title) has been added to your Lit List."
         
         // alert and action
         let alert = UIAlertController(title: nil, message: messageText, preferredStyle: .alert)
