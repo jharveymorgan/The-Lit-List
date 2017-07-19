@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SystemConfiguration
 
 class YourLitListViewController: UIViewController {
     // MARK: - Properties
@@ -41,6 +42,12 @@ class YourLitListViewController: UIViewController {
         if CoreDataHelper.retrieveBooks().count > 0 {
             let books = CoreDataHelper.retrieveBooks()
             fromCoreDataToFirebase(books: books)
+        }
+        
+        // check for internet
+        let internet = isInternetAvailable()
+        if !internet {
+            noInternetAlert()
         }
         
         // get all books from firebase
@@ -139,5 +146,43 @@ extension YourLitListViewController: UITableViewDelegate {
     // show detail about selected book
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: Constants.Segue.showItemDetail, sender: self)
+    }
+}
+
+// MARK: - Check for internet
+extension YourLitListViewController {
+    // check if internet is available
+    func isInternetAvailable() -> Bool {
+        
+        var zeroAddress = sockaddr_in()
+        zeroAddress.sin_len = UInt8(MemoryLayout<sockaddr_in>.size)
+        zeroAddress.sin_family = sa_family_t(AF_INET)
+        
+        guard let defaultRouteReachability = withUnsafePointer(to: &zeroAddress, {
+            $0.withMemoryRebound(to: sockaddr.self, capacity: 1) {
+                SCNetworkReachabilityCreateWithAddress(nil, $0)
+            }
+        }) else {
+            return false
+        }
+        
+        var flags: SCNetworkReachabilityFlags = []
+        if !SCNetworkReachabilityGetFlags(defaultRouteReachability, &flags) {
+            return false
+        }
+        
+        let isReachable = flags.contains(.reachable)
+        let needsConnection = flags.contains(.connectionRequired)
+        
+        return (isReachable && !needsConnection)
+    }
+    
+    // let user know they need an internet connection
+    func noInternetAlert() {
+        let alert = UIAlertController(title: nil, message: "Error. Please check internect connection and try again.", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Okay", style: .default, handler: nil)
+        alert.addAction(okAction)
+        
+        self.present(alert, animated: true)
     }
 }

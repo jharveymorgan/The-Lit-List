@@ -17,7 +17,7 @@ typealias FIRUser = FirebaseAuth.User
 
 struct UserService {
     
-    static func searchGoogleBooksAPI(by userParameter: String, completion: @escaping (JSON) -> Void) {
+    static func searchGoogleBooksAPI(by userParameter: String, viewController: UIViewController, completion: @escaping (JSON) -> Void) {
         // Google books api
         let apiToContact = "https://www.googleapis.com/books/v1/volumes"
         
@@ -40,7 +40,7 @@ struct UserService {
 //                if error._code == NSURLErrorTimedOut {
 //                    //timeout here
 //                }
-                
+                self.requestError(viewController: viewController)
                 print(error)
                 return
             }
@@ -149,13 +149,13 @@ struct UserService {
 // MARK: - UIAlertController
 extension UserService {
     // alert to tell user to only search by one parameter
-    static func requestTimeout(view: UIViewController) {
+    static func requestError(viewController: UIViewController) {
         
         // alert and action
-        let alert = UIAlertController(title: nil, message: "Request timed out. Please check internect connection and try again.", preferredStyle: .alert)
+        let alert = UIAlertController(title: nil, message: "Error. Please check internect connection and try again.", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "Okay", style: .default, handler: nil)
         alert.addAction(okAction)
         
-        view.present(alert, animated: true)
+        viewController.present(alert, animated: true)
     }
 }

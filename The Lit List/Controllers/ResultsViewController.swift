@@ -57,7 +57,7 @@ class ResultsViewController: UIViewController {
         // so user can't tap cancel button mid-request. see if this fixes memory leak(s)
         //cancelButton.isEnabled = false
         
-        UserService.searchGoogleBooksAPI(by: searchParameter) { [unowned self] (response) in
+        UserService.searchGoogleBooksAPI(by: searchParameter, viewController: self) { [unowned self] (response) in
             
             let bookTotal = response["items"].count
             

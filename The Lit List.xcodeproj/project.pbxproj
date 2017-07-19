@@ -272,9 +272,9 @@
 		BA8E27FB1F041BC400105C0E /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				BA8E27FC1F041BFA00105C0E /* ColorHelper.swift */,
-				BAD4F53C1F06A61D00BAAFA0 /* CoreDataHelper.swift */,
 				BA876F5F1F074451008425E1 /* ReminderHelper.swift */,
+				BAD4F53C1F06A61D00BAAFA0 /* CoreDataHelper.swift */,
+				BA8E27FC1F041BFA00105C0E /* ColorHelper.swift */,
 			);
 			name = Helper;
 			sourceTree = "<group>";
