@@ -14,6 +14,7 @@ class YourLitListViewController: UIViewController {
     
     //var myLitList = [Book]()
     var myLitList = [BookToDisplay]()
+    let refreshControl = UIRefreshControl()
     
     let xib = UINib(nibName: "LitListItemCell", bundle: nil)
     
@@ -26,6 +27,10 @@ class YourLitListViewController: UIViewController {
         
         // configure main view
         UIViewController.configureBackgroundAliceBlue(view: self.view)
+        
+        // add pull to refresh
+        refreshControl.addTarget(self, action: #selector(reloadLitList), for: .valueChanged)
+        tableView.addSubview(refreshControl)
     }
     
     // display current list of books
@@ -43,9 +48,6 @@ class YourLitListViewController: UIViewController {
             self.myLitList = books
             self.tableView.reloadData()
         }
-        
-        
-        //tableView.reloadData()
     }
     
     // MARK: - Function(s)
@@ -58,6 +60,19 @@ class YourLitListViewController: UIViewController {
         }
         
         print("Done uploading to firebase")
+    }
+    
+    func reloadLitList() {
+        // get books from Firebase
+        BookService.allBooks(for: User.current) { (books) in
+            self.myLitList = books
+            
+            if self.refreshControl.isRefreshing {
+                self.refreshControl.endRefreshing()
+            }
+            
+            self.tableView.reloadData()
+        }
     }
     
     // MARK: - Segue
@@ -91,10 +106,8 @@ extension YourLitListViewController: UITableViewDataSource {
         cell.authorLabel.text = book.author
         
         // display cover image
-//        if let coverLink = book.imageLink {
-            let coverURL = URL(string: book.imageLink)
-            cell.coverImage.kf.setImage(with: coverURL)
-//        }
+        let coverURL = URL(string: book.imageLink)
+        cell.coverImage.kf.setImage(with: coverURL)
         
         return cell
     }
