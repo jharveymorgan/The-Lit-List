@@ -49,13 +49,12 @@ class ItemDetailViewController: UIViewController {
         
         // display book information
         configureBookDetail(book: book)
-        
     }
     
     // MARK: - Function(s)
     // construct the affiliate link
     func createAffiliateLink(for bookISBN: String) -> String {
-        let affiliateLink = "https://geo.itunes.apple.com/us/book/isbn\(bookISBN)?mt=11&at=\(Constants.iTunesAffiliate.affiliateID)"
+        let affiliateLink = "https://geo.itunes.apple.com/us/book/isbn\(bookISBN)?mt=11&at=\(Constants.AffiliateID.iTunesAffiliateID)"
         return affiliateLink
     }
     
@@ -115,13 +114,6 @@ class ItemDetailViewController: UIViewController {
         
         // open link normally if it is running ios 10
         UIApplication.shared.open(URL(string: iBooksLink)!, options: [:], completionHandler: nil)
-        
-//        // Add ios9 support for opening links, open ibooks link
-//        if #available(iOS 10.0, *) {
-//            UIApplication.shared.open(URL(string: iBooksLink)!, options: [:], completionHandler: nil)
-//        } else {
-//            // Fallback on earlier versions
-//        }
     }
     
     // Google Books info page
@@ -130,6 +122,12 @@ class ItemDetailViewController: UIViewController {
         // open google books link
         UIApplication.shared.open(URL(string: book.googleBooksLink)!, options: [:], completionHandler: nil)
         
+    }
+    
+    // Amazon page
+    @IBAction func amazonButtonTapped(_ sender: Any) {
+        let amazonLink = "http://www.amazon.com/gp/search?keywords=\(self.book.isbn)&tag=\(Constants.AffiliateID.amazonAffiliateID)"
+        UIApplication.shared.open(URL(string: amazonLink)!, options: [:], completionHandler: nil)
     }
     
 }

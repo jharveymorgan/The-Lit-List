@@ -9,11 +9,6 @@
 import UIKit
 
 extension UIViewController {
-    static func configureBackgroundGradient(view: UIView) {
-        let backgroundLayer = ColorHelper.backgroundGradient()
-        backgroundLayer.frame = view.frame
-        view.layer.insertSublayer(backgroundLayer, at: 0)
-    }
     
     static func configureBackgroundLightGrey(view: UIView) {
         view.backgroundColor = UIColor(red: 212/255, green: 212/255, blue: 212/255, alpha: 1)
