@@ -62,23 +62,18 @@ class ItemDetailViewController: UIViewController {
     // display information
     func configureBookDetail(book: BookToDisplay) {
         // format date
-//        if let releaseDate = book.correctDate {
-//            releaseDateLabel.text = timestampFormatter.string(from: releaseDate as Date)
-//        } else {
-//            releaseDateLabel.text = "No Release Date Found"
-//        }
-        releaseDateLabel.text = book.releaseDate
+        if let releaseDate = book.correctDateFromJSON {
+            releaseDateLabel.text = timestampFormatter.string(from: releaseDate)
+        } else {
+            releaseDateLabel.text = book.releaseDate
+        }
         
         titleLabel.text = book.title
         authorLabel.text = book.author
-        //descriptionView.text = book.bookDescription
         descriptionView.text = book.description
         
-        // cover image
-//        if let coverLink = book.imageLink {
-            let coverURL = URL(string: book.imageLink)
-            coverImage.kf.setImage(with: coverURL)
-//        }
+        let coverURL = URL(string: book.imageLink)
+        coverImage.kf.setImage(with: coverURL)
     }
     
     // MARK: - IBActions
@@ -87,14 +82,9 @@ class ItemDetailViewController: UIViewController {
     }
     
     @IBAction func remindMeButtonTapped(_ sender: Any) {
-        // check for a book title
-//        guard let bookTitle = book.title else {
-//            print("Error getting book's title when trying to set a reminder")
-//            return
-//        }
         
         // check for reminder date
-        guard let reminderDateComponents = book.correctDate else {
+        guard let reminderDateComponents = book.correctDateFromJSON else {
             print("Error getting book's correct date when trying to set a reminder")
             noReleaseDate()
             return
@@ -113,12 +103,6 @@ class ItemDetailViewController: UIViewController {
 
     // buy in iBooks Store
     @IBAction func buyBookButtonTapped(_ sender: Any) {
-        
-        // check for isbn
-//        guard let bookISBN = book.isbn else {
-//            print("Error getting book's isbn when trying to buy via iBooks")
-//            return
-//        }
         
         // open in iBooks Store
         let iBooksLink = createAffiliateLink(for: book.isbn)
@@ -142,12 +126,6 @@ class ItemDetailViewController: UIViewController {
     
     // Google Books info page
     @IBAction func googleBooksButtonTapped(_ sender: Any) {
-        
-        // check for google books link
-//        guard let googleBooksLink = book.googleBooksLink else {
-//            print("Error getting google book's link when trying to get information via Google Books")
-//            return
-//        }
         
         // open google books link
         UIApplication.shared.open(URL(string: book.googleBooksLink)!, options: [:], completionHandler: nil)

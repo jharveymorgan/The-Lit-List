@@ -46,8 +46,6 @@
 		BA7779B11F05938400128AA9 /* ResultDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7779B01F05938400128AA9 /* ResultDetailViewController.swift */; };
 		BA876F601F074451008425E1 /* ReminderHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA876F5F1F074451008425E1 /* ReminderHelper.swift */; };
 		BA8E27FA1F0410F700105C0E /* YourLitListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8E27F91F0410F700105C0E /* YourLitListViewController.swift */; };
-		BA8E27FD1F041BFA00105C0E /* ColorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8E27FC1F041BFA00105C0E /* ColorHelper.swift */; };
-		BA8E28001F041C3000105C0E /* UIColor+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8E27FF1F041C3000105C0E /* UIColor+Utility.swift */; };
 		BA8E28031F04239000105C0E /* LitLitItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8E28021F04239000105C0E /* LitLitItemCell.swift */; };
 		BA8E28071F042DD800105C0E /* LitListItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA8E28051F042DD800105C0E /* LitListItemCell.xib */; };
 		BAB8DAD51F0EB29200B87B7E /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAB8DAD41F0EB29200B87B7E /* Settings.storyboard */; };
@@ -106,8 +104,6 @@
 		BA7779B01F05938400128AA9 /* ResultDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResultDetailViewController.swift; path = Controllers/ResultDetailViewController.swift; sourceTree = "<group>"; };
 		BA876F5F1F074451008425E1 /* ReminderHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReminderHelper.swift; path = Helpers/ReminderHelper.swift; sourceTree = "<group>"; };
 		BA8E27F91F0410F700105C0E /* YourLitListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = YourLitListViewController.swift; path = Controllers/YourLitListViewController.swift; sourceTree = "<group>"; };
-		BA8E27FC1F041BFA00105C0E /* ColorHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColorHelper.swift; path = Helpers/ColorHelper.swift; sourceTree = "<group>"; };
-		BA8E27FF1F041C3000105C0E /* UIColor+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+Utility.swift"; path = "Extensions/UIColor+Utility.swift"; sourceTree = "<group>"; };
 		BA8E28021F04239000105C0E /* LitLitItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LitLitItemCell.swift; path = Views/LitLitItemCell.swift; sourceTree = "<group>"; };
 		BA8E28051F042DD800105C0E /* LitListItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LitListItemCell.xib; path = Views/LitListItemCell.xib; sourceTree = "<group>"; };
 		BAB8DAD41F0EB29200B87B7E /* Settings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Settings.storyboard; path = Storyboards/Settings.storyboard; sourceTree = "<group>"; };
@@ -274,7 +270,6 @@
 			children = (
 				BA876F5F1F074451008425E1 /* ReminderHelper.swift */,
 				BAD4F53C1F06A61D00BAAFA0 /* CoreDataHelper.swift */,
-				BA8E27FC1F041BFA00105C0E /* ColorHelper.swift */,
 			);
 			name = Helper;
 			sourceTree = "<group>";
@@ -282,7 +277,6 @@
 		BA8E27FE1F041C1600105C0E /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				BA8E27FF1F041C3000105C0E /* UIColor+Utility.swift */,
 				BA77799E1F05521000128AA9 /* Storyboard+Utility.swift */,
 				BA7779A01F056DF100128AA9 /* UIViewController+Utility.swift */,
 				BA7779A21F056F5200128AA9 /* UINavigationController+Utility.swift */,
@@ -469,14 +463,12 @@
 				BA7779A51F0575B600128AA9 /* SearchByViewController.swift in Sources */,
 				BA2A3D421F151A9F0015C58C /* OnboardingCollectionViewCell.swift in Sources */,
 				BA10316A1F0E9B6B0024859A /* SettingsViewController.swift in Sources */,
-				BA8E27FD1F041BFA00105C0E /* ColorHelper.swift in Sources */,
 				BA247C0C1F05FD09003A5593 /* Constants.swift in Sources */,
 				BA2A3D451F151AFA0015C58C /* OnboardingViewController.swift in Sources */,
 				BAFFB5FF1F168C780019FB2B /* ForgotPasswordViewController.swift in Sources */,
 				BAFFB5FB1F16714F0019FB2B /* UITextField+Utility.swift in Sources */,
 				BAFFB5FD1F167C910019FB2B /* LoginViewController.swift in Sources */,
 				BA7779A31F056F5200128AA9 /* UINavigationController+Utility.swift in Sources */,
-				BA8E28001F041C3000105C0E /* UIColor+Utility.swift in Sources */,
 				BA876F601F074451008425E1 /* ReminderHelper.swift in Sources */,
 				BA11970F1F1F9BDB00B6AE98 /* BookService.swift in Sources */,
 				BA247C081F05C3C6003A5593 /* UserServices.swift in Sources */,

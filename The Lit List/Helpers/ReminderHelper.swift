@@ -19,14 +19,12 @@ struct ReminderHelper {
         switch (status) {
         case EKAuthorizationStatus.authorized:
             // Things are in line with being able to show the calendars in the table view
-            print("authorized")
             
             reminder.calendar = eventStore.defaultCalendarForNewReminders()
             saveReminder(reminder: reminder, eventStore: eventStore, view: view, bookTitle: bookTitle)
         
         case EKAuthorizationStatus.notDetermined:
             // This happens on first-run
-            print("not determined")
             
             // save the reminder if the user is approving reminders for the first time
             requestAccessToReminders(eventStore: eventStore) { (access) in
@@ -40,7 +38,6 @@ struct ReminderHelper {
         
         case EKAuthorizationStatus.restricted, EKAuthorizationStatus.denied:
             // We need to help them give us permission
-            print("denied")
             accessDeniedAlert(viewController: view)
         }
     }

@@ -84,8 +84,6 @@ class SignUpViewController: UIViewController {
         }
         
         // clear textfields(?)
-        
-        print("sign up submit button tapped")
     }
     
 }

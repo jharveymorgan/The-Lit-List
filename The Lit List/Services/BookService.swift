@@ -22,7 +22,7 @@ struct BookService {
     static func allBooks(for user: User, completion: @escaping ([BookToDisplay]) -> Void) {
         let ref = DatabaseReference.toLocation(.books(uid: user.uid))
         
-        ref.observe(.value, with: { (snapshot) in
+        ref.observeSingleEvent(of: .value, with: { (snapshot) in
             guard let snapshot = snapshot.children.allObjects as? [DataSnapshot] else {
                 return completion([])
             }
@@ -56,21 +56,13 @@ struct BookService {
     // create add a book from CoreData to Firebase
     static func createFromCoreData(book: Book) {
         let currentUser = User.current
-        var finalDate = ""
         
         // check book information exists
-        guard let title = book.title, let author = book.author, let bookDescription = book.bookDescription, let imageLink = book.imageLink, let googleBooksLink = book.googleBooksLink, let isbn = book.isbn, let price = book.price
+        guard let title = book.title, let author = book.author, let bookDescription = book.bookDescription, let imageLink = book.imageLink, let googleBooksLink = book.googleBooksLink, let isbn = book.isbn, let price = book.price, let releaseDate = book.releaseDate
             else { return }
         
-        // get the correct date
-        if let releaseDate = book.correctDate {
-            finalDate = timestampFormatter.string(from: releaseDate as Date)
-        } else {
-            finalDate = "No Release Date Found"
-        }
-        
         // information to add to Firebase Database
-        let bookInfo: [String: Any] = ["title": title, "author": author, "bookDescription": bookDescription, "imageLink": imageLink, "googleBooksLink": googleBooksLink, "isbn": isbn, "releaseDate": finalDate, "price": price]
+        let bookInfo: [String: Any] = ["title": title, "author": author, "bookDescription": bookDescription, "imageLink": imageLink, "googleBooksLink": googleBooksLink, "isbn": isbn, "releaseDate": releaseDate, "price": price]
         
         // reference for where to add to Firebase Database
         let newBookRef = DatabaseReference.toLocation(.newBook(currentUID: currentUser.uid))

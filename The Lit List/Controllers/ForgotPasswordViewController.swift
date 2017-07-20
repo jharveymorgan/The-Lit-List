@@ -47,7 +47,6 @@ class ForgotPasswordViewController: UIViewController {
         // send reset link
         UserService.sendResetLink(email: email) { (error) in
             if error != nil {
-                print("Error trying to send reset link")
                 self.invalidEmailAlert()
                 return
             } else {
@@ -55,8 +54,6 @@ class ForgotPasswordViewController: UIViewController {
                 self.navigationController?.popToRootViewController(animated: true)
             }
         }
-        
-        print("We'll send a reset password link")
     }
     
     // MARK: - Functions

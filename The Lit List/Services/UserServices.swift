@@ -35,11 +35,6 @@ struct UserService {
                     completion(json)
                 }
             case .failure(let error):
-                
-//                // request time out
-//                if error._code == NSURLErrorTimedOut {
-//                    //timeout here
-//                }
                 self.requestError(viewController: viewController)
                 print(error)
                 return

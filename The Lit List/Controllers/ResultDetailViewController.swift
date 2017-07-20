@@ -76,9 +76,6 @@ class ResultDetailViewController: UIViewController {
     // MARK: IBActions
     // TODO: Dismiss view after button is tapped
     @IBAction func addToListTapped(_ sender: Any) {
-//        let bookToSave = CoreDataHelper.newBook(json: bookToSaveJSON)
-//        CoreDataHelper.saveBook()
-        
         // create a new book in firebase
         BookService.create(book: bookDetail)
         
