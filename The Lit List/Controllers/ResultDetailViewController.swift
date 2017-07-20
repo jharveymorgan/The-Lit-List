@@ -58,11 +58,9 @@ class ResultDetailViewController: UIViewController {
     func configureBookDetail(book: BookToDisplay) {
         // format date
         if let releaseDate = book.correctDateFromJSON {
-            releaseDateLabel.text = timestampFormatter.string(from: releaseDate as Date)
-            // format the release date correctly
-            book.releaseDate = timestampFormatter.string(from: releaseDate as Date)
+            releaseDateLabel.text = timestampFormatter.string(from: releaseDate)
         } else {
-            releaseDateLabel.text = "No Release Date Found"
+            releaseDateLabel.text = book.releaseDate
         }
         
         titleLabel.text = book.title
