@@ -39,7 +39,7 @@ struct BookService {
         })
     }
     
-    // leta  user create a new book
+    // let a user create a new book
     static func create(book: BookToDisplay) {
         let currentUser = User.current
         

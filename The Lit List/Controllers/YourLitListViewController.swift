@@ -53,7 +53,10 @@ class YourLitListViewController: UIViewController {
         // get all books from firebase
         BookService.allBooks(for: User.current) { (books) in
             self.myLitList = books
-            self.tableView.reloadData()
+            
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
         }
     }
     
@@ -78,7 +81,9 @@ class YourLitListViewController: UIViewController {
                 self.refreshControl.endRefreshing()
             }
             
-            self.tableView.reloadData()
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
         }
     }
     
