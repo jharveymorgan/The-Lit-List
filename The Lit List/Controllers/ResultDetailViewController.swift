@@ -73,7 +73,7 @@ class ResultDetailViewController: UIViewController {
     }
     
     
-    // MARK: IBActions
+    // MARK: - IBActions
     // TODO: Dismiss view after button is tapped
     @IBAction func addToListTapped(_ sender: Any) {
         // create a new book in firebase

@@ -92,7 +92,7 @@ class SearchByViewController: UIViewController {
         isbnTextField.text = nil
     }
     
-    // MARK: IBActions
+    // MARK: - IBActions
     @IBAction func searchButtonTapped(_ sender: Any) {
         let proceed = try? checkFields()
         if let _ = proceed {
