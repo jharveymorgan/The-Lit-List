@@ -72,7 +72,7 @@ class YourLitListViewController: UIViewController {
         print("Done uploading to firebase")
     }
     
-    func reloadLitList() {
+    @objc func reloadLitList() {
         // get books from Firebase
         BookService.allBooks(for: User.current) { (books) in
             self.myLitList = books
@@ -119,7 +119,7 @@ extension YourLitListViewController: UITableViewDataSource {
         
         // display cover image
         let coverURL = URL(string: book.imageLink)
-        cell.coverImage.kf.setImage(with: coverURL)
+        //cell.coverImage.kf.setImage(with: coverURL)
         
         return cell
     }

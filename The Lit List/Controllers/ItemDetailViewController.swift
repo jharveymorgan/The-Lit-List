@@ -39,7 +39,7 @@ class ItemDetailViewController: UIViewController {
         super.viewDidLoad()
         
         // configure view
-        doneButton.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "SourceSansPro-Bold", size: 19)!], for: .normal)
+        doneButton.setTitleTextAttributes([NSAttributedStringKey.font: UIFont(name: "SourceSansPro-Bold", size: 19)!], for: .normal)
         UIViewController.configureBackgroundAliceBlue(view: self.view)
         UINavigationController.configureNavBar(viewController: self)
         
@@ -72,7 +72,7 @@ class ItemDetailViewController: UIViewController {
         descriptionView.text = book.description
         
         let coverURL = URL(string: book.imageLink)
-        coverImage.kf.setImage(with: coverURL)
+        //coverImage.kf.setImage(with: coverURL)
     }
     
     // MARK: - IBActions

@@ -57,7 +57,7 @@ class ForgotPasswordViewController: UIViewController {
     }
     
     // MARK: - Functions
-    func backButtonTapped() {
+    @objc func backButtonTapped() {
         // dismiss view
         self.navigationController?.popToRootViewController(animated: true)
     }

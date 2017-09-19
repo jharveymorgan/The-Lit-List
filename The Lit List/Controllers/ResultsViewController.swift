@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Kingfisher
+//import Kingfisher
 
 // MARK: - Protocol
 protocol ResultsViewControllerDelegate: class {
@@ -35,7 +35,7 @@ class ResultsViewController: UIViewController {
         tableView.register(xib, forCellReuseIdentifier: Constants.TableViewCell.listItemCell)
         
         // configure background and nav bar
-        cancelButton.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "SourceSansPro-Bold", size: 18)!], for: .normal)
+        cancelButton.setTitleTextAttributes([NSAttributedStringKey.font: UIFont(name: "SourceSansPro-Bold", size: 18)!], for: .normal)
         UIViewController.configureBackgroundAliceBlue(view: self.view)        
         
         // so user can't tap cancel button mid-request. see if this fixes memory leak(s)
@@ -123,7 +123,7 @@ extension ResultsViewController: UITableViewDataSource {
         
         // display cover image
         let coverURL = URL(string: book.imageLink)
-        cell.coverImage.kf.setImage(with: coverURL)
+        //cell.coverImage.kf.setImage(with: coverURL)
         
         return cell
     }

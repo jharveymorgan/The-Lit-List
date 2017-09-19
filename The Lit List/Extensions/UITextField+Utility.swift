@@ -17,6 +17,6 @@ extension UITextField {
     }
     
     func configurePlaceholderText(placeholderText: String) {
-        self.attributedPlaceholder = NSAttributedString(string: placeholderText, attributes: [NSForegroundColorAttributeName: UIColor.black, NSFontAttributeName: UIFont(name: "SourceSansPro-SemiBold", size: 15)!])
+        self.attributedPlaceholder = NSAttributedString(string: placeholderText, attributes: [NSAttributedStringKey.foregroundColor: UIColor.black, NSAttributedStringKey.font: UIFont(name: "SourceSansPro-SemiBold", size: 15)!])
     }
 }

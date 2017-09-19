@@ -87,7 +87,7 @@ struct ReminderHelper {
         alert.addAction(thanks)
         
         // configure alert text
-        alert.setValue(NSAttributedString(string: message, attributes: [NSFontAttributeName: UIFont(name: "SourceSansPro-Bold", size: 18)!]), forKey: "attributedMessage")
+        alert.setValue(NSAttributedString(string: message, attributes: [NSAttributedStringKey.font: UIFont(name: "SourceSansPro-Bold", size: 18)!]), forKey: "attributedMessage")
         
         viewController.present(alert, animated: true)
     }

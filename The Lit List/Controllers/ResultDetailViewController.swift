@@ -69,7 +69,7 @@ class ResultDetailViewController: UIViewController {
         
         // cover image
         let coverURL = URL(string: book.imageLink)
-        coverImage.kf.setImage(with: coverURL)
+        //coverImage.kf.setImage(with: coverURL)
     }
     
     
