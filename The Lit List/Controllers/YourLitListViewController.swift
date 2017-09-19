@@ -119,7 +119,7 @@ extension YourLitListViewController: UITableViewDataSource {
         
         // display cover image
         let coverURL = URL(string: book.imageLink)
-        //cell.coverImage.kf.setImage(with: coverURL)
+        cell.coverImage.kf.setImage(with: coverURL)
         
         return cell
     }
