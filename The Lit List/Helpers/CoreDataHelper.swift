@@ -62,7 +62,7 @@ class CoreDataHelper {
         }
         
         if let dateToDisplay = correctDate as NSDate? {
-            book.correctDate = dateToDisplay
+            book.correctDate = dateToDisplay as Date
         }
         
         return book

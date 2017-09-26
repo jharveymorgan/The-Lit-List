@@ -36,8 +36,6 @@ class YourLitListViewController: UIViewController {
     
     // display current list of books
     override func viewDidAppear(_ animated: Bool) {
-        //myLitList = CoreDataHelper.retrieveBooks()
-        
         // check if books should be uploaded to firebase
         if CoreDataHelper.retrieveBooks().count > 0 {
             let books = CoreDataHelper.retrieveBooks()
@@ -62,14 +60,10 @@ class YourLitListViewController: UIViewController {
     
     // MARK: - Function(s)
     func fromCoreDataToFirebase(books: [Book]) {
-        print("Books in CoreData")
-        
         for book in books {
             BookService.createFromCoreData(book: book)
             CoreDataHelper.delete(book: book)
         }
-        
-        print("Done uploading to firebase")
     }
     
     @objc func reloadLitList() {
@@ -158,7 +152,6 @@ extension YourLitListViewController: UITableViewDelegate {
 extension YourLitListViewController {
     // check if internet is available
     func isInternetAvailable() -> Bool {
-        
         var zeroAddress = sockaddr_in()
         zeroAddress.sin_len = UInt8(MemoryLayout<sockaddr_in>.size)
         zeroAddress.sin_family = sa_family_t(AF_INET)
