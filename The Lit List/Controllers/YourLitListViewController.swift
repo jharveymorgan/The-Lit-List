@@ -44,7 +44,6 @@ class YourLitListViewController: UIViewController {
         
         // add search bar to the table view
         tableView.tableHeaderView = searchController.searchBar
-        
     }
     
     // display current list of books
@@ -101,7 +100,14 @@ class YourLitListViewController: UIViewController {
             let navController = segue.destination as! UINavigationController
             let mainDetailViewController = navController.topViewController as! ItemDetailViewController
             
-            mainDetailViewController.book = myLitList[(tableView.indexPathForSelectedRow?.row)!]
+            //mainDetailViewController.book = myLitList[(tableView.indexPathForSelectedRow?.row)!]
+            
+            // show detail of correct book depending on whether user was searching or not
+            if isFiltering() {
+                mainDetailViewController.book = filteredBooks[(tableView.indexPathForSelectedRow?.row)!]
+            } else {
+                mainDetailViewController.book = myLitList[(tableView.indexPathForSelectedRow?.row)!]
+            }
         }
     }
 }// end classs
@@ -109,14 +115,24 @@ class YourLitListViewController: UIViewController {
 // MARK: - UITableViewDataSource
 extension YourLitListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // check if user is searching, if so, return the number of search results
+        if isFiltering() {
+            return filteredBooks.count
+        }
+        
         return myLitList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.TableViewCell.listItemCell, for: indexPath) as! LitLitItemCell
         
-        // get information to display from the array of Books
-        let book = myLitList[indexPath.row]
+        // get information to display depending on whether or not the user is searching
+        let book: BookToDisplay
+        if isFiltering() {
+            book = filteredBooks[indexPath.row]
+        } else {
+            book = myLitList[indexPath.row]
+        }
         
         // display results
         cell.titleLabel.text = book.title
@@ -176,12 +192,17 @@ extension YourLitListViewController: UISearchResultsUpdating {
     
     // filter myLitList based on the search text
     func filterContentForSearchText(searchText: String, scope: String = "All") {
-        filteredBooks = myLitList.filter { (book: BookToDisplay) -> Bool in
-            return book.title.lowercased().contains(searchText.lowercased())
+        filteredBooks = myLitList.filter {
+            $0.title.lowercased().contains(searchText.lowercased())
         }
         
         // reload the view
         tableView.reloadData()
+    }
+    
+    // function to check if currently filtering results
+    func isFiltering() -> Bool {
+        return searchController.isActive && !searchBarEmpty()
     }
 }
 
