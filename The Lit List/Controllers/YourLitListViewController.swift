@@ -13,9 +13,11 @@ class YourLitListViewController: UIViewController {
     // MARK: - Properties
     @IBOutlet weak var tableView: UITableView!
     
-    //var myLitList = [Book]()
     var myLitList = [BookToDisplay]()
+    var filteredBooks = [BookToDisplay]()
     let refreshControl = UIRefreshControl()
+    let searchController = UISearchController(searchResultsController: nil)
+    //let searchController = UISearchController(searchResultsController: ItemDetailViewController)
     
     let xib = UINib(nibName: "LitListItemCell", bundle: nil)
     
@@ -32,6 +34,17 @@ class YourLitListViewController: UIViewController {
         // add pull to refresh
         refreshControl.addTarget(self, action: #selector(reloadLitList), for: .valueChanged)
         tableView.addSubview(refreshControl)
+        
+        // configure search bar
+        searchController.searchResultsUpdater = self
+        searchController.dimsBackgroundDuringPresentation = false
+        definesPresentationContext = true // search bar doesn't stay on screen if user leaves main view
+        searchController.searchBar.searchBarStyle = .minimal
+        searchController.searchBar.sizeToFit()
+        
+        // add search bar to the table view
+        tableView.tableHeaderView = searchController.searchBar
+        
     }
     
     // display current list of books
@@ -145,6 +158,30 @@ extension YourLitListViewController: UITableViewDelegate {
     // show detail about selected book
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: Constants.Segue.showItemDetail, sender: self)
+    }
+}
+
+// MARK: - Search Bar
+//Allow class to know as the text is changing
+extension YourLitListViewController: UISearchResultsUpdating {
+    // UISearchResultsUpdating delegate
+    func updateSearchResults(for searchController: UISearchController) {
+        filterContentForSearchText(searchText: searchController.searchBar.text!)
+    }
+    
+    func searchBarEmpty() -> Bool {
+        // returns true if the the search bar is empty or nil
+        return searchController.searchBar.text?.isEmpty ?? true
+    }
+    
+    // filter myLitList based on the search text
+    func filterContentForSearchText(searchText: String, scope: String = "All") {
+        filteredBooks = myLitList.filter { (book: BookToDisplay) -> Bool in
+            return book.title.lowercased().contains(searchText.lowercased())
+        }
+        
+        // reload the view
+        tableView.reloadData()
     }
 }
 
