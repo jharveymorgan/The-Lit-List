@@ -100,8 +100,6 @@ class YourLitListViewController: UIViewController {
             let navController = segue.destination as! UINavigationController
             let mainDetailViewController = navController.topViewController as! ItemDetailViewController
             
-            //mainDetailViewController.book = myLitList[(tableView.indexPathForSelectedRow?.row)!]
-            
             // show detail of correct book depending on whether user was searching or not
             if isFiltering() {
                 mainDetailViewController.book = filteredBooks[(tableView.indexPathForSelectedRow?.row)!]
