@@ -44,6 +44,7 @@ class YourLitListViewController: UIViewController {
         
         // add search bar to the table view
         tableView.tableHeaderView = searchController.searchBar
+        
     }
     
     // display current list of books
@@ -200,6 +201,11 @@ extension YourLitListViewController: UISearchResultsUpdating {
     
     // function to check if currently filtering results
     func isFiltering() -> Bool {
+        // return true if the search bar is empty, so that no results are displayed and users remember to hit the cancel button
+        if (searchController.isActive && searchBarEmpty()) {
+            return true
+        }
+        // return true if the user is actually searching for a book
         return searchController.isActive && !searchBarEmpty()
     }
 }
