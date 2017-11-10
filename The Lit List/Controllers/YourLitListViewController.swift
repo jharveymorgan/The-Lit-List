@@ -150,7 +150,12 @@ extension YourLitListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // delete the book
-            BookService.delete(book: myLitList[indexPath.row])
+            if isFiltering() {
+                BookService.delete(book: filteredBooks[indexPath.row])
+                filteredBooks.remove(at: indexPath.row)
+            } else {
+                BookService.delete(book: myLitList[indexPath.row])
+            }
             
             // get all books from firebase
             BookService.allBooks(for: User.current) { (books) in
